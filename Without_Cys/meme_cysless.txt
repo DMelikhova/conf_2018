@@ -1,0 +1,1517 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.0.2 (Release date: Thu Aug 30 14:26:08 2018 -0700)
+
+For further information on how to interpret please access http://alternate.meme-suite.org/.
+To get a copy of the MEME software please access http://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to discover
+motifs in biopolymers", Proceedings of the Second International
+Conference on Intelligent Systems for Molecular Biology, pp. 28-36,
+AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= Cysless_LOV
+CONTROL SEQUENCES= --none--
+ALPHABET= ACDEFGHIKLMNPQRSTVWY
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+ABR16704.1               1.0000    272  XP_003042477.1           1.0000    596  
+WP_004515824.1           1.0000    186  WP_004965636.1           1.0000    186  
+WP_005533327.1           1.0000    186  WP_006884446.1           1.0000    185  
+WP_007545138.1           1.0000    259  WP_008311751.1           1.0000    186  
+WP_011222610.1           1.0000    186  WP_015009125.1           1.0000    253  
+WP_015408455.1           1.0000    192  WP_015762404.1           1.0000    184  
+WP_018257517.1           1.0000    184  ERH11543.1               1.0000    196  
+ABT17414.1               1.0000    669  WP_004596479.1           1.0000    667  
+WP_005580789.1           1.0000    662  WP_007994479.1           1.0000    667  
+WP_007998215.1           1.0000    667  WP_008365815.1           1.0000    667  
+WP_008440458.1           1.0000    667  WP_008581736.1           1.0000    667  
+WP_008849170.1           1.0000    668  WP_017342539.1           1.0000    667  
+WP_009223887.1           1.0000    575  WP_016313776.1           1.0000    575  
+WP_022988976.1           1.0000    741  WP_028537505.1           1.0000    575  
+KFN11555.1               1.0000    585  WP_009240369.1           1.0000   1183  
+WP_024978289.1           1.0000   1183  WP_027679436.1           1.0000   1183  
+WP_004627966.1           1.0000   1179  WP_012430081.1           1.0000   1183  
+WP_024542524.1           1.0000   1183  WP_024974539.1           1.0000   1179  
+CAM75577.1               1.0000    703  WP_008614460.1           1.0000    707  
+XP_008462011.1           1.0000    899  XP_008462012.1           1.0000    879  
+WP_031429498.1           1.0000    538  AAA72719.1               1.0000    674  
+WP_010903066.1           1.0000    674  WP_006829240.1           1.0000    724  
+WP_008432994.1           1.0000    725  WP_008496897.1           1.0000    725  
+WP_004978264.1           1.0000    732  WP_008093946.1           1.0000    732  
+WP_004900880.1           1.0000    846  WP_005015369.1           1.0000    849  
+EXE61052.1               1.0000    849  WP_006892283.1           1.0000   1278  
+WP_031436152.1           1.0000   1276  WP_007188961.1           1.0000    837  
+WP_007190073.1           1.0000    833  WP_006631677.1           1.0000    630  
+WP_015178225.1           1.0000    630  KEI69225.1               1.0000   1600  
+WP_017385345.1           1.0000    849  EXF57155.1               1.0000    807  
+XP_002315641.1           1.0000    396  KFM26262.1               1.0000    317  
+WP_011244685.1           1.0000   1238  WP_011378155.1           1.0000   1238  
+AHZ63910.1               1.0000    868  AHZ63911.1               1.0000    877  
+WP_007276298.1           1.0000    737  EES52601.1               1.0000   1594  
+BAL55373.1               1.0000    747  CAA82994.1               1.0000    572  
+WP_011224964.1           1.0000   2306  WP_015409860.1           1.0000   1490  
+WP_006629792.1           1.0000    667  WP_015142706.1           1.0000    965  
+ERM80666.1               1.0000   1104  WP_009784268.1           1.0000   1781  
+WP_006054879.1           1.0000    648  WP_017715031.1           1.0000   1176  
+WP_015201020.1           1.0000    931  KFY83514.1               1.0000    976  
+CBJ26132.1               1.0000   1522  WP_009460030.1           1.0000   1039  
+AHZ63798.1               1.0000   1350  WP_018403148.1           1.0000    859  
+WP_013294580.1           1.0000    312  WP_017309581.1           1.0000    911  
+WP_008228851.1           1.0000    751  WP_019019197.1           1.0000   1070  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme Cysless_LOV -protein -oc . -nostatus -time 18000 -mod zoops -nmotifs 3 -minw 6 -maxw 60 -objfun classic -markov_order 0 
+
+model:  mod=         zoops    nmotifs=         3    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+width:  minw=            6    maxw=           60
+nsites: minsites=        2    maxsites=       88    wnsites=       0.8
+theta:  spmap=         pam    spfuzz=        120
+em:     prior=       megap    b=          348405    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=           69681    N=              88
+sample: seed=            0    hsfrac=          0
+        searchsize=  69681    norand=         no    csites=       1000
+Dirichlet mixture priors file: prior30.plib
+Letter frequencies in dataset:
+A 0.0882 C 0.00911 D 0.0662 E 0.0824 F 0.0362 G 0.0663 H 0.0224 I 0.0587 K 0.0347 
+L 0.101 M 0.0177 N 0.0358 P 0.0417 Q 0.0451 R 0.0702 S 0.0601 T 0.0573 V 0.0702 
+W 0.0105 Y 0.0265 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.0882 C 0.00911 D 0.0662 E 0.0825 F 0.0362 G 0.0663 H 0.0225 I 0.0587 K 0.0347 
+L 0.101 M 0.0177 N 0.0358 P 0.0417 Q 0.0451 R 0.0702 S 0.0601 T 0.0573 V 0.0702 
+W 0.0105 Y 0.0265 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1	width =  35  sites =  88  llr = 5345  E-value = 2.9e-1651
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::4:15::1:::::3212::::1::::::1:1:1
+pos.-specific     C  :::::::::::::::::::::::1:::::::::::
+probability       D  :::::2:::1::::1:11::::::::::::4:5:1
+matrix            E  :::::1::53:::::158:::2:::::::13:114
+                  F  ::2::::8:::::1:::::::::::8:::::::::
+                  G  ::::::2:::::a:::::::9::1::::9:1:1:1
+                  H  ::::::::::1::::::::::::1:::2:::::::
+                  I  63::::::::2:::::::23:::::::::::::::
+                  K  :::::::::3:::::::::::1:::::::11::11
+                  L  3:::::::1:2::::1::14:::1:1a::::::::
+                  M  ::::::::::3::::::::::::::::::::::::
+                  N  ::::81::::::::::::::::a:::::::::2::
+                  P  :::::3::::::::1::::::::3:::::5:1:42
+                  Q  :::::1::::::::::1::::1:::::8:::::3:
+                  R  :1:::1::12::::12:::1:6::9::::1:::::
+                  S  ::::1:1:1:::::4::::::::1::::11:::::
+                  T  ::::1:1::::9::1::::::::::::::::8:::
+                  V  15:5:::::::::::1::41:::::::::::::::
+                  W  :::::::1:::::::::::::::::::::::::::
+                  Y  ::8::::::::::9:::::::::1:::::::::::
+
+         bits    6.8                                    
+                 6.1                                    
+                 5.4                                    
+                 4.7              *        *            
+Relative         4.1   * *  *     *        *    *       
+Entropy          3.4   * *  *   ***      * * *****  *   
+(87.6 bits)      2.7   * *  *   ***      * * *****  *   
+                 2.0 *****  *  ****   * **** ****** *** 
+                 1.4 *************** *******************
+                 0.7 ***********************************
+                 0.0 -----------------------------------
+
+Multilevel           IVYVNPAFEEMTGYSAEEVLGRNPRFLQGPDTDPE
+consensus            LI A  G  KI       AI          E NQ 
+sequence                      RL                        
+                                                        
+                                                        
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                           Site              
+-------------             ----- ---------            -----------------------------------
+WP_006629792.1              165  4.41e-35 ISDPDLPDYP LVYVNDAWREHTGYSVEEVLGRNPRFLQGPGTDPE TVEEIAEAIG
+WP_008581736.1              165  4.41e-35 ISDPDLPDYP LVYVNDAWREHTGYSVEEVLGRNPRFLQGPGTDPE TVEEIAEAIG
+WP_006892283.1              535  9.08e-35 MVDVNKPGMP LIYVNPAFERITGYSRDEAIGRNPRFLQGKETDQP GVDEIRAVLQ
+WP_017342539.1              165  1.29e-34 ISDPDLPDYP LVYVNDAWEEHTGYPVEEALGRNPRFLQGPGTDPE TVEKIGDAIA
+WP_008365815.1              165  1.84e-34 ISDPDLPDYP LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE TVEEIGDAIA
+WP_007994479.1              165  1.84e-34 ISDPDLPDYP LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE TVEEIGDAIA
+WP_004596479.1              165  1.84e-34 ISDPDLPDYP LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE TVEEIGDAIA
+ABT17414.1                  167  1.84e-34 ISDPDLPDYP LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE TVEEIGDAIA
+WP_031436152.1              533  1.18e-33 MVDVNRPGMP LIYVNPAFERITGYSRDEAIGRNARFLQGKETDQP GVDEIRAVLQ
+BAL55373.1                  403  2.67e-33 ITDALKPDNP IIYANPAFLRITGYSLEELLGKNPRFLQGPETDSE AIAEIRAALK
+WP_011224964.1              679  5.04e-33 ITDPTQADNP LVYVNDGFERMTGYTAEDALGRNPRFLQGADTDPE QVARLREAID
+WP_009460030.1              575  5.89e-33 ICDARLPNLP IIYANPAFEYITGYSPEEVIGRNFRFLQGNDTNQP EIQELRNAIQ
+WP_015142706.1              588  3.67e-32 IADATQPDYP IVYCNPAFEKMTGYSHSEAIGRNYRFLQGADTEPD AVAQIRRALH
+WP_022988976.1              208  3.67e-32 MADAQQPDHP VVYVNPAFCEITGYPREEVLGQNSRFLQGSDTDPK AIKAVRLGLE
+WP_017715031.1              609  4.26e-32 ITDAQLPDTP VVYVNPSFEKLTGYSAAEAIGRNLRFLQGSDTEQP GLKKLRAAIG
+WP_015178225.1              231  1.36e-31 ISDATDPDNP IIYCNPAFESMTGYRRQEIIGKNGRFLHGSDTDPA AVEIIRQALQ
+WP_006631677.1              231  1.36e-31 IYDATDPEHP IIYCNPAFESMTGYRRQEIIGKNGRFLHGSDTDPA AVEIIRQALQ
+WP_028537505.1               44  1.57e-31 ITNPNLPDNP LVYVNQGFEKITGYKREEVLHRNLRFLQGKETNKE HLAVIRKAIK
+WP_016313776.1               44  1.57e-31 ITNPNLPDNP LVYVNQGFEKITGYKREEVLHRNLRFLQGKETNKE HLAVIRKAIK
+WP_008440458.1              165  1.57e-31 ISDPDLSDYP LVYVNDAWGEHTGYPVEEALGRNPRFLQGPETAPE TVEEVGEAIA
+WP_027679436.1              654  2.09e-31 VADAQEPDLP IVYVNPGFERMTGYRAEEVLGRNARFLHSSEPGQP ALNEVRTALR
+WP_024978289.1              654  2.09e-31 VADAQQPDLP IVYVNPGFERMTGYRAEEVLGRNARFLHSSEPGQP ALNEVRAALR
+WP_009240369.1              654  2.09e-31 VADAQQPDLP IVYVNPGFERMTGYRAEEVLGRNARFLHSSEPGQP ALNEVRTALR
+WP_024974539.1              650  4.83e-31 VADALQPDFP IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP ALNEVRTALR
+WP_024542524.1              654  4.83e-31 VADAQQPDFP IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP ALNEVRTALR
+WP_012430081.1              654  4.83e-31 VADAQQPDFP IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP ALNEVRTALR
+WP_004627966.1              650  4.83e-31 VADAQQPDFP IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP ALNEVRTALR
+WP_009223887.1               44  4.83e-31 ITNPNLPDNP LVYVNQGFEKITGYKREEVLNRNLRFLQGKETNKE HLAVIRKAIK
+KEI69225.1                  843  1.25e-30 IADARKPDNP IVFVNPAFEKVTGYSAAEALGKNSRFLQGKDRNQP ELKQIRTRLK
+WP_008849170.1              165  1.64e-30 ISDPDLPDYP LVYANEAWVDHTGYPIEEALGRNPRFLQGPGTDPE TVERIAKAVA
+WP_015201020.1              561  3.17e-30 ITDARLPNLP IVYVNQSFEKITGYSACEVIGRNSRFLQKSDHNQP ALEELQTAID
+WP_011378155.1              705  5.33e-30 IADAQQPDMP IIYVNPAFEKITGFSAAEVIGRNFRFLQGLETQQA ELEEMRRALE
+WP_011244685.1              705  5.33e-30 IADAQQPDMP IIYVNPAFEKITGFSAAEVIGRNFRFLQGLETQQA ELEEMRRALE
+WP_031429498.1              187  1.68e-29 ITDAKRKGHP IIYANPAFSQMTGYSQQELIGQNPRILQGPETAPE AIETIREALR
+WP_007998215.1              165  2.15e-29 LSDPDLPDYP LVHVNDAWEDHTGYPVEAALGRNPRFLQGPGTDPM TVERLSKAIQ
+KFN11555.1                   43  2.43e-29 ITDPRLQDNP LVYVNRGFEEITGYSREEVLLRNPRFLQGAETNKG QLEVIRQAIL
+AHZ63911.1                  332  2.76e-29 ITDPRLPDNP IIFASDDFLELTEYSREEIIGRNCRFLQGPDTNPK TVLRIREAIN
+AHZ63910.1                  330  2.76e-29 ITDPRLPDNP IIFASDDFLELTEYSREEIIGRNCRFLQGPDTNPK TVQKIREAIN
+AAA72719.1                  183  2.76e-29 ISDATDPEEP IIYINDSFEDITGYSPDEVVGANHRFLQGPKTNEE PRGGFWTAIT
+WP_009784268.1              777  3.12e-29 LADARLEDHP IIFVNPAFEKITGYSASEIIGENTRFLQGTDNNQP ELERLRETLK
+WP_008093946.1              412  3.53e-29 ITGPSEDDCP IVYANDAFEDLTGYDAEEVLGENHRVLQGPDTAEE DCERFREAIA
+WP_008432994.1               40  5.09e-29 VINSEVEDQP IVYANDAFFKMIGYSEEETLGRNGRFLHGEKTSQK ASENIHACIA
+WP_007276298.1              412  5.75e-29 ITGPSEDDCP IVYANAAFEELTGYDADEILGENHRVLQGPDTDEE ECERFREAIA
+ABR16704.1                   57  9.31e-29 ITDPCLLDHP IVYASQGFLKMSGYSTEEVVGRNVRFLQGPDTDRR TVLTIREAIR
+WP_008496897.1               40  1.69e-28 VINSEIESQP IVYANEAFFKMIGYSEEETLGRNGRFLHGEKTSQK ASENIHACIA
+WP_010903066.1              183  1.69e-28 ISDATDPEEP IIYINDSFEDITGYSPDEVVGANHRFLQGPKTNED RVAEFWTAIT
+XP_008462012.1              141  1.69e-28 ISDATKPDYP IMFASNRFLAMTGYTLDEVIGRNCRFLQGPETDKN EVAKIRHAIR
+XP_008462011.1              161  1.69e-28 ISDATKPDYP IMFASNRFLAMTGYTLDEVIGRNCRFLQGPETDKN EVAKIRHAIR
+WP_006054879.1              322  2.70e-28 ISDIREPNEP LIYVNEGFERVTGYSAEETLGRNLCFLQGEQTDPE RSQRLETAID
+WP_004978264.1              412  3.03e-28 ITGPSEDDCP IVYANGAFEDLTGYDAEEVLGENHRVLQGPDTAEE DCERFREAIA
+WP_018257517.1               90  4.29e-28 LSGPAYQDNP IQYVNRTFRDLTGYSLEEVLDENPRFLQGPDTEPG PVADLREATD
+WP_004900880.1              323  1.34e-27 VIAHADADMP IVYVNAAFLAMTGYTESEIVGRNWRFLKGPDTDAN TLKKIKNALI
+CBJ26132.1                  974  2.60e-27 ISDMTIPGAP MVYINGEFTKTTGYTKEEAVGRNCRFLQGPETEPE SIAVIRNTLS
+EXF57155.1                  278  2.60e-27 FITDASENMV ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE QLALFKQAVK
+WP_017385345.1              320  2.60e-27 FITDASENMV ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE QLALFKQAVK
+EXE61052.1                  320  2.60e-27 FITDASENMV ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE QLALFKQAVK
+WP_005015369.1              320  2.60e-27 FITDASENMV ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE QLALFKQAVK
+WP_015762404.1               90  3.24e-27 LSGPAYQDNP IQYVNRRFRDLTGYSLEEALDENPRFLQGPDTEPG PVADLREATA
+WP_008228851.1              279  5.59e-27 ITDAREDDNP IVYANKAMEQMTGYTMQEMLGQNPRFLQGDDRDQP GLERIRSAIR
+WP_005580789.1              160  5.59e-27 LSDPSLPDNP TVYVNDAWEEITGFDRASILGRNPRILQGPATDPE IKSALSEAVD
+WP_017309581.1              571  6.23e-27 ISDARLPNMP IIYTNPAFEHITGYCRDDVIGRNSSFLQGIDTNQP EIQEIRNAIK
+WP_015409860.1              677  8.60e-27 ITDPQREDNP IEYINKGFSDITGYQEADVVGCNPRFLHGPETDPE ELSRLREAIA
+WP_019019197.1              392  1.32e-26 IADAQAPDMP IIYVNSSFERITGYRAAEAIGKNSRFLQGADREQS GIEEIRAAFQ
+WP_007545138.1               34  1.32e-26 IADPTIEGTP FVFVNHSFEKLTGYSKDEIIGKNGSFLQGPDTNVE SLKQISDAIR
+ERM80666.1                  341  1.46e-26 SNLLDAPGPK IIYVNNAFTRLTGYGSEEVMGRNPRFLQGPNSDFS ALGLLGVALR
+WP_006829240.1               40  2.48e-26 VINSEMEDQP VVYANAAFYKMIGYSEAETLGRNGRFLHGEKTAKQ ASDKIRACVD
+WP_007190073.1              280  5.11e-26 IADANQPDNP LVYANDKFSELTGYQEENVVGQNSRFLQGENTDPS PVAEMREAID
+WP_013294580.1               35  6.27e-26 IADARQQDWP LIYVNAGFEKLSGYSAAELIGKPVRFLQGTDTDQA EIAVLRESLL
+WP_007188961.1              284  6.27e-26 IADANRPDNP LVYANDKFSELTGYQEENIVGQNSRFLQGENTDPG PVAEMREAID
+WP_008614460.1              370  1.27e-25 IAEVGARDLP LIYVNPAFERITGYTAQSALGRNARFLHEFDPAQE GLDEVRAALA
+AHZ63798.1                  634  1.90e-25 VCDAGKPDYP IIFASAGFFGMTGYGTKEVLGANPRFLQGPDTDSG QVEEIRAAFG
+CAM75577.1                  370  3.44e-25 IADATQPDFP LVYVNPAFESMTGYKAADVVGTNARFLHRDDYDQP DLARLRTALE
+CAA82994.1                   65  3.12e-24 ITDPRLPDNP IIFASDSFLELTEFSRAEILARNRRFLQGPETDPA TVAKIRDAID
+WP_005533327.1               92  3.42e-24 LTGPAYQDNP LRYATQTFREMTGYSLAALRGENLRLLQGPATDSE SVATLQEGID
+KFM26262.1                   56  5.44e-24 ISNPRMPDNP VCYASPGFYATTGYSPEEIVGRNCRVLQGRDTCRR SVVEIRDALR
+WP_015009125.1               33  1.03e-23 ITDPNQDHHP IIFANKGYANLTGYEIDEVIGKNGRLLQGEETDPK VINTLKQAIK
+WP_018403148.1              325  1.36e-23 IVDARSPDMP TVYANLAYADMTGYTQNDLIGHNRRFLHGDDTDPE TLEAIRHGLR
+WP_004515824.1               92  1.78e-23 LTGPAYQDNP VRYATQTFQEMTGYSLATLRGENLRLLQGPATNPD AIATLQEGID
+WP_008311751.1               92  1.95e-23 LTGPAYQDNP LRYATQTFREMSGYSLTALRGENLRLLQGPATDPE SVATLQEGID
+WP_011222610.1               92  6.72e-23 LTGPAYQDNP VRYATQTFQEMTGYSLAALRGENLRLLQGPATDAD AIATLQEGID
+WP_004965636.1               92  6.72e-23 LTGPAYQDNP VRYATQTFQEMTGYSLAALRGENLRLLQGPATDAD AIATLQEGID
+EES52601.1                  943  8.01e-23 GVSISDLDGK ILFVNESFTTITGYSQEEVQGKNLRILQGEGTESK TVEEIRRAIE
+XP_003042477.1              315  8.73e-23 LSDPSRPDNP IVFASEEFHRTTQYGMNYAIGRNYRFLQGPKTNPF SIRRIREKLE
+XP_002315641.1               43  1.47e-22 ITDPTISGHP IVFASPGFLKMSGFRRDQVIGNNGRMFQGPKTNRK TVMEIREAIR
+WP_015408455.1               90  1.96e-21 LAGPAFQDTP TIYANRTFRAVTGYSLSAVRGENLRLLQVPETRPG PVADLAEAIG
+KFY83514.1                  498  1.68e-20 VCDVTMPDYP IIYASEIFSRLTGYNKNEVWMENSRFLQSPDGKTQ KGEKRKYVDD
+WP_006884446.1               93  3.91e-20 VAGAAYHDNP VLYANRATRRLTGHSLAALWGENLRRLQGPGTDGA AVDTLRNALR
+ERH11543.1                   96  2.91e-18 LTGAAYHDNP LQYANLAFRELTGHDTTRLSGANPRLLQTETTDCE RVADFVEALR
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+WP_006629792.1                    4.4e-35  164_[1]_468
+WP_008581736.1                    4.4e-35  164_[1]_468
+WP_006892283.1                    9.1e-35  534_[1]_709
+WP_017342539.1                    1.3e-34  164_[1]_468
+WP_008365815.1                    1.8e-34  164_[1]_468
+WP_007994479.1                    1.8e-34  164_[1]_468
+WP_004596479.1                    1.8e-34  164_[1]_468
+ABT17414.1                        1.8e-34  166_[1]_468
+WP_031436152.1                    1.2e-33  532_[1]_709
+BAL55373.1                        2.7e-33  402_[1]_310
+WP_011224964.1                      5e-33  678_[1]_1593
+WP_009460030.1                    5.9e-33  574_[1]_430
+WP_015142706.1                    3.7e-32  587_[1]_343
+WP_022988976.1                    3.7e-32  207_[1]_499
+WP_017715031.1                    4.3e-32  608_[1]_533
+WP_015178225.1                    1.4e-31  230_[1]_365
+WP_006631677.1                    1.4e-31  230_[1]_365
+WP_028537505.1                    1.6e-31  43_[1]_497
+WP_016313776.1                    1.6e-31  43_[1]_497
+WP_008440458.1                    1.6e-31  164_[1]_468
+WP_027679436.1                    2.1e-31  653_[1]_495
+WP_024978289.1                    2.1e-31  653_[1]_495
+WP_009240369.1                    2.1e-31  653_[1]_495
+WP_024974539.1                    4.8e-31  649_[1]_495
+WP_024542524.1                    4.8e-31  653_[1]_495
+WP_012430081.1                    4.8e-31  653_[1]_495
+WP_004627966.1                    4.8e-31  649_[1]_495
+WP_009223887.1                    4.8e-31  43_[1]_497
+KEI69225.1                        1.3e-30  842_[1]_723
+WP_008849170.1                    1.6e-30  164_[1]_469
+WP_015201020.1                    3.2e-30  560_[1]_336
+WP_011378155.1                    5.3e-30  704_[1]_499
+WP_011244685.1                    5.3e-30  704_[1]_499
+WP_031429498.1                    1.7e-29  186_[1]_317
+WP_007998215.1                    2.2e-29  164_[1]_468
+KFN11555.1                        2.4e-29  42_[1]_508
+AHZ63911.1                        2.8e-29  331_[1]_511
+AHZ63910.1                        2.8e-29  329_[1]_504
+AAA72719.1                        2.8e-29  182_[1]_457
+WP_009784268.1                    3.1e-29  776_[1]_970
+WP_008093946.1                    3.5e-29  411_[1]_286
+WP_008432994.1                    5.1e-29  39_[1]_651
+WP_007276298.1                    5.7e-29  411_[1]_291
+ABR16704.1                        9.3e-29  56_[1]_181
+WP_008496897.1                    1.7e-28  39_[1]_651
+WP_010903066.1                    1.7e-28  182_[1]_457
+XP_008462012.1                    1.7e-28  140_[1]_704
+XP_008462011.1                    1.7e-28  160_[1]_704
+WP_006054879.1                    2.7e-28  321_[1]_292
+WP_004978264.1                      3e-28  411_[1]_286
+WP_018257517.1                    4.3e-28  89_[1]_60
+WP_004900880.1                    1.3e-27  322_[1]_489
+CBJ26132.1                        2.6e-27  973_[1]_514
+EXF57155.1                        2.6e-27  277_[1]_495
+WP_017385345.1                    2.6e-27  319_[1]_495
+EXE61052.1                        2.6e-27  319_[1]_495
+WP_005015369.1                    2.6e-27  319_[1]_495
+WP_015762404.1                    3.2e-27  89_[1]_60
+WP_008228851.1                    5.6e-27  278_[1]_438
+WP_005580789.1                    5.6e-27  159_[1]_468
+WP_017309581.1                    6.2e-27  570_[1]_306
+WP_015409860.1                    8.6e-27  676_[1]_779
+WP_019019197.1                    1.3e-26  391_[1]_644
+WP_007545138.1                    1.3e-26  33_[1]_191
+ERM80666.1                        1.5e-26  340_[1]_729
+WP_006829240.1                    2.5e-26  39_[1]_650
+WP_007190073.1                    5.1e-26  279_[1]_519
+WP_013294580.1                    6.3e-26  34_[1]_243
+WP_007188961.1                    6.3e-26  283_[1]_519
+WP_008614460.1                    1.3e-25  369_[1]_303
+AHZ63798.1                        1.9e-25  633_[1]_682
+CAM75577.1                        3.4e-25  369_[1]_299
+CAA82994.1                        3.1e-24  64_[1]_473
+WP_005533327.1                    3.4e-24  91_[1]_60
+KFM26262.1                        5.4e-24  55_[1]_227
+WP_015009125.1                      1e-23  32_[1]_186
+WP_018403148.1                    1.4e-23  324_[1]_500
+WP_004515824.1                    1.8e-23  91_[1]_60
+WP_008311751.1                    1.9e-23  91_[1]_60
+WP_011222610.1                    6.7e-23  91_[1]_60
+WP_004965636.1                    6.7e-23  91_[1]_60
+EES52601.1                          8e-23  942_[1]_617
+XP_003042477.1                    8.7e-23  314_[1]_247
+XP_002315641.1                    1.5e-22  42_[1]_319
+WP_015408455.1                      2e-21  89_[1]_68
+KFY83514.1                        1.7e-20  497_[1]_444
+WP_006884446.1                    3.9e-20  92_[1]_58
+ERH11543.1                        2.9e-18  95_[1]_66
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE width=35 seqs=88
+WP_006629792.1           (  165) LVYVNDAWREHTGYSVEEVLGRNPRFLQGPGTDPE  1 
+WP_008581736.1           (  165) LVYVNDAWREHTGYSVEEVLGRNPRFLQGPGTDPE  1 
+WP_006892283.1           (  535) LIYVNPAFERITGYSRDEAIGRNPRFLQGKETDQP  1 
+WP_017342539.1           (  165) LVYVNDAWEEHTGYPVEEALGRNPRFLQGPGTDPE  1 
+WP_008365815.1           (  165) LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE  1 
+WP_007994479.1           (  165) LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE  1 
+WP_004596479.1           (  165) LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE  1 
+ABT17414.1               (  167) LVYVNNAWEEHTGYPVEEALGRNPRFLQGPGTDPE  1 
+WP_031436152.1           (  533) LIYVNPAFERITGYSRDEAIGRNARFLQGKETDQP  1 
+BAL55373.1               (  403) IIYANPAFLRITGYSLEELLGKNPRFLQGPETDSE  1 
+WP_011224964.1           (  679) LVYVNDGFERMTGYTAEDALGRNPRFLQGADTDPE  1 
+WP_009460030.1           (  575) IIYANPAFEYITGYSPEEVIGRNFRFLQGNDTNQP  1 
+WP_015142706.1           (  588) IVYCNPAFEKMTGYSHSEAIGRNYRFLQGADTEPD  1 
+WP_022988976.1           (  208) VVYVNPAFCEITGYPREEVLGQNSRFLQGSDTDPK  1 
+WP_017715031.1           (  609) VVYVNPSFEKLTGYSAAEAIGRNLRFLQGSDTEQP  1 
+WP_015178225.1           (  231) IIYCNPAFESMTGYRRQEIIGKNGRFLHGSDTDPA  1 
+WP_006631677.1           (  231) IIYCNPAFESMTGYRRQEIIGKNGRFLHGSDTDPA  1 
+WP_028537505.1           (   44) LVYVNQGFEKITGYKREEVLHRNLRFLQGKETNKE  1 
+WP_016313776.1           (   44) LVYVNQGFEKITGYKREEVLHRNLRFLQGKETNKE  1 
+WP_008440458.1           (  165) LVYVNDAWGEHTGYPVEEALGRNPRFLQGPETAPE  1 
+WP_027679436.1           (  654) IVYVNPGFERMTGYRAEEVLGRNARFLHSSEPGQP  1 
+WP_024978289.1           (  654) IVYVNPGFERMTGYRAEEVLGRNARFLHSSEPGQP  1 
+WP_009240369.1           (  654) IVYVNPGFERMTGYRAEEVLGRNARFLHSSEPGQP  1 
+WP_024974539.1           (  650) IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP  1 
+WP_024542524.1           (  654) IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP  1 
+WP_012430081.1           (  654) IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP  1 
+WP_004627966.1           (  650) IVYVNPGFERMTGYRAEEILGRNARFLHSSEPGQP  1 
+WP_009223887.1           (   44) LVYVNQGFEKITGYKREEVLNRNLRFLQGKETNKE  1 
+KEI69225.1               (  843) IVFVNPAFEKVTGYSAAEALGKNSRFLQGKDRNQP  1 
+WP_008849170.1           (  165) LVYANEAWVDHTGYPIEEALGRNPRFLQGPGTDPE  1 
+WP_015201020.1           (  561) IVYVNQSFEKITGYSACEVIGRNSRFLQKSDHNQP  1 
+WP_011378155.1           (  705) IIYVNPAFEKITGFSAAEVIGRNFRFLQGLETQQA  1 
+WP_011244685.1           (  705) IIYVNPAFEKITGFSAAEVIGRNFRFLQGLETQQA  1 
+WP_031429498.1           (  187) IIYANPAFSQMTGYSQQELIGQNPRILQGPETAPE  1 
+WP_007998215.1           (  165) LVHVNDAWEDHTGYPVEAALGRNPRFLQGPGTDPM  1 
+KFN11555.1               (   43) LVYVNRGFEEITGYSREEVLLRNPRFLQGAETNKG  1 
+AHZ63911.1               (  332) IIFASDDFLELTEYSREEIIGRNCRFLQGPDTNPK  1 
+AHZ63910.1               (  330) IIFASDDFLELTEYSREEIIGRNCRFLQGPDTNPK  1 
+AAA72719.1               (  183) IIYINDSFEDITGYSPDEVVGANHRFLQGPKTNEE  1 
+WP_009784268.1           (  777) IIFVNPAFEKITGYSASEIIGENTRFLQGTDNNQP  1 
+WP_008093946.1           (  412) IVYANDAFEDLTGYDAEEVLGENHRVLQGPDTAEE  1 
+WP_008432994.1           (   40) IVYANDAFFKMIGYSEEETLGRNGRFLHGEKTSQK  1 
+WP_007276298.1           (  412) IVYANAAFEELTGYDADEILGENHRVLQGPDTDEE  1 
+ABR16704.1               (   57) IVYASQGFLKMSGYSTEEVVGRNVRFLQGPDTDRR  1 
+WP_008496897.1           (   40) IVYANEAFFKMIGYSEEETLGRNGRFLHGEKTSQK  1 
+WP_010903066.1           (  183) IIYINDSFEDITGYSPDEVVGANHRFLQGPKTNED  1 
+XP_008462012.1           (  141) IMFASNRFLAMTGYTLDEVIGRNCRFLQGPETDKN  1 
+XP_008462011.1           (  161) IMFASNRFLAMTGYTLDEVIGRNCRFLQGPETDKN  1 
+WP_006054879.1           (  322) LIYVNEGFERVTGYSAEETLGRNLCFLQGEQTDPE  1 
+WP_004978264.1           (  412) IVYANGAFEDLTGYDAEEVLGENHRVLQGPDTAEE  1 
+WP_018257517.1           (   90) IQYVNRTFRDLTGYSLEEVLDENPRFLQGPDTEPG  1 
+WP_004900880.1           (  323) IVYVNAAFLAMTGYTESEIVGRNWRFLKGPDTDAN  1 
+CBJ26132.1               (  974) MVYINGEFTKTTGYTKEEAVGRNCRFLQGPETEPE  1 
+EXF57155.1               (  278) ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE  1 
+WP_017385345.1           (  320) ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE  1 
+EXE61052.1               (  320) ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE  1 
+WP_005015369.1           (  320) ISFVNPAFLKQVGYTEEEVIGRNYNFLQGRDTNLE  1 
+WP_015762404.1           (   90) IQYVNRRFRDLTGYSLEEALDENPRFLQGPDTEPG  1 
+WP_008228851.1           (  279) IVYANKAMEQMTGYTMQEMLGQNPRFLQGDDRDQP  1 
+WP_005580789.1           (  160) TVYVNDAWEEITGFDRASILGRNPRILQGPATDPE  1 
+WP_017309581.1           (  571) IIYTNPAFEHITGYCRDDVIGRNSSFLQGIDTNQP  1 
+WP_015409860.1           (  677) IEYINKGFSDITGYQEADVVGCNPRFLHGPETDPE  1 
+WP_019019197.1           (  392) IIYVNSSFERITGYRAAEAIGKNSRFLQGADREQS  1 
+WP_007545138.1           (   34) FVFVNHSFEKLTGYSKDEIIGKNGSFLQGPDTNVE  1 
+ERM80666.1               (  341) IIYVNNAFTRLTGYGSEEVMGRNPRFLQGPNSDFS  1 
+WP_006829240.1           (   40) VVYANAAFYKMIGYSEAETLGRNGRFLHGEKTAKQ  1 
+WP_007190073.1           (  280) LVYANDKFSELTGYQEENVVGQNSRFLQGENTDPS  1 
+WP_013294580.1           (   35) LIYVNAGFEKLSGYSAAELIGKPVRFLQGTDTDQA  1 
+WP_007188961.1           (  284) LVYANDKFSELTGYQEENIVGQNSRFLQGENTDPG  1 
+WP_008614460.1           (  370) LIYVNPAFERITGYTAQSALGRNARFLHEFDPAQE  1 
+AHZ63798.1               (  634) IIFASAGFFGMTGYGTKEVLGANPRFLQGPDTDSG  1 
+CAM75577.1               (  370) LVYVNPAFESMTGYKAADVVGTNARFLHRDDYDQP  1 
+CAA82994.1               (   65) IIFASDSFLELTEFSRAEILARNRRFLQGPETDPA  1 
+WP_005533327.1           (   92) LRYATQTFREMTGYSLAALRGENLRLLQGPATDSE  1 
+KFM26262.1               (   56) VCYASPGFYATTGYSPEEIVGRNCRVLQGRDTCRR  1 
+WP_015009125.1           (   33) IIFANKGYANLTGYEIDEVIGKNGRLLQGEETDPK  1 
+WP_018403148.1           (  325) TVYANLAYADMTGYTQNDLIGHNRRFLHGDDTDPE  1 
+WP_004515824.1           (   92) VRYATQTFQEMTGYSLATLRGENLRLLQGPATNPD  1 
+WP_008311751.1           (   92) LRYATQTFREMSGYSLTALRGENLRLLQGPATDPE  1 
+WP_011222610.1           (   92) VRYATQTFQEMTGYSLAALRGENLRLLQGPATDAD  1 
+WP_004965636.1           (   92) VRYATQTFQEMTGYSLAALRGENLRLLQGPATDAD  1 
+EES52601.1               (  943) ILFVNESFTTITGYSQEEVQGKNLRILQGEGTESK  1 
+XP_003042477.1           (  315) IVFASEEFHRTTQYGMNYAIGRNYRFLQGPKTNPF  1 
+XP_002315641.1           (   43) IVFASPGFLKMSGFRRDQVIGNNGRMFQGPKTNRK  1 
+WP_015408455.1           (   90) TIYANRTFRAVTGYSLSAVRGENLRLLQVPETRPG  1 
+KFY83514.1               (  498) IIYASEIFSRLTGYNKNEVWMENSRFLQSPDGKTQ  1 
+WP_006884446.1           (   93) VLYANRATRRLTGHSLAALWGENLRRLQGPGTDGA  1 
+ERH11543.1               (   96) LQYANLAFRELTGHDTTRLSGANPRLLQTETTDCE  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 20 w= 35 n= 66689 bayes= 10.5913 E= 2.9e-1651 
+  -674   -499   -934   -900   -153   -859   -775    323   -761    155    -45   -792   -803   -773   -861   -778    -76     42   -617   -625 
+  -409     40   -662   -279   -358   -544   -459    223   -453   -173     48   -483   -537    -44    -36    -40   -376    281   -411   -384 
+  -838   -588   -884   -902    242   -835    -89   -709   -729   -661   -600   -667   -805   -719   -786   -738   -769   -724   -352    489 
+   210    189   -923   -911   -632   -771   -889    -20   -793   -531   -478   -784   -805   -875   -933   -684   -225    289   -827   -744 
+  -502   -472   -474   -617   -749   -512   -515   -804   -532   -820   -694    449   -635   -596   -706    105     -1   -708   -735   -666 
+   -57   -400    137    -20   -480   -146    -77   -489     24   -205   -341    113    291    130    -28   -175   -335   -452   -469   -400 
+   243   -310   -142   -159   -488    164   -336   -228    -33   -494   -354   -292   -456   -316   -100     57     41   -417   -479   -427 
+  -791   -547   -854   -869    450   -811   -459   -663   -708   -609    -64   -657   -771   -710   -774   -704   -234   -685    354     12 
+  -165     28   -382    250    -15   -230    -79   -450   -196     47   -325   -286   -430    -27     50     -2    -64   -231   -460    -23 
+   -57   -400     72    159   -480   -228    -77   -489    278   -483   -341   -119   -423    -71    146    -63   -184   -452   -468   -114 
+  -478   -340   -733   -673   -384   -614    228    200   -524    103    416   -554   -603     -3   -626   -506    -70    -84   -461   -443 
+  -472   -326   -593   -639   -551   -606   -515    -86   -438   -585   -375   -360   -560   -499   -561    -17    389    -70   -539   -570 
+  -398   -400   -461   -156   -593    382   -476   -617   -408   -668   -496   -359   -536   -221   -521   -393   -519   -574   -497   -533 
+  -838   -588   -884   -902     74   -835      5   -709   -729   -661   -600   -667   -805   -720   -786   -738   -769   -724   -352    510 
+  -372     27    -21   -214   -494    -94   -314   -505     54   -499   -357   -117    120    -27     78    276    119   -468   -482   -413 
+   142   -384   -380     58   -464   -442    -78   -133     22     36     36   -284      7    -26    121   -177    -64     47   -461   -397 
+   100     27     91    260   -643   -521   -428   -634   -123   -629   -492      0   -529     35   -508    -37   -126   -586   -630   -548 
+   -17   -699    -14    320   -778   -587   -517   -712   -378   -709   -577    -59   -574   -170   -256   -135   -223   -647   -760   -125 
+   126   -426   -866   -826   -543   -775   -728    165   -689     32    -55   -711   -756   -759   -811   -678    -34    257   -664   -619 
+  -422   -288   -674   -613   -361   -555   -469    239   -464    209    -33   -494   -548   -192    -10   -216   -388     72    106   -393 
+  -259   -383   -175   -523   -575    376    -36   -598   -390   -342    -99   -162   -519   -524   -503   -375   -503   -556   -479   -515 
+   -96     29   -615     91   -693   -611    -89   -640    165   -619   -491   -151   -610     36    303   -501   -219   -613   -592   -561 
+  -967   -766   -891  -1028   -937   -841   -804  -1044   -883  -1013   -975    479   -187   -936   -969   -864   -920  -1037   -844   -898 
+    34    284   -649   -589     -5     39    128   -290   -442     56   -237   -476    256   -500   -162     56   -194   -119     10    131 
+  -452    -29   -548   -568   -526   -482   -269   -491   -138   -497   -407    -43   -419   -329    369   -199   -451   -560   -342   -457 
+  -491   -262   -605   -608    449   -588   -504   -106   -499    -42    -73   -519   -509   -583   -306   -442   -524   -101   -277   -163 
+  -796   -602  -1012   -993   -152   -907   -787   -455   -853    328   -335   -890   -839   -803   -904   -895   -759   -560   -615   -622 
+  -812   -705   -799   -772   -794   -775    301   -890   -144   -848   -739   -654   -795    415   -592   -741   -767   -869   -740   -697 
+  -380   -383   -444   -297   -575    369   -459   -598   -171   -650   -478   -342   -519   -524   -275     24   -251   -284   -479   -515 
+   -89   -403    -94     26   -168   -458   -338   -230     98   -209   -370   -133    348   -313    -34    109   -119   -467   -495   -435 
+   -38   -692    251    180   -790     87   -513   -733    118   -730   -601     -3   -583   -173   -626   -493   -223   -667   -775   -668 
+  -479   -334   -545   -616   -557   -258   -108   -477   -427   -599   -383   -142     94   -492   -117   -135    380   -450   -542   -134 
+   -38     29    274     -4   -662     26   -412   -707   -134   -701   -572    272   -566    -92   -249   -122   -476   -669   -656   -553 
+  -120     26   -377    -45   -164   -230   -309   -489    123   -116   -345   -283    307    250    -93    -30   -186   -239   -472   -405 
+   -14   -400    -21    210   -163     -1   -302   -488    142   -483    -55      3    210    -71   -139    -63   -334   -451   -468   -399 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 20 w= 35 nsites= 88 E= 2.9e-1651 
+ 0.000000  0.000000  0.000000  0.000000  0.011364  0.000000  0.000000  0.556818  0.000000  0.295455  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.034091  0.090909  0.000000  0.000000 
+ 0.000000  0.011364  0.000000  0.011364  0.000000  0.000000  0.000000  0.284091  0.000000  0.022727  0.022727  0.000000  0.000000  0.034091  0.056818  0.045455  0.000000  0.511364  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.193182  0.000000  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.795455 
+ 0.386364  0.034091  0.000000  0.000000  0.000000  0.000000  0.000000  0.045455  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.011364  0.522727  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.818182  0.000000  0.000000  0.000000  0.125000  0.056818  0.000000  0.000000  0.000000 
+ 0.056818  0.000000  0.181818  0.068182  0.000000  0.022727  0.011364  0.000000  0.034091  0.022727  0.000000  0.079545  0.340909  0.113636  0.056818  0.011364  0.000000  0.000000  0.000000  0.000000 
+ 0.488636  0.000000  0.022727  0.022727  0.000000  0.227273  0.000000  0.011364  0.022727  0.000000  0.000000  0.000000  0.000000  0.000000  0.034091  0.090909  0.079545  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.829545  0.000000  0.000000  0.000000  0.000000  0.000000  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.011364  0.000000  0.125000  0.022727 
+ 0.022727  0.011364  0.000000  0.500000  0.034091  0.011364  0.011364  0.000000  0.000000  0.147727  0.000000  0.000000  0.000000  0.034091  0.102273  0.056818  0.034091  0.011364  0.000000  0.022727 
+ 0.056818  0.000000  0.113636  0.261364  0.000000  0.011364  0.011364  0.000000  0.250000  0.000000  0.000000  0.011364  0.000000  0.022727  0.204545  0.034091  0.011364  0.000000  0.000000  0.011364 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.113636  0.238636  0.000000  0.204545  0.329545  0.000000  0.000000  0.045455  0.000000  0.000000  0.034091  0.034091  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.034091  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.045455  0.875000  0.045455  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.034091  0.000000  0.954545  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.056818  0.000000  0.022727  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.920455 
+ 0.000000  0.011364  0.056818  0.011364  0.000000  0.034091  0.000000  0.000000  0.045455  0.000000  0.000000  0.011364  0.102273  0.034091  0.125000  0.431818  0.136364  0.000000  0.000000  0.000000 
+ 0.250000  0.000000  0.000000  0.125000  0.000000  0.000000  0.011364  0.022727  0.034091  0.136364  0.022727  0.000000  0.045455  0.034091  0.170455  0.011364  0.034091  0.102273  0.000000  0.000000 
+ 0.181818  0.011364  0.125000  0.511364  0.000000  0.000000  0.000000  0.000000  0.011364  0.000000  0.000000  0.034091  0.000000  0.056818  0.000000  0.045455  0.022727  0.000000  0.000000  0.000000 
+ 0.079545  0.000000  0.056818  0.772727  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.022727  0.000000  0.011364  0.011364  0.022727  0.011364  0.000000  0.000000  0.011364 
+ 0.215909  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.181818  0.000000  0.125000  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.045455  0.420455  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.318182  0.000000  0.443182  0.011364  0.000000  0.000000  0.011364  0.068182  0.011364  0.000000  0.113636  0.022727  0.000000 
+ 0.011364  0.000000  0.022727  0.000000  0.000000  0.909091  0.022727  0.000000  0.000000  0.011364  0.011364  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.045455  0.011364  0.000000  0.159091  0.000000  0.000000  0.011364  0.000000  0.102273  0.000000  0.000000  0.011364  0.000000  0.056818  0.590909  0.000000  0.011364  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.988636  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.113636  0.068182  0.000000  0.000000  0.034091  0.090909  0.056818  0.000000  0.000000  0.147727  0.000000  0.000000  0.261364  0.000000  0.022727  0.090909  0.011364  0.022727  0.011364  0.068182 
+ 0.000000  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.045455  0.000000  0.000000  0.920455  0.022727  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.806818  0.000000  0.000000  0.034091  0.000000  0.090909  0.011364  0.000000  0.000000  0.000000  0.011364  0.000000  0.000000  0.045455  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.011364  0.000000  0.000000  0.000000  0.000000  0.988636  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.181818  0.000000  0.011364  0.000000  0.000000  0.000000  0.000000  0.806818  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.011364  0.000000  0.852273  0.000000  0.000000  0.011364  0.000000  0.000000  0.000000  0.000000  0.000000  0.011364  0.090909  0.011364  0.011364  0.000000  0.000000 
+ 0.045455  0.000000  0.034091  0.102273  0.011364  0.000000  0.000000  0.011364  0.068182  0.022727  0.000000  0.011364  0.477273  0.000000  0.056818  0.136364  0.022727  0.000000  0.000000  0.000000 
+ 0.068182  0.000000  0.386364  0.284091  0.000000  0.125000  0.000000  0.000000  0.079545  0.000000  0.000000  0.034091  0.000000  0.011364  0.000000  0.000000  0.011364  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.011364  0.011364  0.000000  0.000000  0.000000  0.000000  0.011364  0.090909  0.000000  0.034091  0.011364  0.818182  0.000000  0.000000  0.011364 
+ 0.068182  0.011364  0.454545  0.079545  0.000000  0.079545  0.000000  0.000000  0.011364  0.000000  0.000000  0.238636  0.000000  0.022727  0.011364  0.022727  0.000000  0.000000  0.000000  0.000000 
+ 0.034091  0.011364  0.000000  0.056818  0.011364  0.011364  0.000000  0.000000  0.079545  0.045455  0.000000  0.000000  0.375000  0.272727  0.034091  0.045455  0.011364  0.011364  0.000000  0.000000 
+ 0.079545  0.000000  0.056818  0.375000  0.011364  0.068182  0.000000  0.000000  0.090909  0.000000  0.011364  0.034091  0.193182  0.022727  0.022727  0.034091  0.000000  0.000000  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif JVYVNPAFEEMTGYSAEEVJGRNPRFLQGPDTBPE MEME-1 regular expression
+--------------------------------------------------------------------------------
+[IL][VI]Y[VA]NP[AG]FE[EKR][MIL]TGYSAEE[VA][LI]GRNPRFLQGP[DE]T[DN][PQ]E
+--------------------------------------------------------------------------------
+
+
+
+
+Time 134.48 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2	width =  31  sites =  80  llr = 4126  E-value = 3.1e-1200
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2 Description
+--------------------------------------------------------------------------------
+Simplified        A  18:22::11::::::::1:::1:::::::3:
+pos.-specific     C  ::::::::31::::::1::::::::::::::
+probability       D  1::11::1::::::::::8::::::::::::
+matrix            E  2::12433:::3::::::::11:::3:::::
+                  F  :::::::::::::::1::::::9:::2::::
+                  G  :1:1:31:1:1::::::::a:::::::::1:
+                  H  :::::::::1::::::::::1::::::1:::
+                  I  ::5:::::1:1131::::::::::::1:5::
+                  K  1::2112::::1:2::27:::::::::::::
+                  L  ::4::::::::172:::::::2:1:1613::
+                  M  :::::::::::::::::::::::::::1:::
+                  N  1:::2:::::::::a:::1:::::a1:::::
+                  P  :::::::2:::::::::::::4::::::::a
+                  Q  1::1111::1:::::::::::::::2:::1:
+                  R  1::2::1::1:::4::83:::::::1:::::
+                  S  ::::::12:1::::::::::3::::::2:4:
+                  T  2:::1:1::4:2::::::::51:::::3:1:
+                  V  ::1:::::3:71::::::::::::::1:2::
+                  W  :::::::::::::::::::::1:8:::::::
+                  Y  :::::::::::::::9::::::1::::::::
+
+         bits    6.8                                
+                 6.1                                
+                 5.4                                
+                 4.7               *        **      
+Relative         4.1               **   *  ***     *
+Entropy          3.4               ******  ***     *
+(74.4 bits)      2.7  *          * ******  ***     *
+                 2.0  **     * * * ******* *** * * *
+                 1.4  **  **************************
+                 0.7 *******************************
+                 0.0 -------------------------------
+
+Multilevel           EAIREEEEVTVELRNYRKDGTPFWNELTISP
+consensus              L  G PC  TIK   R  S      SLA 
+sequence                                         V  
+                                                    
+                                                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                         Site            
+-------------             ----- ---------            -------------------------------
+WP_008440458.1              206  3.89e-31 TAPETVEEVG EAIANEEEVTVEIRNYRRDGTPFWNELTVAP IYDEAGDLAH
+WP_006629792.1              206  1.32e-30 TDPETVEEIA EAIGNEEEVTVEIRNYRRDGTPFWNELTVAP VYDEEGELAH
+WP_008581736.1              206  1.32e-30 TDPETVEEIA EAIGNEEEVTVEIRNYRRDGTPFWNELTVAP VYDEEGDLAH
+WP_017342539.1              206  8.95e-30 TDPETVEKIG DAIANEEEATVEIRNYRRDGTPFWNELTVAP IYDEDGDLAH
+WP_008365815.1              206  8.95e-30 TDPETVEEIG DAIANEEEATVEIRNYRRDGTPFWNELTVAP IYDEDGDLAH
+WP_007994479.1              206  8.95e-30 TDPETVEEIG DAIANEEEATVEIRNYRRDGTPFWNELTVAP IYDEDGDLAH
+WP_004596479.1              206  8.95e-30 TDPETVEEIG DAIANEEEATVEIRNYRRDGTPFWNELTVAP IYDEDGDLAH
+ABT17414.1                  208  8.95e-30 TDPETVEEIG DAIANEEEATVEIRNYRRDGTPFWNELTVAP IYDEDGDLAH
+WP_015142706.1              629  1.85e-29 TEPDAVAQIR RALHEQRECHVVLKNYRKDGSPFWNELTISP VQNEQGEVTH
+WP_015178225.1              272  3.16e-29 TDPAAVEIIR QALQAESECKVILKNYRKDGTAFWNCFSISP VRDRMGNLTH
+WP_006631677.1              272  4.49e-29 TDPAAVEIIR QALQTESECKVILKNYRKDGTAFWNCFSISP VRDRLGKLTH
+BAL55373.1                  444  1.75e-28 TDSEAIAEIR AALKEGRDCHLTLKNYRKDGTPFWNELLISP VRDENGKLTH
+WP_008849170.1              206  2.86e-28 TDPETVERIA KAVADNEEITVEIRNYRKDGTPFWNELTVAP VYDDDGEIAH
+WP_009460030.1              616  5.44e-28 TNQPEIQELR NAIQQAKNCTVILRNYRKDGSLFWNELSISP VFDADGNCTH
+WP_007190073.1              321  2.20e-27 TDPSPVAEMR EAIDAEEPVTVELQNYRKDGTEFWNRVTIAP VTDGTGAVTN
+WP_007188961.1              325  2.20e-27 TDPGPVAEMR EAIDAEEPVTVELQNYRKDGTEFWNRVTIAP VTDGTGEVTN
+WP_017309581.1              612  2.56e-27 TNQPEIQEIR NAIKQGKNCTVILRNYRRDNTLFWNELSISP VFDDDGKCTH
+WP_009784268.1              818  3.45e-27 NNQPELERLR ETLKNQESCTVILRNYRKDGSLFWNELNLSP IYDQQGNLTH
+WP_008093946.1              453  6.23e-27 TAEEDCERFR EAIADEEPCSVELLNYRRDGTPFWNQSEITP VHGDDGSVTN
+WP_004978264.1              453  6.23e-27 TAEEDCERFR EAIADEEPCSVELLNYRRDGTPFWNQSEITP VHGDDGSVTN
+WP_015409860.1              718  9.62e-27 TDPEELSRLR EAIAAGEPVTVELKNYRKDGSEYWNRLSVTP VTAADGTLSK
+WP_007998215.1              206  1.48e-26 TDPMTVERLS KAIQREDQITVEIRNYRRDGTPFWNELTVAP VYDDDGELAH
+WP_015201020.1              602  1.70e-26 HNQPALEELQ TAIDTHQCCTVLLRNYRKDGVLFWNELSISP VFDVKQKLTH
+ABR16704.1                   98  2.59e-26 TDRRTVLTIR EAIREEKSCQVSILNYKKNGTAFWNLFHLAP VFSEGDGRVI
+WP_031429498.1              228  2.98e-26 TAPEAIETIR EALREGKPCLTTLKNYRKNGTCFWNELFISP VYDSRGNLTH
+WP_005580789.1              201  3.42e-26 TDPEIKSALS EAVDAEQPVTVEIKNYRPDGTPWWNELSIAP VYDESDDPVH
+WP_007276298.1              453  4.51e-26 TDEEECERFR EAIADEEPCSIELLNYRRDGTPFWNHCEITP VHGDDGRVAN
+AHZ63910.1                  122  5.92e-26 TDRAEVAKLK QAIQAGESWCGRLLNYKKDGTPFWNLLTVTP VKDDGGKVVK
+WP_028537505.1               85  1.01e-25 TNKEHLAVIR KAIKEIGAATVTIKNYKKDGSTFWNQFVISP ILDSDGHLLY
+WP_016313776.1               85  1.01e-25 TNKEHLAVIR KAIKEIGAATVTIKNYKKDGSTFWNQFVISP ILDSDGHLLY
+WP_009223887.1               85  1.01e-25 TNKEHLAVIR KAIKEIGAATVTIKNYKKDGSTFWNQFVISP ILDAEGHLLY
+KFN11555.1                   84  1.51e-25 TNKGQLEVIR QAILSGRSSTVTIKNYKKDGSTFWNQFTISP IFDSDGQPLY
+WP_006054879.1              363  3.30e-25 TDPERSQRLE TAIDAGEPVVVELINYRRDGTPFWNQIYLAP VDDKTGAITH
+AHZ63911.1                  126  4.84e-25 TDRAEVAKLK AAITAGESWCGRLLNYKKDGTPFWNLLTVTP VKDDSGKVVK
+WP_018403148.1              366  5.50e-25 TDPETLEAIR HGLRHQTEVNVELINYRKDGTPFWNHLWISP VFDNDGLCTH
+EXF57155.1                  319  6.24e-25 TNLEQLALFK QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP ILDQDGKCTH
+WP_017385345.1              361  6.24e-25 TNLEQLALFK QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP ILDQDGKCTH
+EXE61052.1                  361  6.24e-25 TNLEQLALFK QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP ILDQDGKCTH
+WP_005015369.1              361  6.24e-25 TNLEQLALFK QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP ILDQDGKCTH
+KEI69225.1                  884  1.03e-24 RNQPELKQIR TRLKQKQNCNVVLRNYRKDGSLFWNELNISP IYDQEGNLTH
+WP_017715031.1              650  1.17e-24 TEQPGLKKLR AAIGARKDCTIVVRNYRKDGTVFWNELHISP VQNERGQLTH
+WP_011224964.1              720  1.91e-24 TDPEQVARLR EAIDADEPVSVELKNYRKDGTPYWARLSITP VTGENGTVTN
+WP_013294580.1               76  2.16e-24 TDQAEIAVLR ESLLTGVSCLVTLRNYRRDGTLFWNELSISP IRDKTGELTH
+XP_008462012.1              182  3.94e-24 TDKNEVAKIR HAIRKGNSYCGKLLNYKKNGTPFWNLLTVGP VKDSHGRIIK
+XP_008462011.1              202  3.94e-24 TDKNEVAKIR HAIRKGNSYCGKLLNYKKNGTPFWNLLTVGP VKDSHGRIIK
+EES52601.1                  984  5.00e-24 TESKTVEEIR RAIEGERPFRGQILNYRKDGSPFWNLLTISP VRDESGRLVE
+WP_006829240.1               81  6.34e-24 TAKQASDKIR ACVDAGESGIVEIVNYRKNGTPFWNEITIQP LSFPERNFKF
+WP_004900880.1              364  1.14e-23 TDANTLKKIK NALITKTQLQVKIKNYRKDGSWFWNQLTLAP ILDDLGHCTH
+WP_008614460.1              411  1.28e-23 PAQEGLDEVR AALAEGKPVSVVLRNQRADGTLFWNQLSLSP VHGANGQVSH
+WP_011378155.1              746  2.86e-23 TQQAELEEMR RALEEGTYCEVTLRSYRKDGSLFWNQISLAP VRDQKGHLTH
+WP_011244685.1              746  2.86e-23 TQQAELEEMR RALEEGTYCEVTLRSYRKDGSLFWNQISLAP VRDQKGHLTH
+WP_008496897.1               81  2.86e-23 TSQKASENIH ACIASGEAGIFEIVNYRKNGTPFWNELSIQP LTFPEKNLKF
+WP_010903066.1              224  6.27e-23 TNEDRVAEFW TAITEDHDTQVVLRNYRRDGSLFWNQVDISP IYDEDGTVSH
+AAA72719.1                  224  6.27e-23 TNEEPRGGFW TAITEDHDTQVVLRNYRRDGSLFWNQVDISP IYDEDGTVSH
+WP_015009125.1               74  1.09e-22 TDPKVINTLK QAIKAEQSITVEIYNYKKNGEGFWNKLTIDP MWVDGKLYYV
+WP_008432994.1               81  1.22e-22 TSQKASENIH ACIASGETGIFEIVNYRKNGTPFWNELSIQP LTFPEKNLKF
+WP_019019197.1              433  2.09e-22 REQSGIEEIR AAFQEKREVHTVLRNFHKDGSPFWNELYIAP VRDESGLVTH
+WP_024974539.1              691  2.33e-22 PGQPALNEVR TALRDESEIRVLLRNFRKDGHAFLNNFLLSP VRDAKGAVTH
+WP_024542524.1              695  2.33e-22 PGQPALNEVR TALRDESEIRVLLRNFRKDGHAFLNNFLLSP VRDAKGAVTH
+WP_012430081.1              695  2.33e-22 PGQPALNEVR TALRDESEIRVLLRNFRKDGHAFLNNFLLSP VRDAKGAVTH
+WP_004627966.1              691  2.33e-22 PGQPALNEVR TALRDESEIRVLLRNFRKDGHAFLNNFLLSP VRDAKGAVTH
+WP_027679436.1              695  2.33e-22 PGQPALNEVR TALRDESEIRVLLRNFRKDGHAFLNNFLLSP VRDAKGAVTH
+WP_009240369.1              695  2.33e-22 PGQPALNEVR TALRDESEIRVLLRNFRKDGHAFLNNFLLSP VRDAKGAVTH
+WP_024978289.1              695  3.98e-22 PGQPALNEVR AALRDESEIRVLLRNFRKDGHAFLNNFLLSP VRDAKGAVTH
+WP_015408455.1              131  6.07e-22 TRPGPVADLA EAIGTWEPVTVELRNHRRDGTPFRNRVSLVP FEGPSGAVAN
+WP_022988976.1              249  1.14e-21 TDPKAIKAVR LGLEQKTDVDVTLLNYRKDGTPFWNHLIIRP VLDTTGECTH
+WP_007545138.1               75  1.55e-21 TNVESLKQIS DAIRNEKSITQILKNYKKNGESFYNELTIQP IWDENNHLYY
+CAM75577.1                  411  2.33e-21 YDQPDLARLR TALETGGSVHVVLRNYRADGSLFWNDMTVSA VHAITGGLTH
+XP_002315641.1              302  2.58e-21 TDSSVLNQIQ ESMQVEQACTVCFLNYRKDKSTFWNLLHMSP VRNATGKIAY
+CAA82994.1                  106  1.05e-19 TDPATVAKIR DAIDNETDVTVQLINYTKTGKKFWNVFHLQP MRDQKGEVQY
+WP_006892283.1              576  1.05e-19 TDQPGVDEIR AVLQEGRAGGALLHNYRKNGTPYWNDLRIAP VHDEQGRLSH
+ERH11543.1                  137  1.83e-19 TDCERVADFV EALRTWEPVTVELDNERADGTPFRNRVSLVP VAGDDGTVEH
+XP_003042477.1              356  7.17e-19 TNPFSIRRIR EKLEAGKEHCETFLNYRRDGSPFINLLIVAP LYDSRGIVRY
+CBJ26132.1                 1015  1.60e-18 TEPESIAVIR NTLSKGQDCHVKLTNYRKNGEKFQNLLSMKP VFDGDNIYRY
+WP_031436152.1              574  4.55e-18 TDQPGVDEIR AVLQEGRAGGALLHNYRKDGAAYWNDLRIAP VHDEQGRLSH
+AHZ63798.1                  677  1.93e-17 SGQVEEIRAA FGDGGSGSFCGRILNYKKDGTTFWNLLTITA VKDDAGRTTH
+KFM26262.1                  207  2.28e-17 AEARRVLREA LARDPPTAATVTLLNRRADGSRWWNCLHIAP LRDAQGAVRY
+WP_008228851.1              320  4.80e-17 RDQPGLERIR SAIRNSVPARETLRNYRKDGSQLTVEVSISP VRDEKGNVSH
+KFY83514.1                  550  1.90e-16 VDDAAVYALR RGVSKRREVQCSLINYRKGGQPFTNLLTMVP ITWDTEEVKY
+ERM80666.1                  382  2.06e-16 SDFSALGLLG VALRRKEPFEIETINYKKGGEEFWVNISVTP LKDEGGTLTH
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+WP_008440458.1                    3.9e-31  205_[2]_431
+WP_006629792.1                    1.3e-30  205_[2]_431
+WP_008581736.1                    1.3e-30  205_[2]_431
+WP_017342539.1                    8.9e-30  205_[2]_431
+WP_008365815.1                    8.9e-30  205_[2]_431
+WP_007994479.1                    8.9e-30  205_[2]_431
+WP_004596479.1                    8.9e-30  205_[2]_431
+ABT17414.1                        8.9e-30  207_[2]_431
+WP_015142706.1                    1.9e-29  628_[2]_306
+WP_015178225.1                    3.2e-29  271_[2]_328
+WP_006631677.1                    4.5e-29  271_[2]_328
+BAL55373.1                        1.7e-28  443_[2]_273
+WP_008849170.1                    2.9e-28  205_[2]_432
+WP_009460030.1                    5.4e-28  615_[2]_393
+WP_007190073.1                    2.2e-27  320_[2]_482
+WP_007188961.1                    2.2e-27  324_[2]_482
+WP_017309581.1                    2.6e-27  611_[2]_269
+WP_009784268.1                    3.4e-27  817_[2]_933
+WP_008093946.1                    6.2e-27  452_[2]_249
+WP_004978264.1                    6.2e-27  452_[2]_249
+WP_015409860.1                    9.6e-27  717_[2]_742
+WP_007998215.1                    1.5e-26  205_[2]_431
+WP_015201020.1                    1.7e-26  601_[2]_299
+ABR16704.1                        2.6e-26  97_[2]_144
+WP_031429498.1                      3e-26  227_[2]_280
+WP_005580789.1                    3.4e-26  200_[2]_431
+WP_007276298.1                    4.5e-26  452_[2]_254
+AHZ63910.1                        5.9e-26  121_[2]_716
+WP_028537505.1                      1e-25  84_[2]_460
+WP_016313776.1                      1e-25  84_[2]_460
+WP_009223887.1                      1e-25  84_[2]_460
+KFN11555.1                        1.5e-25  83_[2]_471
+WP_006054879.1                    3.3e-25  362_[2]_255
+AHZ63911.1                        4.8e-25  125_[2]_721
+WP_018403148.1                    5.5e-25  365_[2]_463
+EXF57155.1                        6.2e-25  318_[2]_458
+WP_017385345.1                    6.2e-25  360_[2]_458
+EXE61052.1                        6.2e-25  360_[2]_458
+WP_005015369.1                    6.2e-25  360_[2]_458
+KEI69225.1                          1e-24  883_[2]_686
+WP_017715031.1                    1.2e-24  649_[2]_496
+WP_011224964.1                    1.9e-24  719_[2]_1556
+WP_013294580.1                    2.2e-24  75_[2]_206
+XP_008462012.1                    3.9e-24  181_[2]_667
+XP_008462011.1                    3.9e-24  201_[2]_667
+EES52601.1                          5e-24  983_[2]_580
+WP_006829240.1                    6.3e-24  80_[2]_613
+WP_004900880.1                    1.1e-23  363_[2]_452
+WP_008614460.1                    1.3e-23  410_[2]_266
+WP_011378155.1                    2.9e-23  745_[2]_462
+WP_011244685.1                    2.9e-23  745_[2]_462
+WP_008496897.1                    2.9e-23  80_[2]_614
+WP_010903066.1                    6.3e-23  223_[2]_420
+AAA72719.1                        6.3e-23  223_[2]_420
+WP_015009125.1                    1.1e-22  73_[2]_149
+WP_008432994.1                    1.2e-22  80_[2]_614
+WP_019019197.1                    2.1e-22  432_[2]_607
+WP_024974539.1                    2.3e-22  690_[2]_458
+WP_024542524.1                    2.3e-22  694_[2]_458
+WP_012430081.1                    2.3e-22  694_[2]_458
+WP_004627966.1                    2.3e-22  690_[2]_458
+WP_027679436.1                    2.3e-22  694_[2]_458
+WP_009240369.1                    2.3e-22  694_[2]_458
+WP_024978289.1                      4e-22  694_[2]_458
+WP_015408455.1                    6.1e-22  130_[2]_31
+WP_022988976.1                    1.1e-21  248_[2]_462
+WP_007545138.1                    1.5e-21  74_[2]_154
+CAM75577.1                        2.3e-21  410_[2]_262
+XP_002315641.1                    2.6e-21  301_[2]_64
+CAA82994.1                          1e-19  105_[2]_436
+WP_006892283.1                      1e-19  575_[2]_672
+ERH11543.1                        1.8e-19  136_[2]_29
+XP_003042477.1                    7.2e-19  355_[2]_210
+CBJ26132.1                        1.6e-18  1014_[2]_477
+WP_031436152.1                    4.6e-18  573_[2]_672
+AHZ63798.1                        1.9e-17  676_[2]_643
+KFM26262.1                        2.3e-17  206_[2]_80
+WP_008228851.1                    4.8e-17  319_[2]_401
+KFY83514.1                        1.9e-16  549_[2]_396
+ERM80666.1                        2.1e-16  381_[2]_692
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF EAJREEEEVTVELRNYRKDGTPFWNELTJSP width=31 seqs=80
+WP_008440458.1           (  206) EAIANEEEVTVEIRNYRRDGTPFWNELTVAP  1 
+WP_006629792.1           (  206) EAIGNEEEVTVEIRNYRRDGTPFWNELTVAP  1 
+WP_008581736.1           (  206) EAIGNEEEVTVEIRNYRRDGTPFWNELTVAP  1 
+WP_017342539.1           (  206) DAIANEEEATVEIRNYRRDGTPFWNELTVAP  1 
+WP_008365815.1           (  206) DAIANEEEATVEIRNYRRDGTPFWNELTVAP  1 
+WP_007994479.1           (  206) DAIANEEEATVEIRNYRRDGTPFWNELTVAP  1 
+WP_004596479.1           (  206) DAIANEEEATVEIRNYRRDGTPFWNELTVAP  1 
+ABT17414.1               (  208) DAIANEEEATVEIRNYRRDGTPFWNELTVAP  1 
+WP_015142706.1           (  629) RALHEQRECHVVLKNYRKDGSPFWNELTISP  1 
+WP_015178225.1           (  272) QALQAESECKVILKNYRKDGTAFWNCFSISP  1 
+WP_006631677.1           (  272) QALQTESECKVILKNYRKDGTAFWNCFSISP  1 
+BAL55373.1               (  444) AALKEGRDCHLTLKNYRKDGTPFWNELLISP  1 
+WP_008849170.1           (  206) KAVADNEEITVEIRNYRKDGTPFWNELTVAP  1 
+WP_009460030.1           (  616) NAIQQAKNCTVILRNYRKDGSLFWNELSISP  1 
+WP_007190073.1           (  321) EAIDAEEPVTVELQNYRKDGTEFWNRVTIAP  1 
+WP_007188961.1           (  325) EAIDAEEPVTVELQNYRKDGTEFWNRVTIAP  1 
+WP_017309581.1           (  612) NAIKQGKNCTVILRNYRRDNTLFWNELSISP  1 
+WP_009784268.1           (  818) ETLKNQESCTVILRNYRKDGSLFWNELNLSP  1 
+WP_008093946.1           (  453) EAIADEEPCSVELLNYRRDGTPFWNQSEITP  1 
+WP_004978264.1           (  453) EAIADEEPCSVELLNYRRDGTPFWNQSEITP  1 
+WP_015409860.1           (  718) EAIAAGEPVTVELKNYRKDGSEYWNRLSVTP  1 
+WP_007998215.1           (  206) KAIQREDQITVEIRNYRRDGTPFWNELTVAP  1 
+WP_015201020.1           (  602) TAIDTHQCCTVLLRNYRKDGVLFWNELSISP  1 
+ABR16704.1               (   98) EAIREEKSCQVSILNYKKNGTAFWNLFHLAP  1 
+WP_031429498.1           (  228) EALREGKPCLTTLKNYRKNGTCFWNELFISP  1 
+WP_005580789.1           (  201) EAVDAEQPVTVEIKNYRPDGTPWWNELSIAP  1 
+WP_007276298.1           (  453) EAIADEEPCSIELLNYRRDGTPFWNHCEITP  1 
+AHZ63910.1               (  122) QAIQAGESWCGRLLNYKKDGTPFWNLLTVTP  1 
+WP_028537505.1           (   85) KAIKEIGAATVTIKNYKKDGSTFWNQFVISP  1 
+WP_016313776.1           (   85) KAIKEIGAATVTIKNYKKDGSTFWNQFVISP  1 
+WP_009223887.1           (   85) KAIKEIGAATVTIKNYKKDGSTFWNQFVISP  1 
+KFN11555.1               (   84) QAILSGRSSTVTIKNYKKDGSTFWNQFTISP  1 
+WP_006054879.1           (  363) TAIDAGEPVVVELINYRRDGTPFWNQIYLAP  1 
+AHZ63911.1               (  126) AAITAGESWCGRLLNYKKDGTPFWNLLTVTP  1 
+WP_018403148.1           (  366) HGLRHQTEVNVELINYRKDGTPFWNHLWISP  1 
+EXF57155.1               (  319) QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP  1 
+WP_017385345.1           (  361) QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP  1 
+EXE61052.1               (  361) QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP  1 
+WP_005015369.1           (  361) QAVKEQKDVQITLKNYCRDGSWFWNRLMLGP  1 
+KEI69225.1               (  884) TRLKQKQNCNVVLRNYRKDGSLFWNELNISP  1 
+WP_017715031.1           (  650) AAIGARKDCTIVVRNYRKDGTVFWNELHISP  1 
+WP_011224964.1           (  720) EAIDADEPVSVELKNYRKDGTPYWARLSITP  1 
+WP_013294580.1           (   76) ESLLTGVSCLVTLRNYRRDGTLFWNELSISP  1 
+XP_008462012.1           (  182) HAIRKGNSYCGKLLNYKKNGTPFWNLLTVGP  1 
+XP_008462011.1           (  202) HAIRKGNSYCGKLLNYKKNGTPFWNLLTVGP  1 
+EES52601.1               (  984) RAIEGERPFRGQILNYRKDGSPFWNLLTISP  1 
+WP_006829240.1           (   81) ACVDAGESGIVEIVNYRKNGTPFWNEITIQP  1 
+WP_004900880.1           (  364) NALITKTQLQVKIKNYRKDGSWFWNQLTLAP  1 
+WP_008614460.1           (  411) AALAEGKPVSVVLRNQRADGTLFWNQLSLSP  1 
+WP_011378155.1           (  746) RALEEGTYCEVTLRSYRKDGSLFWNQISLAP  1 
+WP_011244685.1           (  746) RALEEGTYCEVTLRSYRKDGSLFWNQISLAP  1 
+WP_008496897.1           (   81) ACIASGEAGIFEIVNYRKNGTPFWNELSIQP  1 
+WP_010903066.1           (  224) TAITEDHDTQVVLRNYRRDGSLFWNQVDISP  1 
+AAA72719.1               (  224) TAITEDHDTQVVLRNYRRDGSLFWNQVDISP  1 
+WP_015009125.1           (   74) QAIKAEQSITVEIYNYKKNGEGFWNKLTIDP  1 
+WP_008432994.1           (   81) ACIASGETGIFEIVNYRKNGTPFWNELSIQP  1 
+WP_019019197.1           (  433) AAFQEKREVHTVLRNFHKDGSPFWNELYIAP  1 
+WP_024974539.1           (  691) TALRDESEIRVLLRNFRKDGHAFLNNFLLSP  1 
+WP_024542524.1           (  695) TALRDESEIRVLLRNFRKDGHAFLNNFLLSP  1 
+WP_012430081.1           (  695) TALRDESEIRVLLRNFRKDGHAFLNNFLLSP  1 
+WP_004627966.1           (  691) TALRDESEIRVLLRNFRKDGHAFLNNFLLSP  1 
+WP_027679436.1           (  695) TALRDESEIRVLLRNFRKDGHAFLNNFLLSP  1 
+WP_009240369.1           (  695) TALRDESEIRVLLRNFRKDGHAFLNNFLLSP  1 
+WP_024978289.1           (  695) AALRDESEIRVLLRNFRKDGHAFLNNFLLSP  1 
+WP_015408455.1           (  131) EAIGTWEPVTVELRNHRRDGTPFRNRVSLVP  1 
+WP_022988976.1           (  249) LGLEQKTDVDVTLLNYRKDGTPFWNHLIIRP  1 
+WP_007545138.1           (   75) DAIRNEKSITQILKNYKKNGESFYNELTIQP  1 
+CAM75577.1               (  411) TALETGGSVHVVLRNYRADGSLFWNDMTVSA  1 
+XP_002315641.1           (  302) ESMQVEQACTVCFLNYRKDKSTFWNLLHMSP  1 
+CAA82994.1               (  106) DAIDNETDVTVQLINYTKTGKKFWNVFHLQP  1 
+WP_006892283.1           (  576) AVLQEGRAGGALLHNYRKNGTPYWNDLRIAP  1 
+ERH11543.1               (  137) EALRTWEPVTVELDNERADGTPFRNRVSLVP  1 
+XP_003042477.1           (  356) EKLEAGKEHCETFLNYRRDGSPFINLLIVAP  1 
+CBJ26132.1               ( 1015) NTLSKGQDCHVKLTNYRKNGEKFQNLLSMKP  1 
+WP_031436152.1           (  574) AVLQEGRAGGALLHNYRKDGAAYWNDLRIAP  1 
+AHZ63798.1               (  677) FGDGGSGSFCGRILNYKKDGTTFWNLLTITA  1 
+KFM26262.1               (  207) LARDPPTAATVTLLNRRADGSRWWNCLHIAP  1 
+WP_008228851.1           (  320) SAIRNSVPARETLRNYRKDGSQLTVEVSISP  1 
+KFY83514.1               (  550) RGVSKRREVQCSLINYRKGGQPFTNLLTMVP  1 
+ERM80666.1               (  382) VALRRKEPFEIETINYKKGGEEFWVNISVTP  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 20 w= 31 n= 67041 bayes= 10.6533 E= 3.1e-1200 
+    59   -386     36    145   -150   -423     72   -475     96   -192   -327     52   -409    128    -15   -162    131   -226   -454   -385 
+   316    172   -502   -473   -395    -62   -429   -384   -162   -406   -270   -403   -513   -447   -266    -75   -128   -124   -396   -429 
+  -526   -382   -246   -711   -137   -666   -582    307   -561    175    -26   -593   -645   -612   -251   -559   -487     56   -497   -481 
+    92   -386     70     -8   -466    -14    -64   -212    208   -192   -327   -262   -409    128    142    -96    -51   -438   -455   -386 
+    82   -386     98    145   -466   -134    -64   -475     69   -470   -327    199   -160     22   -126    -51     58   -226   -455   -386 
+  -218   -387    -74    209   -467    193    -64    -70     96   -470   -328   -106   -160     94   -126    -96   -321   -439    113   -386 
+  -345   -387   -197    189   -467    -14     19   -476    208   -471   -328    -33   -410     74     47     87     58   -143   -455   -387 
+    16     40    101    174   -513   -440   -324   -525   -216   -519   -379     18    216    -65   -389    139   -182   -487   -502    -11 
+    47    469   -650   -590      8    -14    -82    123   -441   -222   -222   -470   -525   -496   -545   -201   -104    193    119     -6 
+  -345    291   -197    -91   -466   -134    141    -70     -6   -192   -327    -33   -410    128     63     11    260   -225   -455   -386 
+  -135     13   -455   -230   -115    -68   -346     42   -331   -241   -217   -386   -375   -236   -414   -362   -122    336   -409   -437 
+  -380     48   -475    194   -383   -485   -369     36     57     29   -257   -359   -475    -75    -87   -110    182     51   -419   -380 
+  -707   -521   -982   -926    -47   -892   -771    227   -791    271   -286   -836   -803   -756   -860   -828   -218   -216   -588   -614 
+  -521   -475   -235   -504   -592   -588     17      6    270     75   -424   -432   -585    -72    252   -477   -203    -90   -548   -107 
+  -689   -558   -592   -765   -724   -649   -477   -725   -601   -798   -674    476   -694   -649   -745   -125   -618   -754   -658   -677 
+  -693   -509   -770   -272    152   -749    -72   -636   -623   -602   -527   -604   -712   -184   -247   -632   -678   -644   -322    498 
+  -555    227   -653   -557   -661   -589    -85   -600    214   -588   -478   -440   -558   -364    344   -507   -221   -614   -494   -544 
+   -83   -560   -704   -560   -744   -639   -433   -659    420   -633   -510   -474   -174   -381    202   -543   -544   -636   -603   -585 
+  -555   -502    361   -418   -653   -139   -409   -704   -426   -725   -615    188   -584   -497   -605   -399   -213   -680   -632   -552 
+  -375   -378   -438   -518   -571    383   -453   -594   -160   -645   -473   -152   -514   -519   -498   -370   -497   -551   -474   -510 
+  -261   -314   -552    -90   -535   -583    175   -454   -142   -573   -359   -336   -537   -185   -527    223    320   -229   -520   -545 
+    52     33   -441    -77   -493   -231   -372   -486    -35     41   -379   -357    341   -161   -228   -185     27   -234    237   -462 
+  -546   -314   -648   -655    462   -629   -446   -423   -537   -248   -332   -540   -557   -607   -651   -488   -572   -458     98     86 
+  -471   -271   -485   -502   -159   -460   -386   -307   -366   -127   -284   -391   -470   -271   -255   -431   -233   -411    636   -108 
+  -262   -368   -477   -656   -572   -498   -326   -538   -467   -635   -498    471   -552   -505   -607   -350   -443   -163   -517   -538 
+  -360    193    -75    195   -484   -438     72   -490    -68     36   -343    143   -424    178     78   -303   -336   -228   -469   -401 
+  -517     33   -708   -641    218   -646   -523      7   -501    264    -13   -565   -566   -521   -583   -139   -477     22   -449   -452 
+  -380   -292   -139   -109   -134   -490    140    -98   -300      0    148    -47   -480   -381   -142    190    242    -71     21     -8 
+  -669   -485   -962   -933   -493   -892   -843    300   -807    138    110   -829   -831   -826   -919   -826   -634    169   -670   -668 
+   162   -394   -201   -331   -491     12   -313   -499    -76   -495   -353   -276   -433     50   -204    260     93    -91   -479   -411 
+  -177   -566   -738   -742   -743   -675   -668   -762   -606   -749   -676   -677    453   -673   -735   -579   -636   -716   -740   -753 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 20 w= 31 nsites= 80 E= 3.1e-1200 
+ 0.137500  0.000000  0.087500  0.237500  0.012500  0.000000  0.037500  0.000000  0.062500  0.025000  0.000000  0.050000  0.000000  0.112500  0.062500  0.012500  0.150000  0.012500  0.000000  0.000000 
+ 0.812500  0.037500  0.000000  0.000000  0.000000  0.050000  0.000000  0.000000  0.012500  0.000000  0.000000  0.000000  0.000000  0.000000  0.012500  0.025000  0.025000  0.025000  0.000000  0.000000 
+ 0.000000  0.000000  0.012500  0.000000  0.012500  0.000000  0.000000  0.500000  0.000000  0.350000  0.012500  0.000000  0.000000  0.000000  0.012500  0.000000  0.000000  0.100000  0.000000  0.000000 
+ 0.175000  0.000000  0.112500  0.075000  0.000000  0.062500  0.012500  0.012500  0.150000  0.025000  0.000000  0.000000  0.000000  0.112500  0.200000  0.025000  0.037500  0.000000  0.000000  0.000000 
+ 0.162500  0.000000  0.137500  0.237500  0.000000  0.025000  0.012500  0.000000  0.050000  0.000000  0.000000  0.150000  0.012500  0.050000  0.025000  0.037500  0.087500  0.012500  0.000000  0.000000 
+ 0.012500  0.000000  0.037500  0.375000  0.000000  0.275000  0.012500  0.037500  0.062500  0.000000  0.000000  0.012500  0.012500  0.087500  0.025000  0.025000  0.000000  0.000000  0.025000  0.000000 
+ 0.000000  0.000000  0.012500  0.325000  0.000000  0.062500  0.025000  0.000000  0.150000  0.000000  0.000000  0.025000  0.000000  0.075000  0.100000  0.112500  0.087500  0.025000  0.000000  0.000000 
+ 0.100000  0.012500  0.137500  0.287500  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.037500  0.200000  0.025000  0.000000  0.162500  0.012500  0.000000  0.000000  0.025000 
+ 0.125000  0.250000  0.000000  0.000000  0.037500  0.062500  0.012500  0.137500  0.000000  0.012500  0.000000  0.000000  0.000000  0.000000  0.000000  0.012500  0.025000  0.275000  0.025000  0.025000 
+ 0.000000  0.075000  0.012500  0.037500  0.000000  0.025000  0.062500  0.037500  0.025000  0.025000  0.000000  0.025000  0.000000  0.112500  0.112500  0.062500  0.375000  0.012500  0.000000  0.000000 
+ 0.025000  0.012500  0.000000  0.025000  0.025000  0.075000  0.000000  0.087500  0.000000  0.012500  0.000000  0.000000  0.000000  0.012500  0.000000  0.000000  0.025000  0.700000  0.000000  0.000000 
+ 0.000000  0.012500  0.000000  0.337500  0.000000  0.000000  0.000000  0.075000  0.050000  0.125000  0.000000  0.000000  0.000000  0.025000  0.037500  0.025000  0.212500  0.100000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.025000  0.000000  0.000000  0.287500  0.000000  0.662500  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.012500  0.012500  0.000000  0.000000 
+ 0.000000  0.000000  0.012500  0.000000  0.000000  0.000000  0.025000  0.062500  0.225000  0.175000  0.000000  0.000000  0.000000  0.025000  0.412500  0.000000  0.012500  0.037500  0.000000  0.012500 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.975000  0.000000  0.000000  0.000000  0.025000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.012500  0.100000  0.000000  0.012500  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.012500  0.012500  0.000000  0.000000  0.000000  0.000000  0.850000 
+ 0.000000  0.050000  0.000000  0.000000  0.000000  0.000000  0.012500  0.000000  0.162500  0.000000  0.000000  0.000000  0.000000  0.000000  0.762500  0.000000  0.012500  0.000000  0.000000  0.000000 
+ 0.050000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.650000  0.000000  0.000000  0.000000  0.012500  0.000000  0.287500  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.825000  0.000000  0.000000  0.025000  0.000000  0.000000  0.000000  0.000000  0.000000  0.137500  0.000000  0.000000  0.000000  0.000000  0.012500  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.975000  0.000000  0.000000  0.012500  0.000000  0.000000  0.012500  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.012500  0.000000  0.000000  0.050000  0.000000  0.000000  0.087500  0.000000  0.012500  0.000000  0.000000  0.000000  0.000000  0.012500  0.000000  0.312500  0.500000  0.012500  0.000000  0.000000 
+ 0.137500  0.012500  0.000000  0.050000  0.000000  0.012500  0.000000  0.000000  0.025000  0.150000  0.000000  0.000000  0.425000  0.012500  0.012500  0.012500  0.075000  0.012500  0.062500  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.912500  0.000000  0.000000  0.000000  0.000000  0.012500  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.025000  0.050000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.012500  0.000000  0.087500  0.000000  0.000000  0.000000  0.012500  0.025000  0.000000  0.025000  0.000000  0.825000  0.012500 
+ 0.012500  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.962500  0.000000  0.000000  0.000000  0.000000  0.000000  0.025000  0.000000  0.000000 
+ 0.000000  0.037500  0.037500  0.337500  0.000000  0.000000  0.037500  0.000000  0.012500  0.137500  0.000000  0.100000  0.000000  0.162500  0.125000  0.000000  0.000000  0.012500  0.000000  0.000000 
+ 0.000000  0.012500  0.000000  0.000000  0.187500  0.000000  0.000000  0.062500  0.000000  0.612500  0.012500  0.000000  0.000000  0.000000  0.000000  0.025000  0.000000  0.087500  0.000000  0.000000 
+ 0.000000  0.000000  0.025000  0.037500  0.012500  0.000000  0.062500  0.025000  0.000000  0.100000  0.050000  0.025000  0.000000  0.000000  0.025000  0.237500  0.325000  0.037500  0.012500  0.025000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.475000  0.000000  0.262500  0.037500  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.225000  0.000000  0.000000 
+ 0.287500  0.000000  0.012500  0.000000  0.000000  0.075000  0.000000  0.000000  0.012500  0.000000  0.000000  0.000000  0.000000  0.062500  0.012500  0.387500  0.112500  0.037500  0.000000  0.000000 
+ 0.025000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.975000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif EAJREEEEVTVELRNYRKDGTPFWNELTJSP MEME-2 regular expression
+--------------------------------------------------------------------------------
+EA[IL]RE[EG]E[EP][VC]TV[ET][LI][RK]NYR[KR]DG[TS]PFWNEL[TS][ILV][SA]P
+--------------------------------------------------------------------------------
+
+
+
+
+Time 259.45 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3	width =  29  sites =  70  llr = 2882  E-value = 2.1e-710
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::2::1:2:::1:::::::::13:1222
+pos.-specific     C  :::::::1:::::::::::::::::::::
+probability       D  ::814:1::::::::19::2:::::::::
+matrix            E  :::31:1::::::::11::5113:531:3
+                  F  :1::::::::5::3:::::::::::::::
+                  G  ::1::a::::::9::::::::::1:::::
+                  H  :1::::1::7::::::::::1::1::::1
+                  I  3::::::11::4:4:::4::::1::::1:
+                  K  :1::2:1::1:::::::::1:4:::::::
+                  L  :1:::::41::1:1::::::::::::251
+                  M  :::::::::::::1:::::::11:::1::
+                  N  ::::::1::1:::::2:::::::::::::
+                  P  :::::::::::::::::::::::::::::
+                  Q  :::11:::::::::91:::12:1:22:::
+                  R  :3::::1::::::::1:::14211122:2
+                  S  :::11:::1:::::::::3::::1:::1:
+                  T  :1::1:1:5::::::1::7::1:1:1:::
+                  V  6::::::41::5:2:1:6:::1:::::::
+                  W  :::::::::::::::::::::::::::::
+                  Y  :2:::::::15:::::::::::::::1::
+
+         bits    6.8                              
+                 6.1                              
+                 5.4                              
+                 4.7                              
+Relative         4.1          *    *              
+Entropy          3.4      *   ** * * *            
+(59.4 bits)      2.7 * *  *   **** * ***          
+                 2.0 * *  * ******** ***          
+                 1.4 *** ** ******** ******* ** * 
+                 0.7 *****************************
+                 0.0 -----------------------------
+
+Multilevel           VRDEDGXLTHYVGIQNDVTERKEAEELLE
+consensus            IY     V  FI F   IS Q    R   
+sequence                                          
+                                                  
+                                                  
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                        Site           
+-------------             ----- ---------            -----------------------------
+WP_017309581.1              643  4.76e-27 LFWNELSISP VFDDDGKCTHYVGIQSDITERKQAEEELR TALEKEKELN
+WP_009460030.1              647  3.03e-26 LFWNELSISP VFDADGNCTHYVGIQNDITERKQSEMALM VSERRLQYLL
+WP_017342539.1              237  1.40e-25 PFWNELTVAP IYDEDGDLAHYVGFQNDISDRKEAERLAE ERAEKLATER
+WP_008365815.1              237  1.40e-25 PFWNELTVAP IYDEDGDLAHYVGFQNDISDRKEAERLAE ERAEKLATER
+WP_007994479.1              237  1.40e-25 PFWNELTVAP IYDEDGDLAHYVGFQNDISDRKEAERLAE ERAEKLATER
+WP_004596479.1              237  1.40e-25 PFWNELTVAP IYDEDGDLAHYVGFQNDISDRKEAERLAE ERAEKLATER
+ABT17414.1                  239  1.40e-25 PFWNELTVAP IYDEDGDLAHYVGFQNDISDRKEAERLAE ERAEKLATER
+WP_007998215.1              237  2.02e-25 PFWNELTVAP VYDDDGELAHYVGFQNDITERKTAERLAE ERAEKLETER
+WP_008581736.1              237  1.18e-24 PFWNELTVAP VYDEEGDLAHYVGFQNDVSERKAAERLAE ERAEKLATER
+WP_006629792.1              237  1.65e-24 PFWNELTVAP VYDEEGELAHYVGFQNDVSERKAAERLAE ERAEKLATER
+WP_024974539.1              722  2.71e-24 AFLNNFLLSP VRDAKGAVTHYVGIQDDVTEQEMTRTRLA QHATIDSLTG
+WP_024542524.1              726  2.71e-24 AFLNNFLLSP VRDAKGAVTHYVGIQDDVTEQEMTRTRLA QHATIDSLTG
+WP_012430081.1              726  2.71e-24 AFLNNFLLSP VRDAKGAVTHYVGIQDDVTEQEMTRTRLA QHATIDSLTG
+WP_004627966.1              722  2.71e-24 AFLNNFLLSP VRDAKGAVTHYVGIQDDVTEQEMTRTRLA QHATIDSLTG
+WP_027679436.1              726  2.71e-24 AFLNNFLLSP VRDAKGAVTHYVGIQDDVTEQEMTRTRLA QHATIDPLTG
+WP_024978289.1              726  2.71e-24 AFLNNFLLSP VRDAKGAVTHYVGIQDDVTEQEMTRTRLA QHATIDSLTG
+WP_009240369.1              726  2.71e-24 AFLNNFLLSP VRDAKGAVTHYVGIQDDVTEQEMTRTRLA QHATIDPLTG
+WP_008849170.1              237  6.08e-24 PFWNELTVAP VYDDDGEIAHYVGFQNDVTDRKNAERLAE ERAEKLASER
+WP_008440458.1              237  9.76e-24 PFWNELTVAP IYDEAGDLAHYVGFQNDISDRKEAERLAE ERAEKLATER
+WP_006631677.1              303  2.84e-23 AFWNCFSISP VRDRLGKLTHFIGVQRDITERKQAEEALH ISEAQSREQA
+WP_015178225.1              303  4.44e-23 AFWNCFSISP VRDRMGNLTHFIGVQRDITQRKQAEEALH NSEAQSREQA
+WP_009784268.1              849  5.14e-23 LFWNELNLSP IYDQQGNLTHYLGIQNDVTESKLAEEELR KQLERERVIK
+WP_010903066.1              255  7.94e-23 LFWNQVDISP IYDEDGTVSHYVGFQMDVSERMAAQQELQ GERQSLDRLL
+AAA72719.1                  255  7.94e-23 LFWNQVDISP IYDEDGTVSHYVGFQMDVSERMAAQQELQ GERQSLDRLL
+EXF57155.1                  350  1.06e-22 WFWNRLMLGP ILDQDGKCTHFLGIQEDITQQRIHEEYIE YQNTHDQLTG
+WP_017385345.1              392  1.06e-22 WFWNRLMLGP ILDQDGKCTHFLGIQEDITQQRIHEEYIE YQNTHDQLTG
+EXE61052.1                  392  1.06e-22 WFWNRLMLGP ILDQDGKCTHFLGIQEDITQQRIHEEYIE YQNTHDQLTG
+WP_005015369.1              392  1.06e-22 WFWNRLMLGP ILDQDGKCTHFLGIQEDITQQRIHEEYIE YQNTHDQLTG
+KEI69225.1                  915  2.13e-22 LFWNELNISP IYDQEGNLTHYVGIQNDITENKLAQERLG QQVIRERLIA
+WP_006054879.1              394  1.58e-21 PFWNQIYLAP VDDKTGAITHYVGFQQDVTERKRTEQLIQ VLNRVLRHNL
+WP_022988976.1              280  7.07e-21 PFWNHLIIRP VLDTTGECTHFIGIQQDISQQKEQEAKIR FQATHDLLTG
+WP_013294580.1              107  5.22e-20 LFWNELSISP IRDKTGELTHFVGIQKDVTARVIQEQNLR QSNLHLHAAL
+BAL55373.1                  475  9.16e-20 PFWNELLISP VRDENGKLTHFVGVQTDVTELRRVEEQRH ELEIAKQIQL
+WP_017715031.1              681  1.78e-19 VFWNELHISP VQNERGQLTHFIGVQTDITDRKITEEELI YSAFHDALTG
+WP_005580789.1              232  1.78e-19 PWWNELSIAP VYDESDDPVHYVGFQKDVTDRKTAERLAE ERAAKLIEEK
+WP_011378155.1              777  3.39e-19 LFWNQISLAP VRDQKGHLTHMVASQTDVSESKAFEEMLL QQATHDALTG
+WP_011244685.1              777  3.39e-19 LFWNQISLAP VRDQKGHLTHMVASQTDVSESKAFEEMLL QQATHDALTG
+WP_004978264.1              484  4.67e-19 PFWNQSEITP VHGDDGSVTNYIGFQREVTERNARQRLLE RQNERFSEFT
+WP_031429498.1              259  5.19e-19 CFWNELFISP VYDSRGNLTHWIGVQTDVTQLRRAEEERH ELELAKQIQL
+WP_007190073.1              352  5.76e-19 EFWNRVTIAP VTDGTGAVTNYIGFQEDMTERVEYYQMLR RFQQAVESAG
+WP_019019197.1              464  7.88e-19 PFWNELYIAP VRDESGLVTHYISVQSDISEQKRFESELA YNASHDVLTG
+WP_004900880.1              395  7.88e-19 WFWNQLTLAP ILDDLGHCTHFLGIQQDVTKEWVNEEYIE YQKTHDYLTG
+WP_008228851.1              351  8.75e-19 QLTVEVSISP VRDEKGNVSHFIGAQSDVTDKLHTEERLR QSQKMEAIGQ
+WP_007276298.1              484  1.08e-18 PFWNHCEITP VHGDDGRVANYIGFQREVTERNARQRLLE RQNERLSEFT
+WP_007188961.1              356  1.19e-18 EFWNRVTIAP VTDGTGEVTNYIGFQEDMTEHVEYHQMLR RFQRAVESAG
+WP_008093946.1              484  1.19e-18 PFWNQSEITP VHGDDGSVTNYIGFQREVTEHNARQRLLE RQNERFSEFT
+WP_015201020.1              633  3.61e-18 LFWNELSISP VFDVKQKLTHYIGIINDVSDRKQSEVAIR VSKARLEYLL
+WP_008614460.1              442  4.40e-18 LFWNQLSLSP VHGANGQVSHWVGVQRDITQQEEARAALA KAYDDVAHYS
+WP_011224964.1              751  5.91e-18 PYWARLSITP VTGENGTVTNYVGIQQDVTERRERKRQAD ARVDFLERMY
+WP_031436152.1              605  7.91e-18 AYWNDLRIAP VHDEQGRLSHFIGIADDVTERRDAGDALL KSEERLRRSQ
+WP_006892283.1              607  7.91e-18 PYWNDLRIAP VHDEQGRLSHFIGIADDVTERRDAGDALL KSEERLRRSQ
+WP_018403148.1              397  2.05e-17 PFWNHLWISP VFDNDGLCTHFISSQQDISHQKEQQALIT YQATHDLLTG
+ERM80666.1                  413  2.99e-17 EFWVNISVTP LKDEGGTLTHFLAIQRDITERKLSEAALI AKTKLLKGIA
+WP_028537505.1              116  3.28e-17 TFWNQFVISP ILDSDGHLLYFIGLQFDVTREMEKQQASR ERLRQLSHFD
+WP_016313776.1              116  3.28e-17 TFWNQFVISP ILDSDGHLLYFIGLQFDVTREMEKQQASR ERLRQLSHFD
+EES52601.1                 1015  1.07e-16 PFWNLLTISP VRDESGRLVEFVGVQRDVTEIVEVSQRLE HESLHDRLTG
+WP_015409860.1              749  3.68e-16 EYWNRLSVTP VTAADGTLSKFIGIQQDVTARRQRTRSLA EQNRKLELVL
+CAM75577.1                  442  4.77e-16 LFWNDMTVSA VHAITGGLTHFVAIQRDITEQEQNRVSLR QAYDRIERYS
+WP_009223887.1              116  7.95e-16 TFWNQFVISP ILDAEGHLLYFIGLQFDVTREVEKQQAST EQLRQLSHFD
+WP_015142706.1              660  3.00e-15 PFWNELTISP VQNEQGEVTHFIGLQTDITSRRQIASQVR AAAQAVTQTT
+AHZ63798.1                  708  6.73e-15 TFWNLLTITA VKDDAGRTTHFVGMQAEVSKHTEGAMAEV LRPKGLPQSL
+AHZ63911.1                  157  2.54e-14 PFWNLLTVTP VKDDSGKVVKFIGMLVEVTKYTEGSKDKE TRPNALPVSL
+KFN11555.1                  115  3.45e-14 TFWNQFTISP IFDSDGQPLYFIGLQLDVTQEIEERRAST EQIRQLSNLD
+AHZ63910.1                  153  6.32e-14 PFWNLLTVTP VKDDGGKVVKFIGMLVEVTKYTEGAKDKE TRPNALPVSL
+KFM26262.1                  238  1.06e-13 RWWNCLHIAP LRDAQGAVRYIVGVQVDVTARLRGQERRA GASGRGAELA
+XP_008462012.1              213  1.23e-13 PFWNLLTVGP VKDSHGRIIKFIGMQVEIAKDTEGKEKTV RSISITEVQA
+XP_008462011.1              233  1.23e-13 PFWNLLTVGP VKDSHGRIIKFIGMQVEIAKDTEGKEKTV RSISITEVQA
+CAA82994.1                  137  1.33e-13 KFWNVFHLQP MRDQKGEVQYFIGVQLDGSEHVEPVQNSI PVASVMDSEK
+XP_002315641.1              116  8.39e-12 FWMLFQMSPV FSKEDGRVIHFIGVQVPILRNKRSTDDGA DAAWNEIVFG
+ABR16704.1                  130  1.24e-11 FWNLFHLAPV FSEGDGRVIHFVGVQTPISKFSRSSVSNN VSCSRPNNCP
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+WP_017309581.1                    4.8e-27  642_[3]_240
+WP_009460030.1                      3e-26  646_[3]_364
+WP_017342539.1                    1.4e-25  236_[3]_402
+WP_008365815.1                    1.4e-25  236_[3]_402
+WP_007994479.1                    1.4e-25  236_[3]_402
+WP_004596479.1                    1.4e-25  236_[3]_402
+ABT17414.1                        1.4e-25  238_[3]_402
+WP_007998215.1                      2e-25  236_[3]_402
+WP_008581736.1                    1.2e-24  236_[3]_402
+WP_006629792.1                    1.6e-24  236_[3]_402
+WP_024974539.1                    2.7e-24  721_[3]_429
+WP_024542524.1                    2.7e-24  725_[3]_429
+WP_012430081.1                    2.7e-24  725_[3]_429
+WP_004627966.1                    2.7e-24  721_[3]_429
+WP_027679436.1                    2.7e-24  725_[3]_429
+WP_024978289.1                    2.7e-24  725_[3]_429
+WP_009240369.1                    2.7e-24  725_[3]_429
+WP_008849170.1                    6.1e-24  236_[3]_403
+WP_008440458.1                    9.8e-24  236_[3]_402
+WP_006631677.1                    2.8e-23  302_[3]_299
+WP_015178225.1                    4.4e-23  302_[3]_299
+WP_009784268.1                    5.1e-23  848_[3]_904
+WP_010903066.1                    7.9e-23  254_[3]_391
+AAA72719.1                        7.9e-23  254_[3]_391
+EXF57155.1                        1.1e-22  349_[3]_429
+WP_017385345.1                    1.1e-22  391_[3]_429
+EXE61052.1                        1.1e-22  391_[3]_429
+WP_005015369.1                    1.1e-22  391_[3]_429
+KEI69225.1                        2.1e-22  914_[3]_657
+WP_006054879.1                    1.6e-21  393_[3]_226
+WP_022988976.1                    7.1e-21  279_[3]_433
+WP_013294580.1                    5.2e-20  106_[3]_177
+BAL55373.1                        9.2e-20  474_[3]_244
+WP_017715031.1                    1.8e-19  680_[3]_467
+WP_005580789.1                    1.8e-19  231_[3]_402
+WP_011378155.1                    3.4e-19  776_[3]_433
+WP_011244685.1                    3.4e-19  776_[3]_433
+WP_004978264.1                    4.7e-19  483_[3]_220
+WP_031429498.1                    5.2e-19  258_[3]_251
+WP_007190073.1                    5.8e-19  351_[3]_453
+WP_019019197.1                    7.9e-19  463_[3]_578
+WP_004900880.1                    7.9e-19  394_[3]_423
+WP_008228851.1                    8.7e-19  350_[3]_372
+WP_007276298.1                    1.1e-18  483_[3]_225
+WP_007188961.1                    1.2e-18  355_[3]_453
+WP_008093946.1                    1.2e-18  483_[3]_220
+WP_015201020.1                    3.6e-18  632_[3]_270
+WP_008614460.1                    4.4e-18  441_[3]_237
+WP_011224964.1                    5.9e-18  750_[3]_1527
+WP_031436152.1                    7.9e-18  604_[3]_643
+WP_006892283.1                    7.9e-18  606_[3]_643
+WP_018403148.1                    2.1e-17  396_[3]_434
+ERM80666.1                          3e-17  412_[3]_663
+WP_028537505.1                    3.3e-17  115_[3]_431
+WP_016313776.1                    3.3e-17  115_[3]_431
+EES52601.1                        1.1e-16  1014_[3]_551
+WP_015409860.1                    3.7e-16  748_[3]_713
+CAM75577.1                        4.8e-16  441_[3]_233
+WP_009223887.1                      8e-16  115_[3]_431
+WP_015142706.1                      3e-15  659_[3]_277
+AHZ63798.1                        6.7e-15  707_[3]_614
+AHZ63911.1                        2.5e-14  156_[3]_692
+KFN11555.1                        3.5e-14  114_[3]_442
+AHZ63910.1                        6.3e-14  152_[3]_687
+KFM26262.1                        1.1e-13  237_[3]_51
+XP_008462012.1                    1.2e-13  212_[3]_638
+XP_008462011.1                    1.2e-13  232_[3]_638
+CAA82994.1                        1.3e-13  136_[3]_407
+XP_002315641.1                    8.4e-12  115_[3]_252
+ABR16704.1                        1.2e-11  129_[3]_114
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF VRDEDGKLTHYVGIQNDVTERKEAEELLE width=29 seqs=70
+WP_017309581.1           (  643) VFDDDGKCTHYVGIQSDITERKQAEEELR  1 
+WP_009460030.1           (  647) VFDADGNCTHYVGIQNDITERKQSEMALM  1 
+WP_017342539.1           (  237) IYDEDGDLAHYVGFQNDISDRKEAERLAE  1 
+WP_008365815.1           (  237) IYDEDGDLAHYVGFQNDISDRKEAERLAE  1 
+WP_007994479.1           (  237) IYDEDGDLAHYVGFQNDISDRKEAERLAE  1 
+WP_004596479.1           (  237) IYDEDGDLAHYVGFQNDISDRKEAERLAE  1 
+ABT17414.1               (  239) IYDEDGDLAHYVGFQNDISDRKEAERLAE  1 
+WP_007998215.1           (  237) VYDDDGELAHYVGFQNDITERKTAERLAE  1 
+WP_008581736.1           (  237) VYDEEGDLAHYVGFQNDVSERKAAERLAE  1 
+WP_006629792.1           (  237) VYDEEGELAHYVGFQNDVSERKAAERLAE  1 
+WP_024974539.1           (  722) VRDAKGAVTHYVGIQDDVTEQEMTRTRLA  1 
+WP_024542524.1           (  726) VRDAKGAVTHYVGIQDDVTEQEMTRTRLA  1 
+WP_012430081.1           (  726) VRDAKGAVTHYVGIQDDVTEQEMTRTRLA  1 
+WP_004627966.1           (  722) VRDAKGAVTHYVGIQDDVTEQEMTRTRLA  1 
+WP_027679436.1           (  726) VRDAKGAVTHYVGIQDDVTEQEMTRTRLA  1 
+WP_024978289.1           (  726) VRDAKGAVTHYVGIQDDVTEQEMTRTRLA  1 
+WP_009240369.1           (  726) VRDAKGAVTHYVGIQDDVTEQEMTRTRLA  1 
+WP_008849170.1           (  237) VYDDDGEIAHYVGFQNDVTDRKNAERLAE  1 
+WP_008440458.1           (  237) IYDEAGDLAHYVGFQNDISDRKEAERLAE  1 
+WP_006631677.1           (  303) VRDRLGKLTHFIGVQRDITERKQAEEALH  1 
+WP_015178225.1           (  303) VRDRMGNLTHFIGVQRDITQRKQAEEALH  1 
+WP_009784268.1           (  849) IYDQQGNLTHYLGIQNDVTESKLAEEELR  1 
+WP_010903066.1           (  255) IYDEDGTVSHYVGFQMDVSERMAAQQELQ  1 
+AAA72719.1               (  255) IYDEDGTVSHYVGFQMDVSERMAAQQELQ  1 
+EXF57155.1               (  350) ILDQDGKCTHFLGIQEDITQQRIHEEYIE  1 
+WP_017385345.1           (  392) ILDQDGKCTHFLGIQEDITQQRIHEEYIE  1 
+EXE61052.1               (  392) ILDQDGKCTHFLGIQEDITQQRIHEEYIE  1 
+WP_005015369.1           (  392) ILDQDGKCTHFLGIQEDITQQRIHEEYIE  1 
+KEI69225.1               (  915) IYDQEGNLTHYVGIQNDITENKLAQERLG  1 
+WP_006054879.1           (  394) VDDKTGAITHYVGFQQDVTERKRTEQLIQ  1 
+WP_022988976.1           (  280) VLDTTGECTHFIGIQQDISQQKEQEAKIR  1 
+WP_013294580.1           (  107) IRDKTGELTHFVGIQKDVTARVIQEQNLR  1 
+BAL55373.1               (  475) VRDENGKLTHFVGVQTDVTELRRVEEQRH  1 
+WP_017715031.1           (  681) VQNERGQLTHFIGVQTDITDRKITEEELI  1 
+WP_005580789.1           (  232) VYDESDDPVHYVGFQKDVTDRKTAERLAE  1 
+WP_011378155.1           (  777) VRDQKGHLTHMVASQTDVSESKAFEEMLL  1 
+WP_011244685.1           (  777) VRDQKGHLTHMVASQTDVSESKAFEEMLL  1 
+WP_004978264.1           (  484) VHGDDGSVTNYIGFQREVTERNARQRLLE  1 
+WP_031429498.1           (  259) VYDSRGNLTHWIGVQTDVTQLRRAEEERH  1 
+WP_007190073.1           (  352) VTDGTGAVTNYIGFQEDMTERVEYYQMLR  1 
+WP_019019197.1           (  464) VRDESGLVTHYISVQSDISEQKRFESELA  1 
+WP_004900880.1           (  395) ILDDLGHCTHFLGIQQDVTKEWVNEEYIE  1 
+WP_008228851.1           (  351) VRDEKGNVSHFIGAQSDVTDKLHTEERLR  1 
+WP_007276298.1           (  484) VHGDDGRVANYIGFQREVTERNARQRLLE  1 
+WP_007188961.1           (  356) VTDGTGEVTNYIGFQEDMTEHVEYHQMLR  1 
+WP_008093946.1           (  484) VHGDDGSVTNYIGFQREVTEHNARQRLLE  1 
+WP_015201020.1           (  633) VFDVKQKLTHYIGIINDVSDRKQSEVAIR  1 
+WP_008614460.1           (  442) VHGANGQVSHWVGVQRDITQQEEARAALA  1 
+WP_011224964.1           (  751) VTGENGTVTNYVGIQQDVTERRERKRQAD  1 
+WP_031436152.1           (  605) VHDEQGRLSHFIGIADDVTERRDAGDALL  1 
+WP_006892283.1           (  607) VHDEQGRLSHFIGIADDVTERRDAGDALL  1 
+WP_018403148.1           (  397) VFDNDGLCTHFISSQQDISHQKEQQALIT  1 
+ERM80666.1               (  413) LKDEGGTLTHFLAIQRDITERKLSEAALI  1 
+WP_028537505.1           (  116) ILDSDGHLLYFIGLQFDVTREMEKQQASR  1 
+WP_016313776.1           (  116) ILDSDGHLLYFIGLQFDVTREMEKQQASR  1 
+EES52601.1               ( 1015) VRDESGRLVEFVGVQRDVTEIVEVSQRLE  1 
+WP_015409860.1           (  749) VTAADGTLSKFIGIQQDVTARRQRTRSLA  1 
+CAM75577.1               (  442) VHAITGGLTHFVAIQRDITEQEQNRVSLR  1 
+WP_009223887.1           (  116) ILDAEGHLLYFIGLQFDVTREVEKQQAST  1 
+WP_015142706.1           (  660) VQNEQGEVTHFIGLQTDITSRRQIASQVR  1 
+AHZ63798.1               (  708) VKDDAGRTTHFVGMQAEVSKHTEGAMAEV  1 
+AHZ63911.1               (  157) VKDDSGKVVKFIGMLVEVTKYTEGSKDKE  1 
+KFN11555.1               (  115) IFDSDGQPLYFIGLQLDVTQEIEERRAST  1 
+AHZ63910.1               (  153) VKDDGGKVVKFIGMLVEVTKYTEGAKDKE  1 
+KFM26262.1               (  238) LRDAQGAVRYIVGVQVDVTARLRGQERRA  1 
+XP_008462012.1           (  213) VKDSHGRIIKFIGMQVEIAKDTEGKEKTV  1 
+XP_008462011.1           (  233) VKDSHGRIIKFIGMQVEIAKDTEGKEKTV  1 
+CAA82994.1               (  137) MRDQKGEVQYFIGVQLDGSEHVEPVQNSI  1 
+XP_002315641.1           (  116) FSKEDGRVIHFIGVQVPILRNKRSTDDGA  1 
+ABR16704.1               (  130) FSEGDGRVIHFVGVQTPISKFSRSSVSNN  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 20 w= 29 n= 67217 bayes= 10.7283 E= 2.1e-710 
+  -634   -452   -928   -903    -33   -862   -839    228   -778   -157    -21   -796   -811   -825   -906   -791   -599    317   -687   -665 
+  -365   -390   -191   -328     89   -442    206   -479    137     26   -337   -281   -429    -46    178    -86      0   -447   -444    300 
+  -227   -333    368   -167   -465    -84   -313   -479   -189   -519   -400    -27   -498   -417   -490   -361   -434   -464   -424   -404 
+    88   -370    102    183   -450    -65   -272   -195     11   -453   -311    -89   -393    145   -109     52   -154   -208   -438   -369 
+  -135   -369    230    -40   -449   -117     37   -458    225   -175    -25     33   -392     68   -109      1     55   -421   -437   -368 
+  -367   -369   -230   -510   -562    383   -445   -585   -376   -637   -465   -328   -505   -199   -490   -362   -489   -543   -466   -502 
+    63   -369     71     46   -449   -198    184   -458    201   -175   -310    122   -392      5     80    -79     31   -421   -437   -368 
+  -559    377   -836   -796   -506   -745   -697     13   -659    201   -366   -681    -58   -727   -781   -648   -191    234   -630   -587 
+    64   -286   -564   -597   -471   -565   -469    -17   -403    -96   -312   -334   -522   -170   -233     74    329    -39   -478   -491 
+  -502   -329   -393   -254   -357   -478    502   -552     73   -481   -348    108   -470   -215   -352   -352   -407   -511   -348    147 
+  -803   -554   -851   -868    364   -802   -426   -201   -696   -621     67   -635   -772   -686   -753   -704   -735   -688    146    414 
+  -618   -436   -913   -897   -573   -858   -894    276   -776      1   -420   -788   -820   -873   -934   -786   -583    282   -787   -708 
+   -81   -359   -458   -536   -580    376   -469   -603   -403   -652   -481   -354   -516   -531   -514   -118   -482   -546   -489   -525 
+  -230   -292   -685   -626    283   -568   -484    256   -478    -38    199   -507   -559   -531   -583    -49   -395    129   -429   -404 
+  -195   -292   -487   -260   -457   -509   -105   -237   -293   -202   -201   -301   -393    427   -347   -360   -386   -431   -354   -446 
+  -201   -369     87      9     14   -406   -272   -457     11   -175     64    238   -392     91     80    -34     75     20   -437   -368 
+  -473   -421    368     25   -551   -496   -389   -556   -396   -591   -470   -202    -97   -424   -552   -428   -493   -535   -510   -487 
+  -612   -432   -908   -892   -589   -224   -897    276   -772   -483     69   -782   -818   -878   -933   -777   -579    297   -810   -713 
+  -153   -313   -610   -653   -568   -536   -531   -494   -461   -282   -398   -381   -550   -515   -578    208    357   -455   -553   -584 
+  -101   -640    123    254   -706   -568    -65   -644    151   -640   -505   -428   -527    148    -33   -192   -493   -584   -682   -603 
+  -328   -369   -106    -13   -133   -407    128   -194    -49   -175   -310    -15   -393    224    252    -34   -304   -421   -438      6 
+  -341   -354   -365     61   -435   -424   -290   -186    337   -171    160     31   -411   -265    108   -152     31     22     35   -374 
+    49   -365   -106    189   -445   -408    -48     44   -157   -123    237    -90   -394    129     46   -272    -82   -206   -436   -368 
+   172   -369   -339   -178     14     28    128   -194     54   -452   -310    -15   -142      5      2     28    123   -126   -437      6 
+   -90   -370   -340    239   -450   -117    -47   -459     54   -454   -311   -246   -393    172     95    -34    -82   -208   -438    -84 
+   -55   -375    -56    163   -455   -411   -277   -463     10   -457     64   -250   -396    173    168    -80     75    -74   -443   -374 
+    99   -369    -57     29   -449   -406   -272   -458     54    106    159    -15   -392      5    108    -34   -304   -421   -437    132 
+    90   -274   -476   -223   -354   -209   -362    110    -16    214   -228   -115   -463   -364    -71     23    -85   -165   -395   -358 
+    88   -366   -180    183   -446   -199    128    -52   -155    -85    -25    -89   -393      5    120   -270    -34    -73   -436   -368 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 20 w= 29 nsites= 70 E= 2.1e-710 
+ 0.000000  0.000000  0.000000  0.000000  0.028571  0.000000  0.000000  0.285714  0.000000  0.028571  0.014286  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.642857  0.000000  0.000000 
+ 0.000000  0.000000  0.014286  0.000000  0.071429  0.000000  0.100000  0.000000  0.085714  0.128571  0.000000  0.000000  0.000000  0.028571  0.257143  0.028571  0.057143  0.000000  0.000000  0.228571 
+ 0.028571  0.000000  0.842857  0.014286  0.000000  0.071429  0.000000  0.000000  0.014286  0.000000  0.000000  0.028571  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.171429  0.000000  0.142857  0.314286  0.000000  0.042857  0.000000  0.014286  0.028571  0.000000  0.000000  0.014286  0.000000  0.128571  0.028571  0.085714  0.014286  0.014286  0.000000  0.000000 
+ 0.028571  0.000000  0.357143  0.057143  0.000000  0.028571  0.028571  0.000000  0.171429  0.028571  0.014286  0.042857  0.000000  0.071429  0.028571  0.057143  0.085714  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.014286  0.000000  0.000000  0.971429  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.014286  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.142857  0.000000  0.114286  0.114286  0.000000  0.014286  0.085714  0.000000  0.142857  0.028571  0.000000  0.085714  0.000000  0.042857  0.128571  0.028571  0.071429  0.000000  0.000000  0.000000 
+ 0.000000  0.128571  0.000000  0.000000  0.000000  0.000000  0.000000  0.057143  0.000000  0.414286  0.000000  0.000000  0.028571  0.000000  0.000000  0.000000  0.014286  0.357143  0.000000  0.000000 
+ 0.157143  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.057143  0.000000  0.057143  0.000000  0.000000  0.000000  0.014286  0.014286  0.100000  0.542857  0.057143  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.014286  0.000000  0.000000  0.742857  0.000000  0.071429  0.000000  0.000000  0.085714  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.085714 
+ 0.000000  0.000000  0.000000  0.000000  0.457143  0.000000  0.000000  0.014286  0.000000  0.000000  0.028571  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.028571  0.471429 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.400000  0.000000  0.100000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.500000  0.000000  0.000000 
+ 0.057143  0.000000  0.000000  0.000000  0.000000  0.914286  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.028571  0.000000  0.000000  0.000000  0.000000 
+ 0.014286  0.000000  0.000000  0.000000  0.271429  0.000000  0.000000  0.357143  0.000000  0.071429  0.071429  0.000000  0.000000  0.000000  0.000000  0.042857  0.000000  0.171429  0.000000  0.000000 
+ 0.028571  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.014286  0.000000  0.028571  0.000000  0.000000  0.000000  0.928571  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.014286  0.000000  0.128571  0.085714  0.042857  0.000000  0.000000  0.000000  0.028571  0.028571  0.028571  0.200000  0.000000  0.085714  0.128571  0.042857  0.100000  0.085714  0.000000  0.000000 
+ 0.000000  0.000000  0.857143  0.114286  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.028571  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  0.000000  0.000000  0.014286  0.000000  0.400000  0.000000  0.000000  0.028571  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.557143  0.000000  0.000000 
+ 0.028571  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.014286  0.000000  0.000000  0.000000  0.000000  0.000000  0.271429  0.685714  0.000000  0.000000  0.000000 
+ 0.042857  0.000000  0.157143  0.485714  0.000000  0.000000  0.014286  0.000000  0.100000  0.000000  0.000000  0.000000  0.000000  0.128571  0.057143  0.014286  0.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  0.028571  0.071429  0.014286  0.000000  0.057143  0.014286  0.014286  0.028571  0.000000  0.028571  0.000000  0.228571  0.442857  0.042857  0.000000  0.000000  0.000000  0.028571 
+ 0.000000  0.000000  0.000000  0.128571  0.000000  0.000000  0.000000  0.014286  0.385714  0.028571  0.057143  0.042857  0.000000  0.000000  0.157143  0.014286  0.071429  0.085714  0.014286  0.000000 
+ 0.128571  0.000000  0.028571  0.328571  0.000000  0.000000  0.014286  0.085714  0.000000  0.042857  0.100000  0.014286  0.000000  0.114286  0.100000  0.000000  0.028571  0.014286  0.000000  0.000000 
+ 0.314286  0.000000  0.000000  0.014286  0.042857  0.085714  0.057143  0.014286  0.042857  0.000000  0.000000  0.028571  0.014286  0.042857  0.071429  0.071429  0.142857  0.028571  0.000000  0.028571 
+ 0.042857  0.000000  0.000000  0.471429  0.000000  0.028571  0.014286  0.000000  0.042857  0.000000  0.000000  0.000000  0.000000  0.157143  0.142857  0.042857  0.028571  0.014286  0.000000  0.014286 
+ 0.057143  0.000000  0.042857  0.271429  0.000000  0.000000  0.000000  0.000000  0.028571  0.000000  0.028571  0.000000  0.000000  0.157143  0.242857  0.028571  0.100000  0.042857  0.000000  0.000000 
+ 0.185714  0.000000  0.042857  0.100000  0.000000  0.000000  0.000000  0.000000  0.042857  0.228571  0.057143  0.028571  0.000000  0.042857  0.157143  0.042857  0.000000  0.000000  0.000000  0.071429 
+ 0.171429  0.000000  0.000000  0.014286  0.000000  0.014286  0.000000  0.128571  0.028571  0.471429  0.000000  0.014286  0.000000  0.000000  0.042857  0.071429  0.028571  0.014286  0.000000  0.000000 
+ 0.171429  0.000000  0.014286  0.314286  0.000000  0.014286  0.057143  0.042857  0.000000  0.057143  0.014286  0.014286  0.000000  0.042857  0.171429  0.000000  0.042857  0.042857  0.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif VRDEDGKLTHYVGIQNDVTERKEAEELLE MEME-3 regular expression
+--------------------------------------------------------------------------------
+[VI][RY]DEDGX[LV]TH[YF][VI]G[IF]QND[VI][TS]E[RQ]KEAE[ER]LLE
+--------------------------------------------------------------------------------
+
+
+
+
+Time 382.46 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+ABR16704.1                       3.72e-54  56_[1(9.31e-29)]_6_[2(2.59e-26)]_1_\
+    [3(1.24e-11)]_114
+XP_003042477.1                   4.18e-35  314_[1(8.73e-23)]_6_[2(7.17e-19)]_\
+    [3(9.45e-07)]_181
+WP_004515824.1                   8.48e-30  91_[1(1.78e-23)]_6_[2(7.01e-15)]_23
+WP_004965636.1                   5.82e-30  91_[1(6.72e-23)]_6_[2(1.56e-15)]_23
+WP_005533327.1                   3.12e-30  91_[1(3.42e-24)]_6_[2(1.46e-14)]_23
+WP_006884446.1                   2.00e-32  92_[1(3.91e-20)]_6_[2(9.49e-21)]_21
+WP_007545138.1                   5.66e-41  33_[1(1.32e-26)]_6_[2(1.55e-21)]_9_\
+    [3(6.00e-05)]_116
+WP_008311751.1                   3.52e-30  91_[1(1.95e-23)]_6_[2(2.66e-15)]_23
+WP_011222610.1                   1.84e-29  91_[1(6.72e-23)]_6_[2(1.26e-14)]_23
+WP_015009125.1                   2.77e-41  32_[1(1.03e-23)]_6_[2(1.09e-22)]_\
+    149
+WP_015408455.1                   9.48e-39  89_[1(1.96e-21)]_6_[2(6.07e-22)]_\
+    [3(4.04e-07)]_2
+WP_015762404.1                   8.87e-38  89_[1(3.24e-27)]_6_[2(2.64e-19)]_23
+WP_018257517.1                   1.30e-38  89_[1(4.29e-28)]_6_[2(2.90e-19)]_23
+ERH11543.1                       9.47e-31  95_[1(2.91e-18)]_6_[2(1.83e-19)]_29
+ABT17414.1                       1.01e-75  166_[1(1.84e-34)]_6_[2(8.95e-30)]_\
+    [3(1.40e-25)]_402
+WP_004596479.1                   9.98e-76  164_[1(1.84e-34)]_6_[2(8.95e-30)]_\
+    [3(1.40e-25)]_402
+WP_005580789.1                   8.86e-59  159_[1(5.59e-27)]_6_[2(3.42e-26)]_\
+    [3(1.78e-19)]_402
+WP_007994479.1                   9.98e-76  164_[1(1.84e-34)]_6_[2(8.95e-30)]_\
+    [3(1.40e-25)]_402
+WP_007998215.1                   2.23e-67  164_[1(2.15e-29)]_6_[2(1.48e-26)]_\
+    [3(2.02e-25)]_402
+WP_008365815.1                   9.98e-76  164_[1(1.84e-34)]_6_[2(8.95e-30)]_\
+    [3(1.40e-25)]_402
+WP_008440458.1                   2.37e-72  164_[1(1.57e-31)]_6_[2(3.89e-31)]_\
+    [3(9.76e-24)]_402
+WP_008581736.1                   3.00e-76  164_[1(4.41e-35)]_6_[2(1.32e-30)]_\
+    [3(1.18e-24)]_402
+WP_008849170.1                   1.03e-68  164_[1(1.64e-30)]_6_[2(2.86e-28)]_\
+    [3(6.08e-24)]_403
+WP_017342539.1                   7.05e-76  164_[1(1.29e-34)]_6_[2(8.95e-30)]_\
+    [3(1.40e-25)]_402
+WP_009223887.1                   6.53e-59  43_[1(4.83e-31)]_6_[2(1.01e-25)]_\
+    [3(7.95e-16)]_134_[3(9.19e-05)]_268
+WP_016313776.1                   9.31e-61  43_[1(1.57e-31)]_6_[2(1.01e-25)]_\
+    [3(3.28e-17)]_134_[3(9.19e-05)]_268
+WP_022988976.1                   1.16e-60  207_[1(3.67e-32)]_6_[2(1.14e-21)]_\
+    [3(7.07e-21)]_433
+WP_028537505.1                   9.31e-61  43_[1(1.57e-31)]_6_[2(1.01e-25)]_\
+    [3(3.28e-17)]_134_[3(9.19e-05)]_268
+KFN11555.1                       2.00e-55  42_[1(2.43e-29)]_6_[2(1.51e-25)]_\
+    [3(3.45e-14)]_442
+WP_009240369.1                   2.41e-63  88_[1(2.00e-05)]_350_[3(4.00e-09)]_\
+    67_[2(3.73e-06)]_[3(1.74e-06)]_24_[1(2.09e-31)]_6_[2(2.33e-22)]_\
+    [3(2.71e-24)]_429
+WP_024978289.1                   4.09e-63  88_[1(2.76e-05)]_350_[3(1.49e-08)]_\
+    67_[2(2.11e-05)]_[3(5.59e-06)]_24_[1(2.09e-31)]_6_[2(3.98e-22)]_\
+    [3(2.71e-24)]_429
+WP_027679436.1                   2.41e-63  88_[1(5.67e-05)]_350_[3(4.00e-09)]_\
+    67_[2(3.73e-06)]_[3(1.74e-06)]_24_[1(2.09e-31)]_6_[2(2.33e-22)]_\
+    [3(2.71e-24)]_429
+WP_004627966.1                   5.46e-63  88_[1(2.00e-05)]_346_[3(4.00e-09)]_\
+    67_[2(6.20e-06)]_[3(3.56e-06)]_24_[1(4.83e-31)]_6_[2(2.33e-22)]_\
+    [3(2.71e-24)]_429
+WP_012430081.1                   5.52e-63  88_[1(2.00e-05)]_350_[3(4.00e-09)]_\
+    67_[2(6.20e-06)]_[3(3.56e-06)]_24_[1(4.83e-31)]_6_[2(2.33e-22)]_\
+    [3(2.71e-24)]_429
+WP_024542524.1                   5.52e-63  88_[1(2.00e-05)]_350_[3(4.00e-09)]_\
+    67_[2(6.20e-06)]_[3(3.56e-06)]_24_[1(4.83e-31)]_6_[2(2.33e-22)]_\
+    [3(2.71e-24)]_429
+WP_024974539.1                   5.46e-63  88_[1(2.00e-05)]_346_[3(4.00e-09)]_\
+    67_[2(6.20e-06)]_[3(3.56e-06)]_24_[1(4.83e-31)]_6_[2(2.33e-22)]_\
+    [3(2.71e-24)]_429
+CAM75577.1                       8.46e-49  369_[1(3.44e-25)]_6_[2(2.33e-21)]_\
+    [3(4.77e-16)]_233
+WP_008614460.1                   1.92e-53  369_[1(1.27e-25)]_6_[2(1.28e-23)]_\
+    [3(4.40e-18)]_237
+XP_008462011.1                   4.41e-52  160_[1(1.69e-28)]_6_[2(3.94e-24)]_\
+    [3(1.23e-13)]_132_[1(1.95e-23)]_6_[2(8.45e-16)]_434
+XP_008462012.1                   4.12e-52  140_[1(1.69e-28)]_6_[2(3.94e-24)]_\
+    [3(1.23e-13)]_132_[1(1.95e-23)]_6_[2(8.45e-16)]_434
+WP_031429498.1                   3.78e-61  186_[1(1.68e-29)]_6_[2(2.98e-26)]_\
+    [3(5.19e-19)]_203_[1(6.61e-05)]_13
+AAA72719.1                       4.08e-61  182_[1(2.76e-29)]_6_[2(6.27e-23)]_\
+    [3(7.94e-23)]_391
+WP_010903066.1                   2.44e-60  182_[1(1.69e-28)]_6_[2(6.27e-23)]_\
+    [3(7.94e-23)]_391
+WP_006829240.1                   1.20e-41  39_[1(2.48e-26)]_6_[2(6.34e-24)]_\
+    [3(4.33e-05)]_584
+WP_008432994.1                   1.77e-44  39_[1(5.09e-29)]_6_[2(1.22e-22)]_\
+    [3(1.40e-06)]_277_[3(2.38e-05)]_279
+WP_008496897.1                   1.86e-44  39_[1(1.69e-28)]_6_[2(2.86e-23)]_\
+    [3(1.89e-06)]_277_[3(3.22e-05)]_279
+WP_004978264.1                   3.29e-60  157_[1(4.60e-10)]_39_[3(4.49e-05)]_\
+    21_[1(1.75e-07)]_42_[3(1.09e-07)]_24_[1(3.03e-28)]_6_[2(6.23e-27)]_\
+    [3(4.67e-19)]_220
+WP_008093946.1                   9.95e-61  157_[1(1.82e-12)]_39_[3(4.49e-05)]_\
+    21_[1(1.75e-07)]_42_[3(1.09e-07)]_24_[1(3.53e-29)]_6_[2(6.23e-27)]_\
+    [3(1.19e-18)]_220
+WP_004900880.1                   6.13e-56  200_[1(4.07e-07)]_5_[2(3.14e-06)]_\
+    51_[1(1.34e-27)]_6_[2(1.14e-23)]_[3(7.88e-19)]_114_[3(6.68e-05)]_280
+WP_005015369.1                   1.04e-60  197_[1(3.25e-07)]_87_[1(2.60e-27)]_\
+    6_[2(6.24e-25)]_[3(1.06e-22)]_429
+EXE61052.1                       1.04e-60  197_[1(3.25e-07)]_87_[1(2.60e-27)]_\
+    6_[2(6.24e-25)]_[3(1.06e-22)]_429
+WP_006892283.1                   1.45e-57  409_[1(2.36e-18)]_6_[2(2.52e-10)]_\
+    [3(4.81e-10)]_24_[1(9.08e-35)]_6_[2(1.05e-19)]_[3(7.91e-18)]_99_\
+    [3(9.55e-12)]_28_[1(1.12e-10)]_39_[3(1.58e-09)]_384
+WP_031436152.1                   7.48e-55  407_[1(2.36e-18)]_6_[2(2.38e-10)]_\
+    [3(4.81e-10)]_24_[1(1.18e-33)]_6_[2(4.55e-18)]_[3(7.91e-18)]_99_\
+    [3(9.55e-12)]_28_[1(1.12e-10)]_39_[3(1.58e-09)]_384
+WP_007188961.1                   8.63e-58  283_[1(6.27e-26)]_6_[2(2.20e-27)]_\
+    [3(1.19e-18)]_21_[1(7.02e-16)]_6_[2(1.15e-07)]_[3(3.11e-12)]_92_\
+    [3(3.41e-06)]_210
+WP_007190073.1                   3.40e-58  279_[1(5.11e-26)]_6_[2(2.20e-27)]_\
+    [3(5.76e-19)]_21_[1(2.72e-15)]_6_[2(3.01e-08)]_[3(3.11e-12)]_92_\
+    [3(3.41e-06)]_210
+WP_006631677.1                   5.42e-70  99_[1(1.94e-05)]_43_[3(2.44e-06)]_\
+    24_[1(1.36e-31)]_6_[2(4.49e-29)]_[3(2.84e-23)]_299
+WP_015178225.1                   5.95e-70  99_[1(3.03e-05)]_43_[3(2.24e-06)]_\
+    24_[1(1.36e-31)]_6_[2(3.16e-29)]_[3(4.44e-23)]_268_[2(7.26e-05)]
+KEI69225.1                       1.24e-62  149_[3(4.77e-08)]_478_[3(3.07e-07)]_\
+    26_[1(5.93e-07)]_43_[3(1.58e-09)]_24_[1(1.25e-30)]_6_[2(1.03e-24)]_\
+    [3(2.13e-22)]_288_[3(4.04e-10)]_340
+WP_017385345.1                   1.04e-60  197_[1(3.25e-07)]_87_[1(2.60e-27)]_\
+    6_[2(6.24e-25)]_[3(1.06e-22)]_238_[2(8.43e-05)]_160
+EXF57155.1                       8.87e-61  155_[1(3.25e-07)]_87_[1(2.60e-27)]_\
+    6_[2(6.24e-25)]_[3(1.06e-22)]_429
+XP_002315641.1                   8.78e-43  42_[1(1.47e-22)]_6_[2(2.52e-20)]_1_\
+    [3(8.39e-12)]_116_[1(1.53e-21)]_6_[2(2.58e-21)]_[3(3.52e-07)]_35
+KFM26262.1                       2.88e-45  55_[1(5.44e-24)]_6_[2(3.36e-20)]_36_\
+    [1(1.55e-20)]_8_[2(2.28e-17)]_[3(1.06e-13)]_51
+WP_011244685.1                   9.11e-58  103_[1(1.40e-05)]_262_[3(1.60e-07)]_\
+    222_[3(6.14e-09)]_24_[1(5.33e-30)]_6_[2(2.86e-23)]_[3(3.39e-19)]_433
+WP_011378155.1                   9.11e-58  103_[1(1.87e-05)]_262_[3(1.60e-07)]_\
+    222_[3(6.14e-09)]_24_[1(5.33e-30)]_6_[2(2.86e-23)]_[3(3.39e-19)]_433
+AHZ63910.1                       5.52e-55  80_[1(1.41e-21)]_6_[2(5.92e-26)]_\
+    [3(6.32e-14)]_148_[1(2.76e-29)]_6_[2(1.12e-18)]_[3(4.22e-09)]_438
+AHZ63911.1                       1.84e-54  84_[1(1.47e-22)]_6_[2(4.84e-25)]_\
+    [3(2.54e-14)]_146_[1(2.76e-29)]_6_[2(7.85e-19)]_[3(1.26e-09)]_445
+WP_007276298.1                   1.05e-59  157_[1(6.06e-10)]_89_[1(2.21e-07)]_\
+    42_[3(1.09e-07)]_24_[1(5.75e-29)]_6_[2(4.51e-26)]_[3(1.08e-18)]_225
+EES52601.1                       1.19e-48  942_[1(8.01e-23)]_6_[2(5.00e-24)]_\
+    [3(1.07e-16)]_551
+BAL55373.1                       2.11e-67  192_[2(4.79e-05)]_[3(1.77e-10)]_25_\
+    [1(5.13e-08)]_6_[2(2.20e-05)]_[3(9.11e-13)]_24_[1(2.67e-33)]_6_\
+    [2(1.75e-28)]_[3(9.16e-20)]_244
+CAA82994.1                       4.12e-44  64_[1(3.12e-24)]_6_[2(1.05e-19)]_\
+    [3(1.33e-13)]_204_[1(9.23e-05)]_168
+WP_011224964.1                   7.18e-60  27_[1(8.20e-06)]_322_[3(2.77e-05)]_\
+    21_[1(3.01e-07)]_39_[3(3.36e-07)]_62_[2(3.14e-06)]_48_[1(5.04e-33)]_6_\
+    [2(1.91e-24)]_[3(5.91e-18)]_266_[3(6.31e-06)]_100_[3(8.04e-10)]_64_\
+    [2(4.82e-06)]_1_[3(8.17e-08)]_26_[1(1.14e-07)]_93_[1(4.16e-26)]_6_\
+    [2(1.61e-23)]_[3(1.55e-17)]_175_[1(8.48e-06)]_38_[3(2.65e-06)]_18_\
+    [1(3.24e-06)]_6_[2(4.27e-05)]_120_[3(2.80e-07)]_207
+WP_015409860.1                   8.58e-55  191_[1(6.88e-07)]_34_[3(3.14e-06)]_\
+    63_[2(2.90e-05)]_172_[1(3.91e-05)]_7_[2(3.62e-07)]_48_[1(8.60e-27)]_6_\
+    [2(9.62e-27)]_[3(3.68e-16)]_93_[3(1.23e-06)]_26_[1(3.60e-06)]_38_\
+    [3(5.79e-05)]_211_[3(2.67e-07)]_9_[3(9.88e-07)]_185
+WP_006629792.1                   4.19e-76  164_[1(4.41e-35)]_6_[2(1.32e-30)]_\
+    [3(1.65e-24)]_402
+WP_015142706.1                   1.94e-62  587_[1(3.67e-32)]_6_[2(1.85e-29)]_\
+    [3(3.00e-15)]_277
+ERM80666.1                       7.20e-46  85_[1(1.14e-09)]_164_[3(1.83e-08)]_\
+    27_[1(1.46e-26)]_6_[2(2.06e-16)]_[3(2.99e-17)]_202_[1(7.92e-06)]_158_\
+    [3(5.66e-12)]_239
+WP_009784268.1                   3.63e-64  352_[1(4.19e-08)]_86_[1(3.56e-08)]_\
+    5_[2(2.29e-05)]_[3(2.75e-08)]_5_[1(2.13e-05)]_32_[1(1.00e-05)]_43_\
+    [3(1.26e-07)]_24_[1(3.12e-29)]_6_[2(3.45e-27)]_[3(5.14e-23)]_286_\
+    [3(3.42e-11)]_68_[2(2.58e-05)]_[3(8.88e-09)]_266_[3(9.19e-05)]_166
+WP_006054879.1                   3.69e-61  197_[1(7.98e-07)]_36_[3(3.21e-07)]_\
+    24_[1(2.70e-28)]_6_[2(3.30e-25)]_[3(1.58e-21)]_226
+WP_017715031.1                   1.50e-61  14_[1(7.98e-07)]_4_[2(9.17e-09)]_\
+    345_[3(7.71e-06)]_25_[1(2.08e-08)]_37_[3(2.32e-07)]_24_[1(4.26e-32)]_6_\
+    [2(1.17e-24)]_[3(1.78e-19)]_467
+WP_015201020.1                   1.56e-60  187_[1(9.69e-06)]_38_[3(6.68e-05)]_\
+    98_[3(6.84e-06)]_91_[3(6.31e-06)]_24_[1(3.17e-30)]_6_[2(1.70e-26)]_\
+    [3(3.61e-18)]_100_[3(8.11e-11)]_141
+KFY83514.1                       4.81e-28  497_[1(1.68e-20)]_17_[2(1.90e-16)]_\
+    [3(7.17e-05)]_79_[1(3.86e-06)]_89_[1(2.85e-05)]_129
+CBJ26132.1                       2.35e-38  191_[1(2.60e-27)]_6_[2(1.60e-18)]_\
+    [3(6.06e-07)]_268_[1(3.02e-06)]_5_[2(6.11e-14)]_[3(5.58e-05)]_313_\
+    [1(2.60e-27)]_6_[2(1.60e-18)]_[3(3.68e-07)]_275_[1(2.07e-05)]_5_\
+    [2(4.49e-10)]_102
+WP_009460030.1                   1.54e-72  186_[1(8.53e-17)]_6_[2(1.76e-16)]_\
+    [3(5.66e-16)]_36_[1(6.22e-05)]_6_[2(4.79e-05)]_1_[3(1.09e-07)]_96_\
+    [3(1.28e-08)]_24_[1(5.89e-33)]_6_[2(5.44e-28)]_[3(3.03e-26)]_100_\
+    [3(3.11e-12)]_235
+AHZ63798.1                       1.29e-45  633_[1(1.90e-25)]_8_[2(1.93e-17)]_\
+    [3(6.73e-15)]_163_[1(6.78e-28)]_6_[2(5.21e-15)]_1_[3(7.25e-07)]_349
+WP_018403148.1                   7.11e-52  201_[1(9.73e-08)]_35_[3(2.67e-05)]_\
+    24_[1(1.36e-23)]_6_[2(5.50e-25)]_[3(2.05e-17)]_434
+WP_013294580.1                   1.56e-57  34_[1(6.27e-26)]_6_[2(2.16e-24)]_\
+    [3(5.22e-20)]_177
+WP_017309581.1                   6.86e-67  182_[1(2.05e-18)]_6_[2(1.71e-12)]_\
+    [3(6.16e-16)]_109_[3(9.00e-08)]_25_[1(3.23e-05)]_36_[3(2.22e-07)]_24_\
+    [1(6.23e-27)]_6_[2(2.56e-27)]_[3(4.76e-27)]_240
+WP_008228851.1                   6.41e-49  27_[1(1.59e-05)]_41_[3(3.36e-07)]_\
+    22_[1(8.96e-05)]_7_[2(2.12e-06)]_51_[1(5.59e-27)]_6_[2(4.80e-17)]_\
+    [3(8.75e-19)]_372
+WP_019019197.1                   2.10e-53  162_[1(9.07e-06)]_194_[1(1.32e-26)]_\
+    6_[2(2.09e-22)]_[3(7.88e-19)]_578
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (3) found.
+********************************************************************************
+
+CPU: meme-server
+
+********************************************************************************

@@ -1,0 +1,695 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.0.2 (Release date: Thu Aug 30 14:26:08 2018 -0700)
+
+	For further information on how to interpret these results please access http://alternate.meme-suite.org/.
+	To get a copy of the MAST software please access http://meme-suite.org.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE Cys_LOV_test_set.txt (peptide)
+	Last updated on Sun Oct 21 12:33:05 2018
+	Database contains 21 sequences, 12087 residues
+
+	MOTIFS meme_withcys.xml (peptide)
+	MOTIF ID                                                 ALT ID WIDTH BEST POSSIBLE MATCH
+	----- -------------------------------------------------- ------ ----- -------------------
+	    1 RSSKGFVITDPRLPDNPIIYANDAFLELTGYSREEILGRNCRFLQGPDTD MEME-1    50 MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+	    2 KIRKAIAEGEEVTVELJNYRKDGTPFWNLLHJAPIRDDDGE          MEME-2    41 KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+	    3 MDKAVMLNRNKVHRARAEREILDLLDHPFLPTLYASFQTKTHICLITDYY MEME-3    50 MDKNVMLNRNKVHRARAEREILDILDHPFLPTLYASFQTKTHICLITDYC
+
+	PAIRWISE MOTIF CORRELATIONS:
+	MOTIF     1     2
+	----- ----- -----
+	   2   0.14
+	   3   0.11  0.15
+	No overly similar pairs (correlation > 0.60) found.
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.073 C 0.018 D 0.052 E 0.062 F 0.040 G 0.069 H 0.022 I 0.056 K 0.058 
+	L 0.092 M 0.023 N 0.046 P 0.051 Q 0.041 R 0.052 S 0.074 T 0.059 V 0.064 
+	W 0.013 Y 0.033 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 21 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+AAC05083.1                         NPH1-1 [Avena sativa]         1.2e-137    923
+sp|O48963.1|PHOT1_ARATH            RecName: Full=Phototropin-... 3.7e-136    996
+BAA36192.2                         PHY3 [Adiantum capillus-ve... 5.2e-121   1465
+sp|Q00TW1|Q00TW1_OSTTA             [T] KOG0690 Serine/threoni...  2.5e-84    738
+ACL93754.1                         photosensory histidine pro...  1.2e-65    368
+BAF91488.1                         aureochrome1 [Vaucheria fr...  1.2e-62    348
+AGG62438.1                         blue light GTP-binding rec...    2e-61    261
+sp|P58724.1|PHOT_LISMO             RecName: Full=Blue-light p...  3.9e-59    253
+AAL53921.1                         sensory transduction histi...  3.9e-58    489
+CAL55375.1                         Signal transduction histid...  2.7e-57    933
+sp|Q94BT6.2|ADO1_ARATH             RecName: Full=Adagio prote...  2.1e-56    609
+EAA28370.3                         vivid PAS protein VVD [Neu...    3e-56    186
+sp|Q8PJH6|Q8PJH6_XANAC             Sensor histidine kinase        8.6e-56    540
+WP_011242514.1                     MULTISPECIES: two-componen...    2e-54    929
+AAF32298.2                         FKF1 [Arabidopsis thaliana]      3e-54    619
+CAA63964.2                         wc-1 [Neurospora crassa]       5.2e-54   1167
+pdb|3P7N|A                         Chain A, Sensor Histidine ...  5.9e-54    258
+pdb|3SW1|A                         Chain A, Sensory Box Protein   4.8e-53    162
+pdb|4HNB|A                         Chain A, Lov Protein           1.6e-43    177
+sp|Q31RU9|Q31RU9_SYNP7             Diguanylate cyclase/phosph...  9.1e-43    578
+OZT82312.1                         hypothetical protein CIK04...      7.5     88
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [n]  occurrence of motif `n' with p-value less than 0.0001.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+AAC05083.1                         1.2e-137  132-[1]-5-[2]-181-[1]-5-[2]-119-[3]-249
+sp|O48963.1|PHOT1_ARATH            3.7e-136  193-[1]-5-[2]-182-[1]-5-[2]-126-[3]-253
+BAA36192.2                         5.2e-121  671-[1]-6-[2]-157-[1]-5-[2]-135-[3]-259
+sp|Q00TW1|Q00TW1_OSTTA              2.5e-84  25-[1]-5-[2]-79-[1]-5-[2]-132-[3]-260
+ACL93754.1                          1.2e-65  29-[1]-5-[2]-243
+BAF91488.1                          1.2e-62  213-[1]-5-[2]-39
+AGG62438.1                            2e-61  21-[1]-5-[2]-144
+sp|P58724.1|PHOT_LISMO              3.9e-59  15-[1]-5-[2]-142
+AAL53921.1                          3.9e-58  28-[1]-5-[2]-25-[1]-290
+CAL55375.1                          2.7e-57  106-[1]-5-[2]-731
+sp|Q94BT6.2|ADO1_ARATH              2.1e-56  41-[1]-14-[2]-463
+EAA28370.3                            3e-56  67-[1]-16-[2]-12
+sp|Q8PJH6|Q8PJH6_XANAC              8.6e-56  35-[1]-5-[2]-409
+WP_011242514.1                        2e-54  146-[1]-181-[1]-5-[2]-456
+AAF32298.2                            3e-54  50-[1]-14-[2]-464
+CAA63964.2                          5.2e-54  387-[1]-16-[2]-673
+pdb|3P7N|A                          5.9e-54  70-[1]-5-[2]-92
+pdb|3SW1|A                          4.8e-53  32-[1]-5-[2]-34
+pdb|4HNB|A                          1.6e-43  15-[1]-5-[2]-66
+sp|Q31RU9|Q31RU9_SYNP7              9.1e-43  32-[1]-5-[2]-450
+OZT82312.1                              7.5  88
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence,
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif, and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+AAC05083.1
+  NPH1-1 [Avena sativa]
+  LENGTH = 923  COMBINED P-VALUE = 5.83e-139  E-VALUE = 1.2e-137
+  DIAGRAM: 132-[1]-5-[2]-181-[1]-5-[2]-119-[3]-249
+
+                                                              [1]
+                                                              6.5e-31
+                                                              MIPCNFVITDPRLPDNPI
+                                                              + ++ +++++++ +  ++
+76   RAAEWGLVLQTNEQTGRPQGVSARSSGGGGSARSSSDDKAVAGAIPRVSEELRAALSAFQQTFVVSDASRPGHPI
+
+                                          [2]
+                                          5.7e-27
+     IYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDD
+      +++ ++ ++++++  ++++++++++++ +++     +++++++++++    +++++++++++++++++++++++
+151  MYASAGFFNMTGYTSKEVVGRNCRFLQGSGTDPAEIAKIRQALANGSNYCGRVLNYKKDGTAFWNLLTIAPIKDE
+
+     
+     
+     DGH
+     ++
+226  EGRVLKFIGMQVEVSKYTEGNKDTVVRPNGLPESLIKYDARQKDQARSSVSELLLAIKNPRSLSESTNSTFKRKS
+
+                                       [1]
+                                       1.4e-51
+                                       MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNC
+                                       +++++++++++++++++++++++++++++++++++++++++
+376  DPLLDSDDERPESFDDELRRKEMRRGIDLATTLERIEKNFVITDPRLPDNPIIFASDSFLQLTEYSREEILGRNC
+
+                   [2]
+                   2.5e-39
+     RFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     +++++++++     +++++++++++++++++++++++++++++++++++++++++
+451  RFLQGPETDRATVRKIRDAIDNQTEVTVQLINYTKSGKKFWNLFHLQPMRDQKGDVQYFIGVQLDGTEHVRDAAE
+
+                             [3]
+                             4.5e-63
+                             MDKNVMLNRNKVHRARAEREILDILDHPFLPTLYASFQTKTHICLITDYC
+                             ++++++++++++++++++++++++++++++++++++++++++++++++++
+601  GSGDTGSVHLVELLNTGEYFAMKAMDKNVMLNRNKVHRANAEREILDMLDHPFLPTLYASFQTKTHICLITDYYP
+
+
+sp|O48963.1|PHOT1_ARATH
+  RecName: Full=Phototropin-1; AltName: Full=Non-phototropic hypocotyl protein 
+  1; AltName: Full=Root phototropism protein 1
+  LENGTH = 996  COMBINED P-VALUE = 1.78e-137  E-VALUE = 3.7e-136
+  DIAGRAM: 193-[1]-5-[2]-182-[1]-5-[2]-126-[3]-253
+
+                                                [1]
+                                                1.3e-33
+                                                MIPCNFVITDPRLPDNPIIYANDAFEYMTGYS
+                                                + ++ ++++++++++ ++ +++ ++ ++++++
+151  KKTTSQRNSQNSCRSSGEMSDGDVPGGRSGIPRVSEDLKDALSTFQQTFVVSDATKPDYPIMYASAGFFNMTGYT
+
+                            [2]
+                            6.2e-24
+     REEILGRNCRFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+       ++++++++++++ +++     +++  ++++ +    +++++++++ +++++++++++++ +
+226  SKEVVGRNCRFLQGSGTDADELAKIRETLAAGNNYCGRILNYKKDGTSFWNLLTIAPIKDESGKVLKFIGMQVEV
+
+                          [1]
+                          1.4e-51
+                          MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                          ++++++++++++++++++++++++++++++++++++++++++++++++++
+451  VDDKVRQKEMRKGIDLATTLERIEKNFVITDPRLPDNPIIFASDSFLELTEYSREEILGRNCRFLQGPETDLTTV
+
+      [2]
+      5.8e-39
+      KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+      +++++++++++++++++++++++++++++++++++++++++
+526  KKIRNAIDNQTEVTVQLINYTKSGKKFWNIFHLQPMRDQKGEVQYFIGVQLDGSKHVEPVRNVIEETAVKEGEDL
+
+                       [3]
+                       4.8e-62
+                       MDKNVMLNRNKVHRARAEREILDILDHPFLPTLYASFQTKTHICLITDYC
+                       ++++++++++++++++++++++++++++++++++++++++++++++++++
+676  SVHLVELVGTDQLFAMKAMDKAVMLNRNKVHRARAEREILDLLDHPFLPALYASFQTKTHICLITDYYPGGELFM
+
+
+BAA36192.2
+  PHY3 [Adiantum capillus-veneris]
+  LENGTH = 1465  COMBINED P-VALUE = 2.47e-122  E-VALUE = 5.2e-121
+  DIAGRAM: 671-[1]-6-[2]-157-[1]-5-[2]-135-[3]-259
+
+                                                                            [1]
+                                                                            8.9e
+                                                                            MIPC
+                                                                            +  +
+601  TEENGGADNSKKLERMHSAAAGGGGGGGRWEKMRLPSSLAQEWMEAIRGTGDGGASGGGGGGPFDWDLISAFQHN
+
+                                                         [2]
+     -33                                                 6.9e-15
+     NFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD      KIRKAIKEGEEVTVQLINYRKDG
+     +++++++ +++++++++++++ ++++++  ++++ +++++++++++         +  +    +   ++++++++
+676  SFIVVDALKPDFPIIYASTGFFNLTGYTSREVIGGNCRFLQGPDTNPADVASIREALAQGTGTFCGRLLNYRKDG
+
+     
+     
+     KPFWNLLHMQPMRDDDGH
+     + +++++++++++++ +
+751  SSFWNLLTIAPIKDDLGSIVKLIGVQLEVSKYTEGIRANNRRPNGMPQSLIRYDVRHQDKVSAFIAQLVAALTKP
+
+                              [1]
+                              7.9e-46
+                              MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                              +++++++++++++++++++++++ ++++++++++++++ +++++++++++
+901  SVGRPGSLDDPERTRRGIDLATTLERIGKSFVITDPRLPDNPIIFASDRFLELTEYTREEVLGNNCRFLQGRGTD
+
+          [2]
+          3.7e-31
+          KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+           ++++++++++++++++++++++++++++++++ +++++++
+976  RKAVQLIRDAVKEQRDVTVQVLNYTKGGRAFWNLFHLQVMRDENGDVQYFIGVQQEMVAPRPVHQPPELPDILPD
+
+                                    [3]
+                                    6.9e-61
+                                    MDKNVMLNRNKVHRARAEREILDILDHPFLPTLYASFQTKTHIC
+                                    ++++++++++++++++++++++++++++++++++++++++++++
+1126 FRPIKPLGSGDTGSVHLVELRGTGQVFALKAMDKSMMLQRNKVHRARAEREILAIMDHPFLPTLYASFQTKTHVC
+
+     
+     
+     LITDYC
+     ++++++
+1201 LITDYCPGGDLFLLQDKQPTQTLSERTASFYAAEVVVALEYLHCMGVIYRDLKPENVLLQKNGHILLTDFDLSFL
+
+
+sp|Q00TW1|Q00TW1_OSTTA
+  [T] KOG0690 Serine/threonine protein kinase
+  LENGTH = 738  COMBINED P-VALUE = 1.20e-85  E-VALUE =  2.5e-84
+  DIAGRAM: 25-[1]-5-[2]-79-[1]-5-[2]-132-[3]-260
+
+                              [1]
+                              4.0e-33
+                              MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                              +    ++++++++++++++++++++++++++ ++++++ +++++++  ++
+1    MASHRISEGGAHAPSLDPIVARAFGAFDHTFTVCDATKPDCPIVYASDGFLRMTGYAAAEVIGYNCRFLQGEKTN
+
+          [2]
+          2.0e-22
+          KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+          + + +++++    + +++++++++++++ + +++++ ++++
+76   KNDVRELREAIKNGDRWSVRLLNYKKDGTPFWNYLVVAPVKLADGTVVKYIGVQTDVTEVKDADTGERGIEFDEK
+
+                                                       [1]
+                                                       2.4e-42
+                                                       MIPCNFVITDPRLPDNPIIYANDAF
+                                                       +++++++++++++++ +++++++++
+151  GQPVPSRYDARAAAATLGRVSEVEQAVRTAEGLGNQAQRRTGMDLASTLERIEQSFVITDPSLPDHPIVFASDGF
+
+                                   [2]
+                                   6.3e-30
+     EYMTGYSREEILGRNCRFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+      ++++++ ++++++++++++++ ++     +++ ++++++++++ ++++++ ++ +++++++++++++++
+226  MEFTGYSVDEILGRNCRFLQGPKTDRAAVAKIREAIENGEECTVRLLNYTKTGEEFWNMFTLAPVRDEQGIVRFF
+
+                                                          [3]
+                                                          1.1e-27
+                                                          MDKNVMLNRNKVHRARAEREIL
+                                                            + +   +++ ++  ++  ++
+376  RHWEALWRVTNYNDRPLTIDDFVPIRRIGQGDVGTVHLVALAKEKDVRFALKILTKQEIIDRNKLHRLQTESTIL
+
+     
+     
+     DILDHPFLPTLYASFQTKTHICLITDYC
+       +++++ +++++++++ +++ + + ++
+451  NQIDHPFVATLFASFQTSTHVYFLMEYCEGGELYDFLQKAPGKRLSEEATKFYAAEVLVSLQYLHLLGFVYRDLK
+
+
+ACL93754.1
+  photosensory histidine protein kinase LovK [Caulobacter vibrioides NA1000]
+  LENGTH = 368  COMBINED P-VALUE = 5.73e-67  E-VALUE =  1.2e-65
+  DIAGRAM: 29-[1]-5-[2]-243
+
+                                  [1]
+                                  4.1e-45
+                                  MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQG
+                                  +++++++++++++++++++++++++++++++ ++++++++++++++
+1    MEDYSESRRAGERLAAGHGVDDPFAAAISATRMAMIVADATQPDIPIIFANDAFLRLTGYARDEVIGRNCRFLQG
+
+              [2]
+              1.8e-31
+     PDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     ++++     ++++++++++++ +++++++++++++++++++++++++ ++
+76   PDTDPKAIQAVRDALAAGEDVAVDLLNYRKDGSPFWNALNMSPVRNDAGQLVYFFGSQVDVTDKKVVELRARDHS
+
+
+BAF91488.1
+  aureochrome1 [Vaucheria frigida]
+  LENGTH = 348  COMBINED P-VALUE = 5.62e-64  E-VALUE =  1.2e-62
+  DIAGRAM: 213-[1]-5-[2]-39
+
+                                                                    [1]
+                                                                    4.5e-46
+                                                                    MIPCNFVITDPR
+                                                                    ++++++++++++
+151  QSVNELNHENNCLKESIREHLGPRGDSLIAQCSPEADTLLTDNPSKANRILEDPDYSLVKALQMAQQNFVITDAS
+
+                                                [2]
+                                                1.9e-27
+     LPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHM
+     ++++++++++++++++++++ + +++++++++++++++     +++++++++ +  +++++++ +++ +++++++
+226  LPDNPIVYASRGFLTLTGYSLDQILGRNCRFLQGPETDPRAVDKIRNAITKGVDTSVCLLNYRQDGTTFWNLFFV
+
+     
+     
+     QPMRDDDGH
+     +  ++ +++
+301  AGLRDSKGNIVNYVGVQSKVSEDYAKLLVNEQNIEYKGVRTSNMLRRK
+
+
+AGG62438.1
+  blue light GTP-binding receptor YtvA [Bacillus subtilis subsp. subtilis 
+  6051-HGW]
+  LENGTH = 261  COMBINED P-VALUE = 9.29e-63  E-VALUE =    2e-61
+  DIAGRAM: 21-[1]-5-[2]-144
+
+                          [1]
+                          6.3e-42
+                          MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                          +++++++++++ + +++++++++++ +++++ ++++++++++++++++++
+1    MASFQSFGIPGQLEVIKKALDHVRVGVVITDPALEDNPIVYVNQGFVQMTGYETEEILGKNCRFLQGKHTDPAEV
+
+      [2]
+      1.2e-29
+      KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+      ++++++++++++++++++++++++++++++++ ++  ++ +
+76   DNIRTALQNKEPVTVQIQNYKKDGTMFWNELNIDPMEIEDKTYFVGIQNDITKQKEYEKLLEDSLTEITALSTPI
+
+
+sp|P58724.1|PHOT_LISMO
+  RecName: Full=Blue-light photoreceptor; AltName: Full=Phototropin homolog
+  LENGTH = 253  COMBINED P-VALUE = 1.88e-60  E-VALUE =  3.9e-59
+  DIAGRAM: 15-[1]-5-[2]-142
+
+                    [1]                                                    [2]
+                    2.0e-39                                                5.0e-
+                    MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKA
+                     ++++++++++++++++++++++++++++++ +++ ++ ++ ++++++++     +++++
+1    MTAYPQFDVILKALNLSSVGVIITDPEQKDNPIIFVNTGFENITGYAKEEALGSNCHFLQGDDTDKEEVAKIRHA
+
+     
+     30
+     IKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     +++++  ++ +++++++++ ++++++++++++++++
+76   INEKSTANVLLKNYRKDGTSFMNELTIEPIYDDHEHLYFVGIQKDVTTEHDYQLELEKSLTEIEKLSTPIVPIKE
+
+
+AAL53921.1
+  sensory transduction histidine kinase [Brucella melitensis bv. 1 str. 16M]
+  LENGTH = 489  COMBINED P-VALUE = 1.88e-59  E-VALUE =  3.9e-58
+  DIAGRAM: 28-[1]-5-[2]-25-[1]-290
+
+                                 [1]
+                                 7.1e-42
+                                 MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGP
+                                 ++ +++ ++ +++++++++++++++++++++ +++++++++++++++
+1    MAIDLRPFIPFGRGALSQATDPFRAAVEFTLMPMLITNPHLPDNPIVFANPAFLKLTGYEADEVMGRNCRFLQGH
+
+             [2]                                                               [
+             3.5e-27                                                           1
+     DTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH                         M
+     +++     ++  ++++ +++ +++++++++++++++++++++++++++
+76   GTDPAHVRAIKSAIAAEKPIDIDIINYKKSGEAFWNRLHISPVHNANGRLQHFVSSQLDVTLELSRLVELEKERK
+
+     1]
+     .6e-05
+     IPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+     +    +     + +  +  ++ ++ +   ++        ++   +  ++
+151  TLSIETARSKDQLDYIVEVANIGFWTREFYSGKMTCSAECRRIYGFTPDEPVHFDTILDLVVLEDRMTVVQKAHQ
+
+
+CAL55375.1
+  Signal transduction histidine kinase-related protein, C-terminal 
+  [Ostreococcus tauri]
+  LENGTH = 933  COMBINED P-VALUE = 1.28e-58  E-VALUE =  2.7e-57
+  DIAGRAM: 106-[1]-5-[2]-731
+
+                                    [1]
+                                    4.3e-39
+                                    MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFL
+                                     + +++++++++++++++++++ +++ +++++ ++ ++++++++
+76   NELMSLKALYRQCKGTSSPQEQIAVRELAMDSCAEGITIADFSKPDQPLIYANIGFESMTGYSVQETLGKNCRFL
+
+                [2]
+                7.9e-30
+     QGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     ++++++     ++++++++++ +++++++++++++ ++++++++++++ +++
+151  QGPGTDLKELGKVRAAITKGEACTVVLKNYKKSGEEFMNQLSLTPIRDGEGNVMYYVGIQSDITELFKRRDDELN
+
+
+sp|Q94BT6.2|ADO1_ARATH
+  RecName: Full=Adagio protein 1; AltName: Full=Clock-associated PAS protein 
+  ZTL; AltName: Full=F-box only protein 2b; Short=FBX2b; AltName: 
+  Full=Flavin-binding kelch repeat F-box protein 1-like protein 2; 
+  Short=FKF1-like protein 2; AltName: Full=LOV kelch protein 1; AltName: 
+  Full=Protein ZEITLUPE
+  LENGTH = 609  COMBINED P-VALUE = 1.02e-57  E-VALUE =  2.1e-56
+  DIAGRAM: 41-[1]-14-[2]-463
+
+                                              [1]
+                                              9.9e-39
+                                              MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSRE
+                                              +++++++++++ +++++++++++++++ +++ ++
+1    MEWDSGSDLSADDASSLADDEEGGLFPGGGPIPYPVGNLLHTAPCGFVVTDAVEPDQPIIYVNTVFEMVTGYRAE
+
+                                   [2]
+                                   8.1e-29
+     EILGRNCRFLQGPDTD              KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     ++++ ++++++++++               +++++++++++++ +++++++++++ ++++++++++ ++++
+76   EVLGGNCRFLQCRGPFAKRRHPLVDSMVVSEIRKCIDEGIEFQGELLNFRKDGSPLMNRLRLTPIYGDDDTITHI
+
+
+EAA28370.3
+  vivid PAS protein VVD [Neurospora crassa OR74A]
+  LENGTH = 186  COMBINED P-VALUE = 1.43e-57  E-VALUE =    3e-56
+  DIAGRAM: 67-[1]-16-[2]-12
+
+                                                                        [1]
+                                                                        2.0e-38
+                                                                        MIPCNFVI
+                                                                        ++++++++
+1    MSHTVNSSTMNPWEVEAYQQYHYDPRTAPTANPLFFHTLYAPGGYDIMGYLIQIMNRPNPQVELGPVDTSCALIL
+
+                                                               [2]
+                                                               9.2e-28
+     TDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD                KIRKAIKEGEEVTVQLI
+     ++ ++++++++++++++++++++++++++++++++++ +++                 +++++++ + ++++++
+76   CDLKQKDTPIVYASEAFLYMTGYSNAEVLGRNCRFLQSPDGMVKPKSTRKYVDSNTINTMRKAIDRNAEVQVEVV
+
+     
+     
+     NYRKDGKPFWNLLHMQPMRDDDGH
+     +++++++ ++++++++++++++++
+151  NFKKNGQRFVNFLTMIPVRDETGEYRYSMGFQCETE
+
+
+sp|Q8PJH6|Q8PJH6_XANAC
+  Sensor histidine kinase
+  LENGTH = 540  COMBINED P-VALUE = 4.09e-57  E-VALUE =  8.6e-56
+  DIAGRAM: 35-[1]-5-[2]-409
+
+                                        [1]
+                                        1.2e-42
+                                        MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRN
+                                        +++++++++++++++++++++++++++++++ ++++++ +
+1    MNDPGHGELRAPHISESRSLPVEKHRSDIFFAAVETTRMPMTVTDPHLPDNPIVFANRAFLEMTGYAADEVIGNN
+
+                    [2]
+                    1.8e-24
+     CRFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     ++++++++++      ++  ++  +++  ++++++++++ ++++++++++++++++
+76   CRFLQGPETDPASISDVRESIESRREFATEVLNYRKDGSSFWNALFISPVFDDKGNLVYFFGSQLDVSRRRDAED
+
+
+WP_011242514.1
+  MULTISPECIES: two-component system response regulator [Synechococcus]
+  LENGTH = 929  COMBINED P-VALUE = 9.45e-56  E-VALUE =    2e-54
+  DIAGRAM: 146-[1]-181-[1]-5-[2]-456
+
+                                                                            [1]
+                                                                            5.2e
+                                                                            MIPC
+                                                                            +  +
+76   AIQAGITRPIILLTGQGNEQLDASAIELGAADYLVKGQLDCQQLLRSIRYAIDRNLATTRLAESESRYRLLFEAN
+
+     
+     -06
+     NFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+     +     + +       ++++  ++ +++ ++ +       +  +
+151  PEPMWVFAKQGLQFLAVNQAASQFFGYSQQEFLAMTVLDIQSEEEKTRFLQFFESLICNQIVDPAVGVWAYRHKQ
+
+       [1]                                                    [2]
+       7.0e-40                                                2.7e-26
+       MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKAIKEGEEVTVQLIN
+       +++++++++++ ++++++++++++++++++++++++++++++ +++++++     ++ +++ + +++++++++
+376  LEASFNGVVIVDAIEPDMPVIYVNPAFERITGYSEAEMLGRNCRILQGNERDSLQIEEIHRGLSQAENVHVVIRN
+
+     
+     
+     YRKDGKPFWNLLHMQPMRDDDGH
+     ++++++++++ ++++++++++++
+451  FRKDGQPFWNDLYISPIFNAQGNVTHFIGVQNDITEQKRYEEELSFSASHDVLTGLPNRAVLEDRLRQGCKMALR
+
+
+AAF32298.2
+  FKF1 [Arabidopsis thaliana]
+  LENGTH = 619  COMBINED P-VALUE = 1.45e-55  E-VALUE =    3e-54
+  DIAGRAM: 50-[1]-14-[2]-464
+
+                                                       [1]
+                                                       6.2e-37
+                                                       MIPCNFVITDPRLPDNPIIYANDAF
+                                                       +++ +++++++ +++++++++++++
+1    MAREHAIGEATGKRKKRGRVEEAEEYCNDGIEEQVEDEKLPLEVGMFYYPMTPPSFIVSDALEPDFPLIYVNRVF
+
+                                            [2]
+                                            1.1e-28
+     EYMTGYSREEILGRNCRFLQGPDTD              KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMR
+     + ++++ +++++++++++++ +++               +++++++++++++ +++++++++++ ++++++++++
+76   EVFTGYRADEVLGRNCRFLQYRDPRAQRRHPLVDPVVVSEIRRCLEEGIEFQGELLNFRKDGTPLVNRLRLAPIR
+
+     
+     
+     DDDGH
+     +++++
+151  DDDGTITHVIGIQVFSETTIDLDRVSYPVFKHKQQLDQTSECLFPSGSPRFKEHHEDFCGILQLSDEVLAHNILS
+
+
+CAA63964.2
+  wc-1 [Neurospora crassa]
+  LENGTH = 1167  COMBINED P-VALUE = 2.50e-55  E-VALUE =  5.2e-54
+  DIAGRAM: 387-[1]-16-[2]-673
+
+                 [1]
+                 5.5e-41
+                 MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                 ++++++++++ ++ +++++++++++++++++++++++++++++++ ++++
+376  SRKDPKLKLGAVDMSCAFVVCDVTLNDCPIIYVSDNFQNLTGYSRHEIVGRNCRFLQAPDGNVEAGTKREFVENN
+
+        [2]
+        4.2e-25
+        KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+        +  + ++++++++  +++++++++++ ++++++++ +++++
+451  AVYTLKKTIAEGQEIQQSLINYRKGGKPFLNLLTMIPIPWDTEEIRYFIGFQIDLVECPDAIIGQEGNGPMQVNY
+
+
+pdb|3P7N|A
+  Chain A, Sensor Histidine Kinase
+  LENGTH = 258  COMBINED P-VALUE = 2.82e-55  E-VALUE =  5.9e-54
+  DIAGRAM: 70-[1]-5-[2]-92
+
+                                                                           [1]
+                                                                           3.2e-
+                                                                           MIPCN
+                                                                           +++ +
+1    MRGSHHHHHHGMASMTGGQQMGRDLYDDDDKDHPFTMGQDRPIDGSGAPGADDTRVEVQPPAQWVLDLIEASPIA
+
+                                                       [2]
+     36                                                2.9e-28
+     FVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKP
+      +++++++ +++++ +++++  +++++++++++++++++ + ++      ++++++ +++++ ++++++++++++
+76   SVVSDPRLADNPLIAINQAFTDLTGYSEEECVGRNCRFLAGSGTEPWLTDKIRQGVREHKPVLVEILNYKKDGTP
+
+     
+     
+     FWNLLHMQPMRDDDGH
+     + ++  ++++++++++
+151  FRNAVLVAPIYDDDDELLYFLGSQVEVDDDQPNMGMARRERAAEMLKTLSPRQLEVTTLVASGLRNKEVAARLGL
+
+
+pdb|3SW1|A
+  Chain A, Sensory Box Protein
+  LENGTH = 162  COMBINED P-VALUE = 2.30e-54  E-VALUE =  4.8e-53
+  DIAGRAM: 32-[1]-5-[2]-34
+
+                                     [1]
+                                     3.7e-34
+                                     MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRF
+                                     +++ +++++  +  ++ +++++ +++++++++++++++  +++
+1    MGSSHHHHHHSSGLVPRGSHMINAQLLQSMVDASNDGIVVAEKEGDDTILIYVNAAFEYLTGYSRDEILYQDCRF
+
+                 [2]
+                 2.4e-28
+     LQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     +++++++      +++++++++++  ++++++++++++++++++++++ ++++
+76   LQGDDRDQLGRARIRKAMAEGRPCREVLRNYRKDGSAFWNELSITPVKSDFDQRTYFIGIQKDVSRQVELERELA
+
+
+pdb|4HNB|A
+  Chain A, Lov Protein
+  LENGTH = 177  COMBINED P-VALUE = 7.80e-45  E-VALUE =  1.6e-43
+  DIAGRAM: 15-[1]-5-[2]-66
+
+                    [1]                                                    [2]
+                    4.7e-31                                                1.6e-
+                    MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKA
+                    ++++++++++++++ ++++ +++ +++++++++  +++ ++++++  + +      ++++
+1    AMDQKQFEKIRAVFDRSGVALTLVDMSLPEQPLVLANPPFLRMTGYTEGQILGFNCRFLQRGDENAQARADIRDA
+
+     
+     22
+     IKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     ++ ++++++++++++ + +++ ++++++++    +
+76   LKLGRELQVVLRNYRANDEPFDNLLFLHPVGGRPDAPDYFLGSQFELGRSGNSEEAAAAGHAGALTGELARIGTV
+
+
+sp|Q31RU9|Q31RU9_SYNP7
+  Diguanylate cyclase/phosphodiesterase (GGDEF & EAL domains) with PAS/PAC 
+  sensor(S)
+  LENGTH = 578  COMBINED P-VALUE = 4.34e-44  E-VALUE =  9.1e-43
+  DIAGRAM: 32-[1]-5-[2]-450
+
+                                     [1]
+                                     1.1e-27
+                                     MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRF
+                                     ++++++ +++++ ++  + +++ ++ +++++ +++ +++ +++
+1    MIARPMVPTADQLATDDLSLSDRSRFWLAALEASGQGVAIADATHPDLILTYVNSAFKKLTGYNAAEALGKSCRF
+
+                 [2]
+                 2.7e-26
+     LQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     +++ ++      + ++++ +++ + +++++++++++ ++++++++++ + ++
+76   LQGSDRAQPGITTLRQAIRNGQACEVVLRNYRKDGSLFWNQLTIAPITDGQGKVSHYVALQRDITAFKEQEQALQ
+
+
+OZT82312.1
+  hypothetical protein CIK04_25825, partial [Vibrio sp. 03_296]
+  LENGTH = 88  COMBINED P-VALUE = 3.57e-01  E-VALUE =      7.5
+  DIAGRAM: 88
+
+********************************************************************************
+
+
+CPU: meme-server
+Time 0.036 secs.
+
+mast -oc . -nostatus -minseqs 21 -remcorr -ev 10.0 -dl http://www.uniprot.org/uniprot/?query=SEQUENCEID&sort=score meme_withcys.xml Cys_LOV_test_set.txt

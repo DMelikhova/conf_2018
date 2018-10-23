@@ -1,0 +1,720 @@
+********************************************************************************
+MAST - Motif Alignment and Search Tool
+********************************************************************************
+	MAST version 5.0.2 (Release date: Thu Aug 30 14:26:08 2018 -0700)
+
+	For further information on how to interpret these results please access http://alternate.meme-suite.org/.
+	To get a copy of the MAST software please access http://meme-suite.org.
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+	If you use this program in your research, please cite:
+
+	Timothy L. Bailey and Michael Gribskov,
+	"Combining evidence using p-values: application to sequence homology
+	searches", Bioinformatics, 14(48-54), 1998.
+********************************************************************************
+
+
+********************************************************************************
+DATABASE AND MOTIFS
+********************************************************************************
+	DATABASE Non_LOV_test_set.txt (peptide)
+	Last updated on Sun Oct 21 13:41:47 2018
+	Database contains 44 sequences, 28526 residues
+
+	MOTIFS meme_withcys.xml (peptide)
+	MOTIF ID                                                 ALT ID WIDTH BEST POSSIBLE MATCH
+	----- -------------------------------------------------- ------ ----- -------------------
+	    1 RSSKGFVITDPRLPDNPIIYANDAFLELTGYSREEILGRNCRFLQGPDTD MEME-1    50 MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+	    2 KIRKAIAEGEEVTVELJNYRKDGTPFWNLLHJAPIRDDDGE          MEME-2    41 KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+	    3 MDKAVMLNRNKVHRARAEREILDLLDHPFLPTLYASFQTKTHICLITDYY MEME-3    50 MDKNVMLNRNKVHRARAEREILDILDHPFLPTLYASFQTKTHICLITDYC
+
+	PAIRWISE MOTIF CORRELATIONS:
+	MOTIF     1     2
+	----- ----- -----
+	   2   0.14
+	   3   0.11  0.15
+	No overly similar pairs (correlation > 0.60) found.
+
+	Random model letter frequencies (from non-redundant database):
+	A 0.073 C 0.018 D 0.052 E 0.062 F 0.040 G 0.069 H 0.022 I 0.056 K 0.058 
+	L 0.092 M 0.023 N 0.046 P 0.051 Q 0.041 R 0.052 S 0.074 T 0.059 V 0.064 
+	W 0.013 Y 0.033 
+********************************************************************************
+
+
+********************************************************************************
+SECTION I: HIGH-SCORING SEQUENCES
+********************************************************************************
+	- Each of the following 30 sequences has E-value less than 10.
+	- The E-value of a sequence is the expected number of sequences
+	  in a random database of the same size that would match the motifs as
+	  well as the sequence does and is equal to the combined p-value of the
+	  sequence times the number of sequences in the database.
+	- The combined p-value of a sequence measures the strength of the
+	  match of the sequence to all the motifs and is calculated by
+	    o finding the score of the single best match of each motif
+	      to the sequence (best matches may overlap),
+	    o calculating the sequence p-value of each score,
+	    o forming the product of the p-values,
+	    o taking the p-value of the product.
+	- The sequence p-value of a score is defined as the
+	  probability of a random sequence of the same length containing
+	  some match with as good or better a score.
+	- The score for the match of a position in a sequence to a motif
+	  is computed by by summing the appropriate entry from each column of
+	  the position-dependent scoring matrix that represents the motif.
+	- Sequences shorter than one or more of the motifs are skipped.
+	- The table is sorted by increasing E-value.
+********************************************************************************
+
+SEQUENCE NAME                      DESCRIPTION                   E-VALUE  LENGTH
+-------------                      -----------                   -------- ------
+tr|Q5V5P7|Q5V5P7_HALMA             HTR-like protein OS=Haloar...  2.9e-51    726
+tr|Q609M8|Q609M8_METCA             Sensory box histidine kina...  2.7e-08   1177
+tr|Q87SR8|Q87SR8_VIBPA             Putative sensory box/GGDEF...  8.4e-07    626
+sp|P76129|DOSP_ECOLI               Oxygen sensor protein DosP...  9.6e-07    799
+tr|Q486I1|Q486I1_COLP3             Sensory box/GGDEF domain p...  3.3e-06    284
+sp|P10955|FIXL_RHIME               Sensor protein FixL OS=Rhi...  0.00014    505
+tr|Q8YZM9|Q8YZM9_NOSS1             Two-component sensor histi...  0.00015    637
+tr|Q87TF0|Q87TF0_VIBPA             Nitrogen regulation protei...    0.041    348
+sp|Q96RG2|PASK_HUMAN               PAS domain-containing seri...     0.21   1323
+tr|Q8EII0|Q8EII0_SHEON             Histidine kinase OS=Shewan...     0.27   1765
+sp|P52687|CITA_KLEPN               Sensor histidine kinase Ci...     0.51    547
+tr|Q7NXP4|Q7NXP4_CHRVO             Probable GGDEF family prot...     0.57    427
+tr|Q8EGB0|Q8EGB0_SHEON             Diguanylate cyclase with P...      1.1    339
+tr|Q0S7I6|Q0S7I6_RHOJR             Uncharacterized protein OS...      1.2    399
+sp|P23222|FIXL_BRADU               Sensor protein FixL OS=Bra...      1.3    505
+sp|P0AEC8|DCUS_ECOLI               Sensor histidine kinase Dc...      1.7    543
+sp|Q55168|PHY1_SYNY3               Phytochrome-like protein c...      2.7    748
+tr|Q8PSW8|Q8PSW8_METMA             Hypothetical sensory trans...      3.7    876
+tr|Q24QT8|Q24QT8_DESHY             Uncharacterized protein OS...      3.9    450
+sp|P16113|PYP_HALHA                Photoactive yellow protein...      4.1    125
+sp|P07663|PER_DROME                Period circadian protein O...      4.8   1224
+sp|P23545|PHOR_BACSU               Alkaline phosphatase synth...      4.9    579
+tr|Q6N3S7|Q6N3S7_RHOPA             Putative diguanylate cycla...      5.1    644
+tr|Q74DN1|Q74DN1_GEOSL             Sensor histidine kinase re...      5.1    772
+sp|P9WLZ7|Y1364_MYCTU              Uncharacterized protein Rv...      6.2    653
+tr|Q9KL26|Q9KL26_VIBCH             Methyl-accepting chemotaxi...      6.3    652
+sp|C1CZ84|IRRE_DEIDV               Radiation response metallo...      6.4    281
+tr|Q8PSW1|Q8PSW1_METMA             Hypothetical sensory trans...      7.7    839
+sp|P13633|DCTB_RHIME               C4-dicarboxylate transport...        8    621
+tr|B3PFT7|B3PFT7_CELJU             AbfS arabinofuranosidase t...      8.4    467
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION II: MOTIF DIAGRAMS
+********************************************************************************
+	- The ordering and spacing of all non-overlapping motif occurrences
+	  are shown for each high-scoring sequence listed in Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001.
+	- The POSITION p-value of a match is the probability of
+	  a single random subsequence of the length of the motif
+	  scoring at least as well as the observed match.
+	- For each sequence, all motif occurrences are shown unless there
+	  are overlaps.  In that case, a motif occurrence is shown only if its
+	  p-value is less than the product of the p-values of the other
+	  (lower-numbered) motif occurrences that it overlaps.
+	- The table also shows the E-value of each sequence.
+	- Spacers and motif occurences are indicated by
+	   o -d-    `d' residues separate the end of the preceding motif 
+		    occurrence and the start of the following motif occurrence
+	   o [n]  occurrence of motif `n' with p-value less than 0.0001.
+********************************************************************************
+
+SEQUENCE NAME                      E-VALUE   MOTIF DIAGRAM
+-------------                      --------  -------------
+tr|Q5V5P7|Q5V5P7_HALMA              2.9e-51  278-[1]-5-[2]-30-[1]-272
+tr|Q609M8|Q609M8_METCA              2.7e-08  91-[1]-5-[2]-26-[1]-300-[1]-564
+tr|Q87SR8|Q87SR8_VIBPA              8.4e-07  344-[1]-232
+sp|P76129|DOSP_ECOLI                9.6e-07  16-[1]-9-[2]-24-[1]-6-[2]-562
+tr|Q486I1|Q486I1_COLP3              3.3e-06  11-[1]-5-[2]-177
+sp|P10955|FIXL_RHIME                0.00014  141-[1]-9-[2]-264
+tr|Q8YZM9|Q8YZM9_NOSS1              0.00015  14-[1]-[2]-181-[1]-301
+tr|Q87TF0|Q87TF0_VIBPA                0.041  8-[1]-3-[2]-246
+sp|Q96RG2|PASK_HUMAN                   0.21  126-[1]-858-[3]-239
+tr|Q8EII0|Q8EII0_SHEON                 0.27  575-[2]-32-[1]-8-[2]-1018
+sp|P52687|CITA_KLEPN                   0.51  303-[2]-203
+tr|Q7NXP4|Q7NXP4_CHRVO                 0.57  187-[2]-199
+tr|Q8EGB0|Q8EGB0_SHEON                  1.1  339
+tr|Q0S7I6|Q0S7I6_RHOJR                  1.2  122-[1]-227
+sp|P23222|FIXL_BRADU                    1.3  76-[2]-30-[1]-308
+sp|P0AEC8|DCUS_ECOLI                    1.7  543
+sp|Q55168|PHY1_SYNY3                    2.7  24-[1]-674
+tr|Q8PSW8|Q8PSW8_METMA                  3.7  601-[1]-225
+tr|Q24QT8|Q24QT8_DESHY                  3.9  450
+sp|P16113|PYP_HALHA                     4.1  125
+sp|P07663|PER_DROME                     4.8  233-[1]-100-[1]-791
+sp|P23545|PHOR_BACSU                    4.9  579
+tr|Q6N3S7|Q6N3S7_RHOPA                  5.1  644
+tr|Q74DN1|Q74DN1_GEOSL                  5.1  43-[1]-70-[1]-559
+sp|P9WLZ7|Y1364_MYCTU                   6.2  135-[2]-477
+tr|Q9KL26|Q9KL26_VIBCH                  6.3  522-[2]-89
+sp|C1CZ84|IRRE_DEIDV                    6.4  281
+tr|Q8PSW1|Q8PSW1_METMA                  7.7  839
+sp|P13633|DCTB_RHIME                      8  621
+tr|B3PFT7|B3PFT7_CELJU                  8.4  467
+
+********************************************************************************
+
+
+
+********************************************************************************
+SECTION III: ANNOTATED SEQUENCES
+********************************************************************************
+	- The positions and p-values of the non-overlapping motif occurrences
+	  are shown above the actual sequence for each of the high-scoring
+	  sequences from Section I.
+	- A motif occurrence is defined as a position in the sequence whose
+	  match to the motif has POSITION p-value less than 0.0001 as 
+	  defined in Section II.
+	- For each sequence, the first line specifies the name of the sequence.
+	- The second (and possibly more) lines give a description of the 
+	  sequence.
+	- Following the description line(s) is a line giving the length, 
+	  combined p-value, and E-value of the sequence as defined in Section I.
+	- The next line reproduces the motif diagram from Section II.
+	- The entire sequence is printed on the following lines.
+	- Motif occurrences are indicated directly above their positions in the
+	  sequence on lines showing
+	   o the motif number of the occurrence,
+	   o the position p-value of the occurrence,
+	   o the best possible match to the motif, and
+	   o columns whose match to the motif has a positive score (indicated 
+	     by a plus sign).
+********************************************************************************
+
+
+tr|Q5V5P7|Q5V5P7_HALMA
+  HTR-like protein OS=Haloarcula marismortui (strain ATCC 43049 / DSM 3752 / 
+  JCM 8966 / VKM B-1809) OX=272569 GN=htlD PE=1 SV=1
+  LENGTH = 726  COMBINED P-VALUE = 6.50e-53  E-VALUE =  2.9e-51
+  DIAGRAM: 278-[1]-5-[2]-30-[1]-272
+
+                                                          [1]
+                                                          6.3e-32
+                                                          MIPCNFVITDPRLPDNPIIYAN
+                                                           ++++++++++ ++++++++++
+226  ETEFPGHGHAVVAYQLTPLVVDGTIDGIVGVARDVTEQKERERELLRNKRAIDEAPVGVTITDPNQPDNPLIYAN
+
+                                      [2]
+                                      9.8e-31
+     DAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     +   ++++++  + ++++++ +++  ++     + ++++++++ + +++++++++++ ++++ +++++++++++
+301  DHYRELTGYSLPELLGKNCRILQGENTDPEPVDALRDAIDAGEQVSVELRNYRKDGTEFWNRVRIAPVRDDDGTV
+
+                                  [1]
+                                  1.0e-06
+                                  MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQG
+                                    +++    +    +  +  +++ +    ++ + +++++
+376  VNYVGFQQDTTERKRREKRLEETSSRLEALFENSPDMIDVLDADGTICEVNQRFCAELGYDESEVLGRSIWEFDL
+
+     
+     
+     PDTD
+     
+451  MFDAEDVQTQLSGFSVDERRKFEGLYERRDGSTMSVEVHLLRFNLEGEDRFLAISRDITERKEREQELEQQNEQL
+
+
+tr|Q609M8|Q609M8_METCA
+  Sensory box histidine kinase/response regulator OS=Methylococcus capsulatus 
+  (strain ATCC 33009 / NCIMB 11132 / Bath) OX=243233 GN=MCA1204 PE=1 SV=1
+  LENGTH = 1177  COMBINED P-VALUE = 6.15e-10  E-VALUE =  2.7e-08
+  DIAGRAM: 91-[1]-5-[2]-26-[1]-300-[1]-564
+
+                     [1]                                                    [2]
+                     7.2e-09                                                6.7e
+                     MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRK
+                     ++  +  ++  +     + ++++++     + +++ ++   +              + +
+76   LAQQIARESQRNKELLDALDAHALVSITDLQGRILYANDNFCAVSRYGREELVGQDHRIVNSGYHGKAYIRDMWR
+
+                                                                    [1]
+     -10                                                            5.1e-09
+     AIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH                          MIPCNFVITDPR
+      +  +   + +  + +++++  +   ++ +  +  +                           ++  +      +
+151  TISRGNIWQGEFCNRRKDGTRYWVDSTIVPLMDNAGKPRQYISIRRDITAQKEAEAQLARLKQAMDANSEMILLT
+
+     
+     
+     LPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+          +++++++  ++ +  + + ++     +  +  +
+226  DRAGRIIYANPALCRFSGMAEGELLGQSPSILDSPLADQETLAAMQEALQAGQPWSGRLLNRRRTGPAPHDAEDY
+
+                                           [1]
+                                           2.1e-05
+                                           MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEIL
+                                            + +++     +  ++    +  +  + ++      +
+526  ANMSHEIRTPMNGVLGMLELLKDTDMSREQWDLVETASNSAESLLEIINSILDFSKLEAGKVEIERTEFNLPDLV
+
+     
+     
+     GRNCRFLQGPDTD
+        +  + ++  +
+601  EEVCALLAGRAHDKGLELNCFLPADLPRMWIGDPTRIRQILTNLLGNSVKFTERGEVSVKVMQGEAGAKRTDLSF
+
+
+tr|Q87SR8|Q87SR8_VIBPA
+  Putative sensory box/GGDEF family protein OS=Vibrio parahaemolyticus serotype 
+  O3:K6 (strain RIMD 2210633) OX=223926 GN=VP0354 PE=1 SV=1
+  LENGTH = 626  COMBINED P-VALUE = 1.92e-08  E-VALUE =  8.4e-07
+  DIAGRAM: 344-[1]-232
+
+                                                 [1]
+                                                 6.9e-13
+                                                 MIPCNFVITDPRLPDNPIIYANDAFEYMTGY
+                                                 ++  +++ +  +     ++ +++ ++++ ++
+301  ATRDINDLIQESLFVLSLVLVFTLPITALALHYRRHSVESKLARAALDGMTAVMISDASLRIIMVNQEFENMMGY
+
+     
+     
+     SREEILGRNCRFLQGPDTD
+     +++ + + +   +     +
+376  STEQVKGSNAHSLILLPEDLEETLNIWNKLGRENVWEGEVRCRTQLNHVFTAIMRIQANLTKSGKISYYITSLVD
+
+
+sp|P76129|DOSP_ECOLI
+  Oxygen sensor protein DosP OS=Escherichia coli (strain K12) OX=83333 GN=dosP 
+  PE=1 SV=4
+  LENGTH = 799  COMBINED P-VALUE = 2.19e-08  E-VALUE =  9.6e-07
+  DIAGRAM: 16-[1]-9-[2]-24-[1]-6-[2]-562
+
+                     [1]
+                     5.9e-11
+                     MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                     + ++++  +        + + +++ +++ ++ ++++++ +   +  ++
+1    MKLTDADNAADGIFFPALEQNMMGAVLINENDEVMFFNPAAEKLWGYKREEVIGNNIDMLIPRDLRPAHPEYIRH
+
+     [2]                                                              [1]
+     5.7e-06                                                          4.8e-06
+     KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH                        MIPCNFVITD
+     +   + +  +    +++  ++++++ + ++ ++ +  +                           ++      +
+76   NREGGKARVEGMSRELQLEKKDGSKIWTRFALSKVSAEGKVYYLALVRDASVEMAQKEQTRQLIIAVDHLDRPVI
+
+                                                   [2]
+                                                   9.0e-06
+     PRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD      KIRKAIKEGEEVTVQLINYRKDGKPFWNL
+        +   ++  ++++ ++ ++   +  +     +               + + +    + + +  +  +++ +
+151  VLDPERHIVQCNRAFTEMFGYCISEASGMQPDTLLNIPEFPADNRIRLQQLLWKTARDQDEFLLLTRTGEKIWIK
+
+     
+     
+     LHMQPMRDDDGH
+      +++++++   +
+226  ASISPVYDVLAHLQNLVMTFSDITEERQIRQLEGNILAAMCSSPPFHEMGEIICRNIESVLNESHVSLFALRNGM
+
+
+tr|Q486I1|Q486I1_COLP3
+  Sensory box/GGDEF domain protein OS=Colwellia psychrerythraea (strain 34H / 
+  ATCC BAA-681) OX=167879 GN=CPS_1291 PE=1 SV=1
+  LENGTH = 284  COMBINED P-VALUE = 7.40e-08  E-VALUE =  3.3e-06
+  DIAGRAM: 11-[1]-5-[2]-177
+
+                [1]                                                    [2]
+                3.3e-07                                                1.9e-07
+                MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD     KIRKAIKEG
+                +    +     +     ++  + + +++ +++++  ++     +  ++       ++  +++++
+1    MNVDILKQRAKAFDYVFDAIVVTDLQGFIIDWNKGSETLYGYSKEQAIGQPVNMLHVPGDTEHITSEVISAVENQ
+
+     
+     
+     EEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+        + +++   +++   + +    +++ ++ +
+76   GKWTGEIRMLHKDGHIGWIESMCVPIYGENYQMVGALGINRDITKRKKETERLEHLAHYDQLTKVPNRYLLLDRL
+
+
+sp|P10955|FIXL_RHIME
+  Sensor protein FixL OS=Rhizobium meliloti (strain 1021) OX=266834 GN=fixL 
+  PE=1 SV=2
+  LENGTH = 505  COMBINED P-VALUE = 3.20e-06  E-VALUE =  0.00014
+  DIAGRAM: 141-[1]-9-[2]-264
+
+                                                                       [1]
+                                                                       2.8e-08
+                                                                       MIPCNFVIT
+                                                                               +
+76   AAGLSLVAAVSHQQISSADGPSVVELLVFGSAVLLIVALGEVLEAARRAIDRTEDVVRARDAHLRSILDTVPDAT
+
+                                                       [2]
+                                                       4.4e-06
+     DPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD         KIRKAIKEGEEVTVQLINYRKDGKP
+       +  +  ++  + +  +  ++ ++++++ + + +                + ++ +  + +  ++   +++++
+151  VVSATDGTIVSFNAAAVRQFGYAEEEVIGQNLRILMPEPYRHEHDGYLQRYMATGEKRIIGIDRVVSGQRKDGST
+
+     
+     
+     FWNLLHMQPMRDDDGH
+     +   + +  ++   +
+226  FPMKLAVGEMRSGGERFFTGFIRDLTEREESAARLEQIQAELARLARLNEMGEMASTLAHELNQPLSAIANYSHG
+
+
+tr|Q8YZM9|Q8YZM9_NOSS1
+  Two-component sensor histidine kinase OS=Nostoc sp. (strain PCC 7120 / SAG 
+  25.82 / UTEX 2576) OX=103690 GN=alr0428 PE=1 SV=1
+  LENGTH = 637  COMBINED P-VALUE = 3.42e-06  E-VALUE =  0.00015
+  DIAGRAM: 14-[1]-[2]-181-[1]-301
+
+                   [1]                                               [2]
+                   1.1e-08                                           4.8e-05
+                   MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTDKIRKAIKEGEE
+                    +++++  +          +++++  ++++++++  +  +      +        + ++ +
+1    MNIQSELEFKFAHYLINNAVEASFCLGDNWQFLYVNDATCRMTEYSREQLLSMNLQDIDVDFALHDWEEIRQKNN
+
+     
+     
+     VTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+      +   +    +++ +  + +++   +++
+76   YTFKTRYRSQSGRIFLVEMSLTFLEDQERRFSCVFVREKSNEIVELSVQKWINELRDANNKLQQEVSELKKKEVN
+
+                                                                  [1]
+                                                                  1.1e-07
+                                                                  MIPCNFVITDPRLP
+                                                                  +  +    + +
+226  SSTSNIESYDVLELKDGRVFAHYSQPQWLGQKIIGRVWSIWDITESKQTEEALRLNEARFRALAETSDASTFLVQ
+
+     
+     
+     DNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+     ++   +++++ + ++++++ + +         + +
+301  DTQFCYVNPAVEVLTGYTRTELLNGFDIRRLIKYRKGRQIRNSATATNFEYQEISILTKNGAERWLSCAVTILDS
+
+
+tr|Q87TF0|Q87TF0_VIBPA
+  Nitrogen regulation protein OS=Vibrio parahaemolyticus serotype O3:K6 (strain 
+  RIMD 2210633) OX=223926 GN=VP0119 PE=1 SV=1
+  LENGTH = 348  COMBINED P-VALUE = 9.33e-04  E-VALUE =    0.041
+  DIAGRAM: 8-[1]-3-[2]-246
+
+             [1]                                                  [2]
+             8.2e-05                                              1.7e-06
+             MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD   KIRKAIKEGEEVTV
+               ++ ++ +        + +++++ + +   ++  ++      +  +         + ++ ++ ++
+1    MDTSLPSAILNNMVTATLILDDGLAIRYANPAAELLFSQSAKRIVEQSLSQLIQHASLDLALLTQPLQSGQSITD
+
+     
+     
+     QLINYRKDGKPFWNLLHMQPMRDDDGH
+         +  ++++ + + +++++ ++
+76   SDVTFVVDGRPLMLEVTVSPITWQRQLMLLVEMRKIDQQRRLTQELNQHAQQQAAKLLVRGLAHEIKNPLGGLRG
+
+
+sp|Q96RG2|PASK_HUMAN
+  PAS domain-containing serine/threonine-protein kinase OS=Homo sapiens OX=9606 
+  GN=PASK PE=1 SV=3
+  LENGTH = 1323  COMBINED P-VALUE = 4.68e-03  E-VALUE =     0.21
+  DIAGRAM: 126-[1]-858-[3]-239
+
+                                                        [1]
+                                                        1.1e-05
+                                                        MIPCNFVITDPRLPDNPIIYANDA
+                                                         ++ +  +     + + +  +++
+76   SLAAQNICTSKLHCPAAPEHTDPSEPRGSVSCCSLLRGLSSGWSSPLLPAPVCNPNKAIFTVDAKTTEILVANDK
+
+     
+     
+     FEYMTGYSREEILGRNCRFLQGPDTD
+        + +++ +  ++        +
+151  ACGLLGYSSQDLIGQKLTQFFLRSDSDVVEALSEEHMEADGHAAVVFGTVVDIISRSGEKIPVSVWMKRMRQERR
+
+                                                                [3]
+                                                                6.3e-06
+                                                                MDKNVMLNRNKVHRAR
+                                                                       +  +   +
+976  FEEPPKAVELEGLAACEGEYSQKYSTMSPLGSGAFGFVWTAVDKEKNKEVVVKFIKKEKVLEDCWIEDPKLGKVT
+
+     
+     
+     AEREILDILDHPFLPTLYASFQTKTHICLITDYC
+      +  ++  + +         +       +++
+1051 LEIAILSRVEHANIIKVLDIFENQGFFQLVMEKHGSGLDLFAFIDRHPRLDEPLASYIFRQLVSAVGYLRLKDII
+
+
+tr|Q8EII0|Q8EII0_SHEON
+  Histidine kinase OS=Shewanella oneidensis (strain MR-1) OX=211586 GN=SO_0859 
+  PE=1 SV=1
+  LENGTH = 1765  COMBINED P-VALUE = 6.14e-03  E-VALUE =     0.27
+  DIAGRAM: 575-[2]-32-[1]-8-[2]-1018
+
+                                                       [2]
+                                                       1.8e-05
+                                                       KIRKAIKEGEEVTVQLINYRKDGKP
+                                                         + + +        ++  + ++
+526  LIVDQNGQIVFSNSRCQQLFGYDAKAMLALQIETLLPEELRHLHTGERLDFLREGRDRPMASARHVRALKSDGGE
+
+                                                     [1]
+                                                     5.3e-06
+     FWNLLHMQPMRDDDGH                                MIPCNFVITDPRLPDNPIIYANDAFEY
+     ++ +  ++    +++                                 +   + +          + +++++  +
+601  FVAEIALSILPSDFDGRRQVAASIRDMTQKIMVEQKIRDSELRFRGLVTNIPGAVYRTRIGEVWVIEYVSDNIAE
+
+                                    [2]
+                                    1.8e-05
+     MTGYSREEILGRNCRFLQGPDTD        KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     ++++ +   +    +                 + +++++++ + ++ +    +++  +        + +++
+676  ITGYAASQFIENRQRTFTSLILEDDRALCNQHIERALAQQETFEVEYRIRHRDGSIRWVHEKGKASYSEEGLPLW
+
+
+sp|P52687|CITA_KLEPN
+  Sensor histidine kinase CitA OS=Klebsiella pneumoniae OX=573 GN=citA PE=1 
+  SV=1
+  LENGTH = 547  COMBINED P-VALUE = 1.16e-02  E-VALUE =     0.51
+  DIAGRAM: 303-[2]-203
+
+        [2]
+        2.5e-05
+        KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+        + + ++  + + +  ++ ++         + ++ +    ++
+301  KVIASRMAVILNNEPQGWVISFRSKDDINTLSLQLSQVQQYADNLRAVQHEHRNLISTIAGLLFLKRYNQALELI
+
+
+tr|Q7NXP4|Q7NXP4_CHRVO
+  Probable GGDEF family protein OS=Chromobacterium violaceum (strain ATCC 12472 
+  / DSM 30191 / JCM 1249 / NBRC 12614 / NCIMB 9131 / NCTC 9757) OX=243365 
+  GN=CV_1582 PE=1 SV=1
+  LENGTH = 427  COMBINED P-VALUE = 1.30e-02  E-VALUE =     0.57
+  DIAGRAM: 187-[2]-199
+
+                                          [2]
+                                          2.2e-06
+                                          KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDD
+                                          + +  +++    + +++  + +  +   + + +  +++
+151  LYVNPALARMGGLTMADPSQLSGLFMAPGVEARLEREALRELLDASGAWQGELLLARRGAAPLPVLASATRLRDE
+
+     
+     
+     DGH
+     ++
+226  DGRLLSVWVVSDISGMKESERRLHALAFFDGLTGLANRALFGERLRWHLQNEPAGGRLAILFLDLNGFKQVNDLL
+
+
+tr|Q8EGB0|Q8EGB0_SHEON
+  Diguanylate cyclase with PAS sensory domain OS=Shewanella oneidensis (strain 
+  MR-1) OX=211586 GN=SO_1695 PE=1 SV=2
+  LENGTH = 339  COMBINED P-VALUE = 2.50e-02  E-VALUE =      1.1
+  DIAGRAM: 339
+
+
+tr|Q0S7I6|Q0S7I6_RHOJR
+  Uncharacterized protein OS=Rhodococcus jostii (strain RHA1) OX=101510 
+  GN=RHA1_ro04714 PE=1 SV=1
+  LENGTH = 399  COMBINED P-VALUE = 2.68e-02  E-VALUE =      1.2
+  DIAGRAM: 122-[1]-227
+
+                                                    [1]
+                                                    1.3e-05
+                                                    MIPCNFVITDPRLPDNPIIYANDAFEYM
+                                                              +   +  +++++ + ++
+76   VLADRSTRYILTRSIDVTTDASGAPVELTGVVIELGHVAGRDAQLAALLDRVGLGFMALDEDLRIIYVNSGCLRH
+
+     
+     
+     TGYSREEILGRNCRFLQGPDTD
+        ++++ +++
+151  VRRSRDELLGRVVTEVLPETQGSYFDALCRKVLATGREQQTRVDSLYSPGMTIEVTAAADSGALVVHFRDVTAEV
+
+
+sp|P23222|FIXL_BRADU
+  Sensor protein FixL OS=Bradyrhizobium diazoefficiens (strain JCM 10833 / IAM 
+  13628 / NBRC 14792 / USDA 110) OX=224911 GN=fixL PE=1 SV=1
+  LENGTH = 505  COMBINED P-VALUE = 3.07e-02  E-VALUE =      1.3
+  DIAGRAM: 76-[2]-30-[1]-308
+
+      [2]                                                                    [1]
+      8.1e-05                                                                7.3
+      KIRKAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH                              MIP
+      ++ +  + +  + +  +    +    + + +   ++++ ++
+76   SAIKRVSERGGGFDVSFRVAGTSNAGQWIRARAGLIRDEAGTARHLSGIFLDIDEEKQVEGALRTRETHLRSILH
+
+     
+     e-05
+     CNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                   +   +++ +++ + ++ + ++ +   +
+151  TIPDAMIVIDGHGIIQLFSTAAERLFGWSELEAIGQNVNILMPEPDRSRHDSYISRYRTTSDPHIIGIGRIVTGK
+
+
+sp|P0AEC8|DCUS_ECOLI
+  Sensor histidine kinase DcuS OS=Escherichia coli (strain K12) OX=83333 
+  GN=dcuS PE=1 SV=1
+  LENGTH = 543  COMBINED P-VALUE = 3.96e-02  E-VALUE =      1.7
+  DIAGRAM: 543
+
+
+sp|Q55168|PHY1_SYNY3
+  Phytochrome-like protein cph1 OS=Synechocystis sp. (strain PCC 6803 / Kazusa) 
+  OX=1111708 GN=cph1 PE=1 SV=1
+  LENGTH = 748  COMBINED P-VALUE = 6.18e-02  E-VALUE =      2.7
+  DIAGRAM: 24-[1]-674
+
+                             [1]
+                             7.4e-06
+                             MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                              ++    ++   +++  +  ++ +   + + + +  +++
+1    MATTVQLSDQSLRQLETLAIHTAHLIQPHGLVVVLQEPDLTISQISANCTGILGRSPEDLLGRTLGEVFDSFQID
+
+
+tr|Q8PSW8|Q8PSW8_METMA
+  Hypothetical sensory transduction histidine kinase OS=Methanosarcina mazei 
+  (strain ATCC BAA-159 / DSM 3647 / Goe1 / Go1 / JCM 11833 / OCM 88) OX=192952 
+  GN=MM_2955 PE=1 SV=1
+  LENGTH = 876  COMBINED P-VALUE = 8.35e-02  E-VALUE =      3.7
+  DIAGRAM: 601-[1]-225
+
+      [1]
+      8.4e-05
+      MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+      + ++ + +    +  +    + ++ +++ +  + ++  +    ++   +
+601  RDERCEVHLQGVILDVTEHKKAEEALLQIEEIHKKEIHHRIKNNLQVISTLLYLESGNFSDEKVIEAFIESQHRV
+
+
+tr|Q24QT8|Q24QT8_DESHY
+  Uncharacterized protein OS=Desulfitobacterium hafniense (strain Y51) 
+  OX=138119 GN=DSY3815 PE=1 SV=1
+  LENGTH = 450  COMBINED P-VALUE = 8.97e-02  E-VALUE =      3.9
+  DIAGRAM: 450
+
+
+sp|P16113|PYP_HALHA
+  Photoactive yellow protein OS=Halorhodospira halophila OX=1053 GN=pyp PE=1 
+  SV=3
+  LENGTH = 125  COMBINED P-VALUE = 9.24e-02  E-VALUE =      4.1
+  DIAGRAM: 125
+
+
+sp|P07663|PER_DROME
+  Period circadian protein OS=Drosophila melanogaster OX=7227 GN=per PE=1 SV=2
+  LENGTH = 1224  COMBINED P-VALUE = 1.09e-01  E-VALUE =      4.8
+  DIAGRAM: 233-[1]-100-[1]-791
+
+             [1]
+             1.2e-05
+             MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+             ++ +    +  +  +  + +  ++     ++ ++  +++
+226  AGTGQRGERVKEDSFCCVISMHDGIVLYTTPSITDVLGYPRDMWLGRSFIDFVHLKDRATFASQITTGIPIAESR
+
+             [1]
+             8.0e-05
+             MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+              ++++   +  +     +  +  +     ++  +  +++       ++
+376  SYKVPDEILSQKSPKFAIRHTATGIISHVDSAAVSALGYLPQDLIGRSIMDFYHHEDLSVMKETYETVMKKGQTA
+
+
+sp|P23545|PHOR_BACSU
+  Alkaline phosphatase synthesis sensor protein PhoR OS=Bacillus subtilis 
+  (strain 168) OX=224308 GN=phoR PE=1 SV=1
+  LENGTH = 579  COMBINED P-VALUE = 1.12e-01  E-VALUE =      4.9
+  DIAGRAM: 579
+
+
+tr|Q6N3S7|Q6N3S7_RHOPA
+  Putative diguanylate cyclase (GGDEF) with PAS/PAC domain OS=Rhodopseudomonas 
+  palustris (strain ATCC BAA-98 / CGA009) OX=258594 GN=RPA3616 PE=1 SV=1
+  LENGTH = 644  COMBINED P-VALUE = 1.15e-01  E-VALUE =      5.1
+  DIAGRAM: 644
+
+
+tr|Q74DN1|Q74DN1_GEOSL
+  Sensor histidine kinase response regulator, PAS and PAS domain-containing 
+  OS=Geobacter sulfurreducens (strain ATCC 51573 / DSM 12127 / PCA) OX=243231 
+  GN=GSU1285 PE=1 SV=1
+  LENGTH = 772  COMBINED P-VALUE = 1.17e-01  E-VALUE =      5.1
+  DIAGRAM: 43-[1]-70-[1]-559
+
+                                                [1]
+                                                5.6e-05
+                                                MIPCNFVITDPRLPDNPIIYANDAFEYMTGYS
+                                                  + ++              ++++     +++
+1    MVGSLVTYLKKCAASVLGAPYTLLCRLLPRITADLRYGSGYRALFEHAIDGIFIMDAEGHYLDVNPAICSAIGYT
+
+     
+     
+     REEILGRNCRFLQGPDTD
+     +++ +      +
+76   RDEFLALDWGVLSRGVDSGWAAASLARIVGGEPLREERTVWTRNGDQLTVELSAHLLPDGKILGIARDVSERKRM
+
+                  [1]
+                  8.9e-05
+                  MIPCNFVITDPRLPDNPIIYANDAFEYMTGYSREEILGRNCRFLQGPDTD
+                     ++      +  +  +  ++ + ++ ++  +   +++    +
+151  EESLRSTSEFLDTILDEAPLPIYITSVDGTLRLANNAWERETGIPRNAAVGRRLNELFPAAMCDQFSEINRRVVE
+
+
+sp|P9WLZ7|Y1364_MYCTU
+  Uncharacterized protein Rv1364c OS=Mycobacterium tuberculosis (strain ATCC 
+  25618 / H37Rv) OX=83332 GN=Rv1364c PE=1 SV=1
+  LENGTH = 653  COMBINED P-VALUE = 1.42e-01  E-VALUE =      6.2
+  DIAGRAM: 135-[2]-477
+
+                                                                 [2]
+                                                                 5.8e-05
+                                                                 KIRKAIKEGEEVTVQ
+                                                                 +  ++ +  +++
+76   DRVYQTGEPQSGSEWRLQTDYDGSGVEERYFDFVVTPRRRADGSIEGVQLIVDDVTSRVRARQAAEARVEELSER
+
+     
+     
+     LINYRKDGKPFWNLLHMQPMRDDDGH
+      ++ + + +    ++  + +    +
+151  YRNVRDSATVMQQALLAASVPVVPGADIAAEYLVAAEDTAAGGDWFDALALGDRLVLVVGDVVGHGVEAAAVMSQ
+
+
+tr|Q9KL26|Q9KL26_VIBCH
+  Methyl-accepting chemotaxis protein OS=Vibrio cholerae serotype O1 (strain 
+  ATCC 39315 / El Tor Inaba N16961) OX=243277 GN=VC_A0923 PE=1 SV=1
+  LENGTH = 652  COMBINED P-VALUE = 1.42e-01  E-VALUE =      6.3
+  DIAGRAM: 522-[2]-89
+
+                                                                             [2]
+                                                                             8.3
+                                                                             KIR
+                                                                             +++
+451  VTKTTKAIDTLSATIDAAVDDVKVLESATANIETVLKVINDIADQTNLLALNAAIEAARAGESGRGFAVVADEVR
+
+     
+     e-05
+     KAIKEGEEVTVQLINYRKDGKPFWNLLHMQPMRDDDGH
+     +  +  +  + ++++     +   ++  ++  +  +
+526  TLAQRTQQSTTEIRNMIEKLQSGANAVAVAMSHSKDTAASAVNQAQGANEALEKIRLAIQQISDMNIQIASAAEE
+
+
+sp|C1CZ84|IRRE_DEIDV
+  Radiation response metalloprotease IrrE OS=Deinococcus deserti (strain VCD115 
+  / DSM 17065 / LMG 22923) OX=546414 GN=irrE PE=1 SV=1
+  LENGTH = 281  COMBINED P-VALUE = 1.45e-01  E-VALUE =      6.4
+  DIAGRAM: 281
+
+
+tr|Q8PSW1|Q8PSW1_METMA
+  Hypothetical sensory transduction histidine kinase OS=Methanosarcina mazei 
+  (strain ATCC BAA-159 / DSM 3647 / Goe1 / Go1 / JCM 11833 / OCM 88) OX=192952 
+  GN=MM_2965 PE=1 SV=1
+  LENGTH = 839  COMBINED P-VALUE = 1.76e-01  E-VALUE =      7.7
+  DIAGRAM: 839
+
+
+sp|P13633|DCTB_RHIME
+  C4-dicarboxylate transport sensor protein DctB OS=Rhizobium meliloti (strain 
+  1021) OX=266834 GN=dctB PE=1 SV=3
+  LENGTH = 621  COMBINED P-VALUE = 1.81e-01  E-VALUE =        8
+  DIAGRAM: 621
+
+
+tr|B3PFT7|B3PFT7_CELJU
+  AbfS arabinofuranosidase two component system sensor protein OS=Cellvibrio 
+  japonicus (strain Ueda107) OX=498211 GN=abfS PE=1 SV=1
+  LENGTH = 467  COMBINED P-VALUE = 1.91e-01  E-VALUE =      8.4
+  DIAGRAM: 467
+
+********************************************************************************
+
+
+CPU: meme-server
+Time 0.043 secs.
+
+mast -oc . -nostatus -minseqs 44 -remcorr -ev 10.0 -dl http://www.uniprot.org/uniprot/?query=SEQUENCEID&sort=score meme_withcys.xml Non_LOV_test_set.txt
