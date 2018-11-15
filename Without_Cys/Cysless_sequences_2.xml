@@ -1,3 +1,5 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<sequences>
 <sequence comment="" db="0" length="757" name="A0A1L8CN88">
 <score combined_pvalue="1.11e-31" evalue="1.1e-26" strand="both"/>
 <seg start="226">
@@ -20306,3 +20308,4 @@ GADTVVEDEYRLRRADGTYIRVKDRAFVQRDAAGRPLRMLGTMQDVTEAREMEARLSRAETLQAVGTLTGGVAHD
 <hit idx="2" match=" +++ ++   + +  +++++ ++ + ++ " pos="479" pvalue="1.8e-08"/>
 </seg>
 </sequence>
+</sequences>
