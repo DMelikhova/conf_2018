@@ -1,31 +1,4 @@
-# pfam_scan.pl,  run at Thu Nov  8 17:02:18 2018
-#
-# Copyright (c) 2009 Genome Research Ltd
-# Freely distributed under the GNU 
-# General Public License
-#
-# Authors: Jaina Mistry (jaina@ebi.ac.uk), 
-#          Rob Finn (rdf@ebi.ac.uk)
-#
-# This is free software; you can redistribute it and/or modify it under
-# the terms of the GNU General Public License as published by the Free Software
-# Foundation; either version 2 of the License, or (at your option) any later version.
-# This program is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
-# details.
-#
-# You should have received a copy of the GNU General Public License along with
-# this program. If not, see <http://www.gnu.org/licenses/>. 
-# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-#      query sequence file: /home/dmelikhova/projects/181015_conf_mipt_18/Without_Cys/Cysless_proteins_2.fasta
-#        searching against: .//Pfam-A.hmm, with cut off --cut_ga
-#    resolve clan overlaps: on
-#     predict active sites: off
-# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-#
-# <seq id> <alignment start> <alignment end> <envelope start> <envelope end> <hmm acc> <hmm name> <type> <hmm start> <hmm end> <hmm length> <bit score> <E-value> <significance> <clan>
-
+<seq id> <alignment start> <alignment end> <envelope start> <envelope end> <hmm acc> <hmm name> <type> <hmm start> <hmm end> <hmm length> <bit score> <E-value> <significance> <clan>
 A0A1G8UUF8    116    197    113    197 PF08447.12  PAS_3             Domain     6    89    89     55.3   6.1e-15   1 CL0183   
 A0A1G8UUF8    238    323    237    324 PF08447.12  PAS_3             Domain     2    88    89     57.3   1.5e-15   1 CL0183   
 A0A1G8UUF8    348    455    348    457 PF08448.10  PAS_4             Domain     1   108   110     55.0   8.5e-15   1 CL0183   
